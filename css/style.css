@@ -180,6 +180,10 @@ a > img {
 	background-image: url(images/smoking.svg);
 }
 
+#navigation > a.covid {
+	background-image: url(images/breathing.svg); /*need to change image url*/
+}
+
 #top-buttons {
 	position: absolute;
 	top: 1vw;
