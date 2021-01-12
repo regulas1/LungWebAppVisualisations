@@ -19,7 +19,16 @@
   </head>
 
   <body data-page="" data-severity="">
-
+    
+    <script>
+      const app = new Vue({
+          el: '#app', // 1
+          data: { // 2
+              myLocalProperty: 'Im a local property value' // 3
+          }
+      });
+  </script>
+  
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
