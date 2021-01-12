@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <!-- added "contain" and "width" -->
+    <img alt="ABI logo" src="./assets/abi-hc-rgb.png"
+      contain
+      width="50%" 
+    ><img>
+    <HelloWorld msg="Welcome to Your Lung Model"/>
+    <Breathing msg="Welcome to your Lung Model"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Breathing from './components/Breathing.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Breathing
   }
 }
 </script>
@@ -24,5 +32,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
 </style>
