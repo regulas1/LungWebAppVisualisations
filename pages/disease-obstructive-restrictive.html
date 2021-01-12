@@ -1,0 +1,51 @@
+<section id="page-disease-obstructive-restrictive">
+	<article class="left">
+		<h1>Obstructive</h1>
+		<h2>Common Diseases</h2>
+        <ul>
+            <li>Chronic Obstructive Pulmonary Disease (COPD)</li>
+            <ul>
+                <li>Emphysema</li>
+                <li>Chronic Bronchitis</li>
+            </ul>
+            <li>Asthma</li>
+            <li>Cystic Fibrosis</li>
+        </ul>
+        <h2>Common Symptoms</h2>
+		<ul>
+            <li>Dyspnoea (breathlessness)</li>
+            <li>Wheezing/coughing</li>
+            <li>Sputum (mucus) hypersecretion</li>
+            <li>Tiredness</li>
+            <li>Anxiety/depression</li>
+        </ul>
+        <a class="nav-button" href="#/disease">Go back to DISEASE</a>
+    </article>
+    
+	<article class="right">
+        <h1>Restrictive</h1>
+		<h2>Common Diseases</h2>
+        <ul>
+            <li>Interstitial Lung Disease</li>
+            <ul>
+                <li>Pulmonary Fibrosis</li>
+            </ul>
+        </ul>
+        <h2>Common Symptoms</h2>
+		<ul>
+            <li>Dyspnoea (breathlessness)</li>
+            <li>Wheezing/coughing</li>
+            <li>Mucus hypersecretion</li>
+            <li>Tiredness</li>
+        </ul>
+	</article>
+</section>
+
+<script>
+loadScene({
+	vs: 'shaders/airways.vs',
+	fs: 'shaders/airways.fs',
+	view: 'models/smoker_and_asthmatic_flow_view.json',
+	models: ['models/smoker_and_asthmatic_flow_1.json'],
+}, airwaysUniforms);
+</script>

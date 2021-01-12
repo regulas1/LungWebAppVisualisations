@@ -169,15 +169,19 @@ a > img {
 }
 
 #navigation > a.breathing {
-	background-image: url(images/breathing.svg);
+	background-image: url(images/breathingButton.png);
 }
 
 #navigation > a.asthma {
-	background-image: url(images/asthma.svg);
+	background-image: url(images/asthmaButton.png);
 }
 
 #navigation > a.smoking {
-	background-image: url(images/smoking.svg);
+	background-image: url(images/smokingButton.png);
+}
+
+#navigation > a.disease {
+	background-image: url(images/diseaseButton.png);
 }
 
 #top-buttons {
