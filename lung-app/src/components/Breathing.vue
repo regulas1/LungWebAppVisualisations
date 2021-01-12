@@ -9,9 +9,9 @@
     </p>
     <h3>Click on a button to read more about it</h3>
     <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">Breathing</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">Asthma</a></li>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">Smoking</a></li>
+      <li><a href="#/breathing" target="_blank" rel="noopener">Breathing</a></li>
+      <li><a href="#/asthma" target="_blank" rel="noopener">Asthma</a></li>
+        <li><a href="#/smoking" target="_blank" rel="noopener">Smoking</a></li>
     </ul>
   </div>
 </template>
