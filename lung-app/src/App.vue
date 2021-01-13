@@ -19,7 +19,8 @@ export default {
   /* data must be a function: https://vuejs.org/v2/guide/components.html */
   data: function() { 
     return {
-      fullTree: nav /* https://stackoverflow.com/questions/45116796/how-to-import-and-use-image-in-a-vue-single-file-component */ 
+      fullTree: nav 
+      /* https://stackoverflow.com/questions/45116796/how-to-import-and-use-image-in-a-vue-single-file-component */ 
     }
   }
 }
