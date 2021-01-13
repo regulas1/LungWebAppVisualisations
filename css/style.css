@@ -184,6 +184,10 @@ a > img {
 	background-image: url(images/diseaseButton.png);
 }
 
+#navigation > a.fullTree {
+	background-image: url(images/fullTree.png);
+}
+
 #top-buttons {
 	position: absolute;
 	top: 1vw;
