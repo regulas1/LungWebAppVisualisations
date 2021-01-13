@@ -180,10 +180,12 @@ a > img {
 	background-image: url(images/smokingButton.png);
 }
 
+/* added a disease page */
 #navigation > a.disease {
 	background-image: url(images/diseaseButton.png);
 }
 
+/* added tree navigation as an image */
 #navigation > a.fullTree {
 	background-image: url(images/fullTree.png);
 }
