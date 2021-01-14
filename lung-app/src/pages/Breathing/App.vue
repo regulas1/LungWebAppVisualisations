@@ -1,19 +1,15 @@
-<!--
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="lung-app/src/assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
--->
     <!--Display navigation tree-->
+    <img alt="Navigation tree" :src="fullTree" height="500px"/>  <!--Need to bind since using image as module-->
+  </div>
+</template>
 
-  <!--  <img alt="Navigation tree" :src="fullTree" height="500px"/>  <!--Need to bind since using image as module-->
-  <!-- </div>
-</template> -->
-
-<!--
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import nav from './assets/fullTree.png' /* Fetch fullTree image from assets */
+import HelloWorld from '../../components/HelloWorld.vue'
+import nav from '../../assets/fullTree.png' /* Fetch fullTree image from assets */
 
 export default {
   name: 'App',
@@ -40,4 +36,3 @@ export default {
   margin-top: 60px;
 }
 </style>
--->
