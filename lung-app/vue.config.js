@@ -2,6 +2,18 @@
 
 module.exports = {
     pages: {
+      index: { /* Can use any name */
+        // entry for the page
+        entry: 'src/pages/Loading/main.js', /* Must use correct pathname (ie correct folder name capitalisation) */
+        // the source template
+        template: 'public/Loading/index.html',
+        /* Appends "index.html" onto parent directory ("public"), 
+        must use page with HTML header (not a section id) */
+        filename: 'index.html',
+        // when using title option,
+        // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
+        title: 'Loading Page'
+      },
       breathing: { /* Can use any name */
         // entry for the page
         entry: 'src/pages/Breathing/main.js', /* Must use correct pathname (ie correct folder name capitalisation) */
@@ -32,10 +44,7 @@ module.exports = {
         filename: 'index.html',
         // when using title option,
         // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
-        title: 'Breathing Gas Exchange Page',
-        // chunks to include on this page, by default includes
-        // extracted common chunks and vendor chunks.
-        /* chunks: ['chunk-vendors', 'chunk-common', 'index'] */
-      },
+        title: 'Breathing Gas Exchange Page'
+      }
     }
   }
