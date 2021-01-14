@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-layout column>
-            <h1 class="title my-3">Breathing</h1> <!--Change heading-->
+            <h1 class="title my-3">Asthma</h1>
             <div
                 v-for="(item, idx) in userRecipes"
                 class="subheading mb-2"
@@ -10,7 +10,7 @@
                 {{ item }}
             </div>
             <v-flex mt-4>
-                <v-btn color="primary" to="/menu">Learn about lung GAS EXCHANGE</v-btn> <!--Change button text-->
+                <v-btn color="primary" to="/menu">Learn about lung FUNCTION</v-btn>
             </v-flex>
         </v-layout>
     </v-container>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: 'Breathing', /* Change name of component */ 
+    name: 'Asthma',
     computed: {
         userRecipes() {
             return this.$store.state.userRecipes;

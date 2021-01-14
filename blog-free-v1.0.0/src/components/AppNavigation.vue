@@ -18,21 +18,28 @@
                 </template>
             </v-list>
         </v-navigation-drawer>
+
+        <!--All navigation buttons to go inside <v-toolbar> tag-->
         <v-toolbar app color="brown darken-4" dark>
             <v-toolbar-side-icon
                 class="hidden-md-and-up"
                 @click="drawer = !drawer"
             ></v-toolbar-side-icon>
+
+            <!--Corresponds to left-most button-->
             <v-spacer class="hidden-md-and-up"></v-spacer>
             <router-link to="/">
                 <v-toolbar-title data-cy="titleBtn">{{
                     appTitle
                 }}</v-toolbar-title>
             </router-link>
+
+            <!--Corresponds to v-btn for each page-->
+            <!--Change url name ("to=") and button text-->
             <v-btn
                 flat
                 class="hidden-sm-and-down nav-menu"
-                to="/breathing"
+                to="/breathing" 
                 data-cy="menuBtn"
                 >Breathing</v-btn
             >
@@ -49,6 +56,13 @@
                 to="/smoking"
                 data-cy="menuBtn"
                 >Smoking</v-btn
+            >
+            <v-btn
+                flat
+                class="hidden-sm-and-down nav-menu"
+                to="/disease"
+                data-cy="menuBtn"
+                >Disease</v-btn
             >
             <!--
             <v-spacer class="hidden-sm-and-down"></v-spacer>
@@ -75,15 +89,16 @@
 
 <script>
 export default {
-    name: 'AppNavigation',
+    name: 'AppNavigation', /* Change component name */
     data() {
         return {
-            appTitle: 'Lung App',
+            appTitle: 'Lung App', /* Text in left-most button */
             drawer: false,
             items: [
-                { title: 'Breathing', url: '/breathing' },
+                { title: 'Breathing', url: '/breathing' }, /* Array corresponding to each page */
                 { title: 'Asthma', url: '/asthma' },
-                { title: 'Smoking', url: '/smoking' }
+                { title: 'Smoking', url: '/smoking' },
+                { title: 'Disease', url: '/disease' }
             ]
         };
     },
