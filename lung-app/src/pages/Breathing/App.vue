@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="lung-app/src/assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="@/assets/logo.png">
+    <HelloWorld msg="Welcome to Your Breathing Page"/>
     <!--Display navigation tree-->
     <img alt="Navigation tree" :src="fullTree" height="500px"/>  <!--Need to bind since using image as module-->
 
     <nav>
-      <a href="breathing.html">Go to Breathing Page</a>
+      <a href="breathing.html">Go to Breathing Page</a> <!-- Can use index.html or breathing.html -->
       </nav>
   </div>
 </template>
 
 <script>
-import HelloWorld from '../../components/HelloWorld.vue'
-import nav from '../../assets/fullTree.png' /* Fetch fullTree image from assets */
+import HelloWorld from '@/components/HelloWorld.vue'
+import nav from '@/assets/fullTree.png' /* Fetch fullTree image from assets */
 
 export default {
-  name: 'App',
+  name: 'breathing', /* Can be "app" or "breathing" */
   components: {
     HelloWorld
   },

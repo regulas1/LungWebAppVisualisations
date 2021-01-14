@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App.vue' /* Finds App.vue in same directory as main.js */
 
 Vue.config.productionTip = false
 

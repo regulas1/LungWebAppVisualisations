@@ -1,5 +1,5 @@
 <template>
-  <div class="breathing">
+  <div class="breathing"> <!--can use any class name-->
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'Breathing',
+  name: 'Breathing', /* Use name of Vue component */
   props: {
     msg: String
   }

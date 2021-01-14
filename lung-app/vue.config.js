@@ -2,7 +2,7 @@
 
 module.exports = {
     pages: {
-      Breathing: {
+      breathing: { /* Can use any name */
         // entry for the page
         entry: 'src/pages/Breathing/main.js',
         // the source template
