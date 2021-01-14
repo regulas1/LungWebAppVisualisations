@@ -16,8 +16,7 @@ export default new Router({
     {            
       path: '/breathing',            
       name: 'breathing',            
-      component: () => import('../views/Breathing.vue')        
+      component: () => import('../views/Breathing.vue')   /* Need ../ to exit out of current directory and locate views folder in src */     
     },
   ],
 })
-/* Need ../ to exit out of current directory and locate views folder in src */

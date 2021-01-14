@@ -16,10 +16,6 @@ export default new Vuex.Store({
         text: 'Breathing',
         href: '#about',
       },
-      {
-        text: 'Asthma',
-        href: '#about',
-      },
     ],
   },
   getters: {
