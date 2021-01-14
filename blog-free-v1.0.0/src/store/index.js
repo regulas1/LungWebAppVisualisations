@@ -9,11 +9,15 @@ export default new Vuex.Store({
     drawer: false,
     items: [
       {
-        text: 'Home',
+        text: 'Home', /* "Category" in articles.json correspond to remaining navigation buttons' text */
         href: '#!',
       },
       {
-        text: 'About',
+        text: 'Breathing',
+        href: '#about',
+      },
+      {
+        text: 'Asthma',
         href: '#about',
       },
     ],

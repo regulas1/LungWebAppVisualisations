@@ -13,5 +13,11 @@ export default new Router({
       name: 'home',
       component: Home,
     },
+    {            
+      path: '/breathing',            
+      name: 'breathing',            
+      component: () => import('../views/Breathing.vue')        
+    },
   ],
 })
+/* Need ../ to exit out of current directory and locate views folder in src */

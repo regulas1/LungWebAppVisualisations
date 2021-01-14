@@ -3,7 +3,7 @@
     id="about"
     tag="section"
   >
-    <base-subheading>About Us</base-subheading>
+    <base-subheading>Breathing</base-subheading>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut tortor tellus. Donec maximus curs us pulvinar.
