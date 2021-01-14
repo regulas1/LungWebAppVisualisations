@@ -4,6 +4,10 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <!--Display navigation tree-->
     <img alt="Navigation tree" :src="fullTree" height="500px"/>  <!--Need to bind since using image as module-->
+
+    <nav>
+      <a href="breathing.html">Go to Breathing Page</a>
+      </nav>
   </div>
 </template>
 

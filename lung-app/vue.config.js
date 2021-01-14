@@ -6,9 +6,9 @@ module.exports = {
         // entry for the page
         entry: 'src/pages/Breathing/main.js',
         // the source template
-        template: 'public/breathing.html',
+        template: 'public/index.html',
         // output as dist/index.html
-        filename: 'breathing.html',
+        filename: 'index.html',
         // when using title option,
         // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
         title: 'Breathing Page',
