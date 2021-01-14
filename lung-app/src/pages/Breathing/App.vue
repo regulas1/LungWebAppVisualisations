@@ -4,10 +4,9 @@
     <HelloWorld msg="Welcome to Your Breathing Page"/>
     <!--Display navigation tree-->
     <img alt="Navigation tree" :src="fullTree" height="500px"/>  <!--Need to bind since using image as module-->
-
     <nav>
       <a href="breathing.html">Go to Breathing Page</a> <!-- Can use index.html or breathing.html -->
-      </nav>
+    </nav>
   </div>
 </template>
 
