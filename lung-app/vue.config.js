@@ -4,10 +4,11 @@ module.exports = {
     pages: {
       breathing: { /* Can use any name */
         // entry for the page
-        entry: 'src/pages/Breathing/main.js',
+        entry: 'src/pages/Breathing/main.js', /* Must use correct pathname (ie correct folder name capitalisation) */
         // the source template
-        template: 'public/index.html',
-        // output as dist/index.html
+        template: 'public/breathing.html',
+        /* Appends "index.html" onto parent directory ("public"), 
+        must use page with HTML header (not a section id) */
         filename: 'index.html',
         // when using title option,
         // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
