@@ -26,7 +26,7 @@
                 @click="drawer = !drawer"
             ></v-toolbar-side-icon>
 
-            <!--Corresponds to left-most button-->
+            <!--Corresponds to left-most button ("My Lungs")-->
             <v-spacer class="hidden-md-and-up"></v-spacer>
             <router-link to="/">
                 <v-toolbar-title data-cy="titleBtn">{{
@@ -92,7 +92,7 @@ export default {
     name: 'AppNavigation', /* Change component name */
     data() {
         return {
-            appTitle: 'Lung App', /* Text in left-most button */
+            appTitle: 'My Lungs', /* Text in left-most button */
             drawer: false,
             items: [
                 { title: 'Breathing', url: '/breathing' }, /* Array corresponding to each page */

@@ -20,7 +20,7 @@
             <v-flex mt-4>
                 <!--Change capitalised text-->
                 <p>
-                    <v-btn color="primary" to="/menu"> Click here </v-btn> to learn more about measuring LUNG FUNCTION.
+                    <v-btn color="primary" to="/menu"> Click here </v-btn> to learn more about MEASURING LUNG FUNCTION.
                 </p>
             </v-flex>
 
@@ -29,7 +29,13 @@
                 Some patches of lung get a small amount of air, and others get more air than usual.
             </p>
 
+            <ul>
+                <li>Gas exchange is worse</li>
+                <li>The breathing muscles have to work harder to breathe</li>
+                <li>Much more energy is required just to breathe, which is distressing for the patient</li>
+            </ul>
             
+            <p></p>
             
             <p>
                 In this model <font color="green">Green</font> is good, <font color="red">Red</font> is too high, and <font color="blue">Blue</font> is too low.
