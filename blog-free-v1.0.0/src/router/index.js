@@ -29,5 +29,10 @@ export default new Router({
       name: 'smoking',            
       component: () => import('../views/Smoking.vue')   
     },
+    {            
+      path: '/disease',            
+      name: 'disease',            
+      component: () => import('../views/Disease.vue')   
+    }
   ],
 })
