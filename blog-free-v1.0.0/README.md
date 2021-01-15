@@ -21,7 +21,7 @@
         This will display message "Cloning into LungWebAppVisualisations..."
         A new folder will be created in the VueProjects folder called "LungWebAppVisualisations"
 
-4. Navigate to the new folder to set the current directory
+4. Navigate to the folder called "blog-free-v1.0.0" which is located within the new folder "LungWebAppVisualisations"git
     Example: cd LungWebAppVisualisations
 
     Running a status check should confirm that you are on branch "step-3" and everything is up to date
@@ -34,24 +34,24 @@
              git checkout -b step-4
 ```
 
-### Compiles and hot-reloads for development
+### Compile
 ```
-yarn run serve
+npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+npm run build
 ```
 
 ### Run your tests
 ```
-yarn run test
+npm run test
 ```
 
 ### Lints and fixes files
 ```
-yarn run lint
+npm run lint
 ```
 
 ### Customize configuration
