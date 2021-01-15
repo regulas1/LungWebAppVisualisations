@@ -1,3 +1,4 @@
+<!--Corresponds to all 3 images on Homepage-->
 <template>
   <v-container>
     <v-row>

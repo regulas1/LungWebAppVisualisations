@@ -56,3 +56,77 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Project Outline
+```
+There are 2 important folders in Vue projects:
+1. public
+2. src
+
+These folders are where user editing occurs.
+```
+### @/public
+```
+index.html
+    Vue creates index.html in the public folder by default.
+    It currently contains links to the lung model scripts.
+```
+### @/src
+```
+@/assets
+    Contains images used in the webpage
+
+@/components
+    Contains all Vue components - think of variables. Components are passed to App.vue, which is then passed main.js to display in the browser.
+    If we were to create a new HelloWorld project from scratch, Vue would automatically create a HelloWorld component.
+
+    ./base
+        ./Btn.vue uses <v-btn> 
+            export props:{} & computed:{} with name="baseBtn"
+        ./Card.vue uses <v-card> 
+            export with name="baseCard"
+        ./Subheading.vue uses <h2> with class="subheading text-uppercase font-weight-medium mb-3"
+            export with name="baseSubheading"
+
+    ./core
+        ./AppBar.vue uses <v-app-bar>
+            import utilities from vuex
+            export computed() & methods() with name="CoreAppBar"
+        ./Cta.vue uses <v-btn> 
+            export computed with name="CoreCta"
+        ./Drawer.vue uses <v-navigation-drawer> 
+            import utilities from vuex
+            export computed() & methods() with name="CoreDrawer"
+        ./Footer.vue uses <v-footer> 
+            export data() with name="CoreFooter"
+        ./View.vue uses <v-content> with id="home"
+            export with name="CoreView"
+
+    ./home
+        ./Articles.vue uses <section> with id="feed" 
+            export components() with name="HomeAbout"
+        ./Banner.vue uses <base-card> 
+            export with name="HomeBanner"
+        ./Subscribe.vue uses <v-container> with id="subscribe" 
+            export name="HomeSubscribe"
+
+    ./AppNavigation.vue uses <span> with <v-navigation-drawer> & <v-toolbar>
+        export data() with name="AppNavigation"
+
+    ./Feed.vue uses <v-container>
+        import utilities from vuex
+        export components:{} & data:() & computed:{} & watch:{} with name="Feed"
+
+    ./FeedCard.vue uses <v-col>
+        export props:{} with name "FeedCard"
+
+    
+
+
+    
+
+
+
+
+
+```

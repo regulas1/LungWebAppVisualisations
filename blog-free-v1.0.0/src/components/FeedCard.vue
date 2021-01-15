@@ -1,3 +1,4 @@
+<!--Corresponds to only 2 smaller images on Homepage-->
 <template>
   <v-col
     cols="12"
