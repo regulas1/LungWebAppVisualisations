@@ -12,10 +12,6 @@ export default new Vuex.Store({
         text: 'Home', /* "Category" in articles.json correspond to remaining navigation buttons' text */
         href: '#!',
       },
-      {
-        text: 'Breathing',
-        href: '#about',
-      },
     ],
   },
   getters: {
