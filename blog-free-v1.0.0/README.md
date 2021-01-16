@@ -77,7 +77,7 @@ index.html
     Contains images used in the webpage
 
 @/components
-    Contains all Vue components - think of variables. Components are passed to App.vue, which is then passed main.js to display in the browser.
+    Contains most Vue components - think of variables. Components are passed to App.vue, which is then passed main.js to display in the browser.
     If we were to create a new HelloWorld project from scratch, Vue would automatically create a HelloWorld component.
 
     ./base
@@ -104,9 +104,32 @@ index.html
     ./Feed.vue uses <v-container>
         import utilities from vuex
         export components:{} & data:() & computed:{} with name="Feed"
+            components:{} import FeedCard:()
 
     ./FeedCard.vue uses <v-col>
         export props:{} with name "FeedCard"
+        Includes <style>
+
+@/views
+    Contains separate Vue components corresponding to each different page in the lung app.
+    (Home, Breathing, Asthma, Smoking, Disease)
+
+./App.vue uses <v-app> with id="app"
+    import AppNavigation
+    export components:{AppNavigation} with name="App"
+
+@/data
+    Contains articles.json used by @/store/index.js
+    Used to display images on Homepage in browser
+
+./main.js
+    import App (& all other main sources)
+    Creates new Vue instance with imported sources
+
+./vue.config.js
+    Needed for navigation between pages
+    
+```
 
     
 
