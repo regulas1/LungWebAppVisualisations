@@ -5,19 +5,7 @@
     <v-content transition="slide-x-transition">
       <router-view></router-view>
     </v-content>
-    
-    
 
-    <!--
-    <core-app-bar />
-
-    <core-drawer />
-    
-    <core-view />
-
-    <core-footer />
-
-    <core-cta /> -->
   </v-app>
 </template>
 
@@ -28,9 +16,6 @@
     name: 'App',
 
     components: {
-      CoreDrawer: () => import('@/components/core/Drawer'),
-      CoreFooter: () => import('@/components/core/Footer'),
-      CoreView: () => import('@/components/core/View'),
       AppNavigation
     },
   }

@@ -1,3 +1,5 @@
+<!--Corresponds to large image on Homepage & "Page 1 of "-->
+
 <template>
   <section id="feed">
     <feed>

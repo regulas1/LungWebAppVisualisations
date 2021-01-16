@@ -2,6 +2,7 @@
 <template>
   <v-container>
     <v-row>
+      <!--Corresponds to main images on Homepage-->
       <v-col cols="12">
         <slot />
       </v-col>
@@ -14,46 +15,23 @@
       />
     </v-row>
 
+    <!--Centres "Page 1 of 1"-->
     <v-row align="center">
       <v-col cols="3">
-        <base-btn
-          v-if="page !== 1"
-          class="ml-0"
-          square
-          title="Previous page"
-          @click="page--"
-        >
-          <v-icon>mdi-chevron-left</v-icon>
-        </base-btn>
-      </v-col>
 
+      </v-col>
       <v-col
         class="text-center subheading"
         cols="6"
       >
         PAGE {{ page }} OF {{ pages }}
       </v-col>
-
-      <v-col
-        class="text-right"
-        cols="3"
-      >
-        <base-btn
-          v-if="pages > 1 && page < pages"
-          class="mr-0"
-          square
-          title="Next page"
-          @click="page++"
-        >
-          <v-icon>mdi-chevron-right</v-icon>
-        </base-btn>
-      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-  // Utilities
+  // Utilities needed for all three images on Homepage
   import {
     mapState,
   } from 'vuex'
@@ -65,11 +43,13 @@
       FeedCard: () => import('@/components/FeedCard'),
     },
 
+
     data: () => ({
-      layout: [2, 2, 1, 2, 2, 3, 3, 3, 3, 3, 3],
+      layout: [2, 2], // Corresponds to positioning of two smaller images on Homepage
       page: 1,
     }),
-
+  
+    // Corresponds to 2 smaller images and page number on Homepage
     computed: {
       ...mapState(['articles']),
       pages () {
@@ -80,12 +60,6 @@
         const stop = this.page * 11
 
         return this.articles.slice(start, stop)
-      },
-    },
-
-    watch: {
-      page () {
-        window.scrollTo(0, 0)
       },
     },
   }

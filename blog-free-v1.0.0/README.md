@@ -88,34 +88,22 @@ index.html
         ./Subheading.vue uses <h2> with class="subheading text-uppercase font-weight-medium mb-3"
             export with name="baseSubheading"
 
-    ./core
-        ./AppBar.vue uses <v-app-bar>
-            import utilities from vuex
-            export computed() & methods() with name="CoreAppBar"
-        ./Cta.vue uses <v-btn> 
-            export computed with name="CoreCta"
-        ./Drawer.vue uses <v-navigation-drawer> 
-            import utilities from vuex
-            export computed() & methods() with name="CoreDrawer"
-        ./Footer.vue uses <v-footer> 
-            export data() with name="CoreFooter"
-        ./View.vue uses <v-content> with id="home"
-            export with name="CoreView"
-
     ./home
         ./Articles.vue uses <section> with id="feed" 
-            export components() with name="HomeAbout"
+            export components:{} with name="HomeAbout"
+                components:{} import Feed:()
         ./Banner.vue uses <base-card> 
             export with name="HomeBanner"
         ./Subscribe.vue uses <v-container> with id="subscribe" 
             export name="HomeSubscribe"
 
     ./AppNavigation.vue uses <span> with <v-navigation-drawer> & <v-toolbar>
-        export data() with name="AppNavigation"
+        export data(){} with name="AppNavigation"
+        Includes <style>
 
     ./Feed.vue uses <v-container>
         import utilities from vuex
-        export components:{} & data:() & computed:{} & watch:{} with name="Feed"
+        export components:{} & data:() & computed:{} with name="Feed"
 
     ./FeedCard.vue uses <v-col>
         export props:{} with name "FeedCard"
