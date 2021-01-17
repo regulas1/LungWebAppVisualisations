@@ -77,7 +77,7 @@ index.html
     Contains images used in the webpage
 
 @/components
-    Contains most Vue components - think of variables. Components are passed to App.vue, which is then passed main.js to display in the browser.
+    Contains only .vue files - think of variables. Components are passed to App.vue, which is then passed main.js to display in the browser.
     If we were to create a new HelloWorld project from scratch, Vue would automatically create a HelloWorld component.
 
     ./base
@@ -118,12 +118,17 @@ index.html
     import AppNavigation
     export components:{AppNavigation} with name="App"
 
+@/store
+    ./index.js contains Vuex store setup 
+    Deals with instantaneous current state resulting from user interaction
+
 @/data
     Contains articles.json used by @/store/index.js
     Used to display images on Homepage in browser
 
 ./main.js
-    import App (& all other main sources)
+    Where Vue instance is created & mounted
+    import main <App /> component from App.vue file (& all other main sources)
     Creates new Vue instance with imported sources
 
 ./vue.config.js
