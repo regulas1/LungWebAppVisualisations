@@ -18,6 +18,7 @@
     <meta property="og:description" content="Using parameters from an individual estimate the state of the lung and provide a 3D visualisation representative of the individual.">
     <meta property="og:image" content="images/lungapp.jpg">
     <!--<link rel="stylesheet" href="css/style.css">-->
+    <script type="module" src="./src/main.js"></script>
   </head>
 
   <body>
@@ -27,7 +28,10 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
 
-    <!--<model-three src="example/models/obj/LeePerrySmith.obj"></model-three>-->
+      <!--Where 3D scene will be rendered-->
+    <div id="scene-container">
+      <canvas></canvas>
+    </div>
 
     <!--Imported all js files for 3D model-->
     <script src="lib/pako_inflate.min.js"></script>
