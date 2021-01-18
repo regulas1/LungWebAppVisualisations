@@ -15,13 +15,13 @@ function createCube() {
   cube.rotation.set(-0.5, -0.1, 0.8);
 
   const radiansPerSecond = MathUtils.degToRad(30);
-
+  /*
   cube.tick = (delta) => {
     // increase the cube's rotation each frame
     cube.rotation.z += delta * radiansPerSecond;
     cube.rotation.x += delta * radiansPerSecond;
     cube.rotation.y += delta * radiansPerSecond;
-  };
+  };*/
   
   return cube;
 }

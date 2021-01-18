@@ -31,11 +31,14 @@ class World {
     scene.add(cube, light); // Add cube & light components simultaneously
 
     const resizer = new Resizer(container, camera, renderer);
-    /*
+    
     // .onResize calls World.render
+    // renders a frame on resize
     resizer.onResize = () => {
       this.render();
-    };*/
+    };
+
+    //  Fires the event "change" whenever user interaction causes the controls to move the camera
     controls.addEventListener('change', () => {
       this.render();
     });

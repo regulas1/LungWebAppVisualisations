@@ -7,9 +7,13 @@ function createControls(camera, canvas) {
   // the controls to be updated each frame
 
   // this.controls.autoRotate = true;
-  controls.enableDamping = true;
+  // controls.enableDamping = true;
 
-  controls.tick = () => controls.update();
+  // Limits maximum zoom
+  controls.minDistance = 5;
+  controls.maxDistance = 20;
+
+  // controls.tick = () => controls.update();
 
   return controls;
 }
