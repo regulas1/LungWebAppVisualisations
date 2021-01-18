@@ -10,7 +10,7 @@
     Example: npm install -g @vue/cli
 
 1(d) Install yarn and its dependencies
-    Install yarn: npm i -g --yarn
+    Install yarn: npm i -g yarn
     Install dependencies: yarn
 
 1(e) Set up a directory/folder 
