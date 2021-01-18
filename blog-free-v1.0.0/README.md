@@ -9,7 +9,11 @@
 1(c) Install Vue through their command line interface (CLI)
     Example: npm install -g @vue/cli
 
-1(d). Set up a directory/folder 
+1(d) Install yarn and its dependencies
+    Install yarn: npm i -g --yarn
+    Install dependencies: yarn
+
+1(e) Set up a directory/folder 
     Example: create a new folder in documents called "VueProjects"
 
 2. Use Command Prompt (or Terminal on Mac) to navigate to directory
@@ -42,6 +46,8 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+OR
+yarn build
 ```
 
 ### Run your tests

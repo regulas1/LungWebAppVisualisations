@@ -3,6 +3,7 @@ import { createCube } from './components/cube.js';
 import { createLights } from './components/lights.js';
 import { createScene } from './components/scene.js';
 
+import { createControls } from './systems/controls.js';
 import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/Resizer.js';
 
@@ -20,6 +21,8 @@ class World {
     renderer = createRenderer();
     container.append(renderer.domElement);
 
+    const controls = createControls(camera, renderer.domElement);
+
     // Cube does not need to be a module scope variable since it is only used in the constructor
     const cube = createCube();
 
@@ -28,10 +31,14 @@ class World {
     scene.add(cube, light); // Add cube & light components simultaneously
 
     const resizer = new Resizer(container, camera, renderer);
+    /*
     // .onResize calls World.render
     resizer.onResize = () => {
       this.render();
-    };
+    };*/
+    controls.addEventListener('change', () => {
+      this.render();
+    });
   }
 
   render() {

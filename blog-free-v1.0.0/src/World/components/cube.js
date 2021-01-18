@@ -1,5 +1,5 @@
 // Cube mesh requires geometry & material
-import { BoxBufferGeometry, Mesh, MeshStandardMaterial } from 'three';
+import { BoxBufferGeometry, MathUtils, Mesh, MeshStandardMaterial } from 'three';
 
 function createCube() {
   // create a geometry
@@ -13,6 +13,15 @@ function createCube() {
   const cube = new Mesh(geometry, material);
 
   cube.rotation.set(-0.5, -0.1, 0.8);
+
+  const radiansPerSecond = MathUtils.degToRad(30);
+
+  cube.tick = (delta) => {
+    // increase the cube's rotation each frame
+    cube.rotation.z += delta * radiansPerSecond;
+    cube.rotation.x += delta * radiansPerSecond;
+    cube.rotation.y += delta * radiansPerSecond;
+  };
   
   return cube;
 }
