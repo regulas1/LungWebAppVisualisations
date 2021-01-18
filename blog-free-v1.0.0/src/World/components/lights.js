@@ -1,13 +1,26 @@
-import { DirectionalLight } from 'three';
+// Need ambient & hemispherical lights to create realistic effect of light bouncing off surfaces
+// With only directional light, surfaces on the back of an object are completely black and remain so when rotated
+import {
+  // AmbientLight,
+  DirectionalLight,
+  HemisphereLight,
+} from 'three';
 
 function createLights() {
+  
+  const ambientLight = new HemisphereLight(
+    'white', // bright sky color
+    'darkslategrey', // dim ground color
+    5, // intensity
+  );
+
   // Create a directional light
-  const light = new DirectionalLight('white', 8);
-
+  const mainLight = new DirectionalLight('white', 5);
   // move the light right, up, and towards us
-  light.position.set(10, 10, 10);
+  mainLight.position.set(10, 10, 10);
 
-  return light;
+
+  return {ambientLight, mainLight};
 }
 
 export { createLights };

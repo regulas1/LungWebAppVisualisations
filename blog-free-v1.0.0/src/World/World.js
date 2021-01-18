@@ -26,9 +26,10 @@ class World {
     // Cube does not need to be a module scope variable since it is only used in the constructor
     const cube = createCube();
 
-    const light = createLights();
+    // Add the two lights (ambient & directional) to the scene
+    const { ambientLight, mainLight } = createLights();
 
-    scene.add(cube, light); // Add cube & light components simultaneously
+    scene.add(cube, ambientLight, mainLight); // Add cube & light components simultaneously
 
     const resizer = new Resizer(container, camera, renderer);
     
