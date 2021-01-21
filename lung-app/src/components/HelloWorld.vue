@@ -10,19 +10,25 @@
     </p>
     <div class="lungs">
     This is where the lung model goes
+    <model-obj src="example/models/obj/LeePerrySmith.obj"></model-obj>
     </div>
   </div>
 </template>
 
+<!--
 <script src="./lib/zinc-0.29.5.min.js"></script>;
 <script src="./lib/svg-2.7.1.min.js"></script>;
 <script src="./js/webgl_check.js"></script>;
+-->
 
 <script>
+import { ModelObj } from 'vue-3d-model';
+
+/*
 import createScene from './js/scene.js';
 import global from './js/globals.js';
-//import webgl from './js/webgl_check.js';
-
+import webgl from './js/webgl_check.js'; */
+/*
 loadScene({
 	vs: 'shaders/surface.vs',
 	fs: 'shaders/surface.fs',
@@ -35,12 +41,15 @@ loadScene({
 		'models/surface_5.json',
 		'models/surface_6.json',
 	],
-}, surfaceUniforms);
+}, surfaceUniforms); */
 
 export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  components: { 
+    ModelObj 
   }
 };
 </script>

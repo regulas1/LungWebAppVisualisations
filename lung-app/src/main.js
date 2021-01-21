@@ -12,7 +12,7 @@ import router from "./router";
 import store from "./store";
 
 // PROJECT: OTHER
-import "@/components/js/scene";
+//import "@/components/js/scene"; // Having this makes the browser appear blank
 
 
 
