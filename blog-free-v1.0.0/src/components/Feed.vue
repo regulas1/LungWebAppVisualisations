@@ -17,9 +17,9 @@
 
     <!--Centres "Page 1 of 1"-->
     <v-row align="center">
-      <v-col cols="3">
-
-      </v-col>
+      <!--<v-col cols="3">
+              Check if Needed
+      </v-col>-->
       <v-col
         class="text-center subheading"
         cols="6"
