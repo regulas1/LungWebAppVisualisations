@@ -5,6 +5,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import pages from '../examples/pages'
+
 /*
 import {
   Camera,
@@ -15,6 +17,7 @@ import {
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';*/
 
+/*
 import { World } from './World/World.js';
 
 function main() {
@@ -29,7 +32,7 @@ function main() {
 }
 
 main();
-
+*/
 
 Vue.config.productionTip = false
 
@@ -37,5 +40,6 @@ new Vue({
   vuetify,
   router,
   store,
+  pages,
   render: h => h(App),
 }).$mount('#app')

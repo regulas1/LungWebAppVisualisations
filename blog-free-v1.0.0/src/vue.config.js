@@ -1,6 +1,11 @@
+const pkg = require('./package.json');
+
 module.exports = {
-  devServer: {
-    disableHostCheck: true,
-  },
-  transpileDependencies: ['vuetify'],
-}
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/' + pkg.name
+    : '/',
+    devServer: {
+      disableHostCheck: true,
+    },
+    transpileDependencies: ['vuetify'],
+};
