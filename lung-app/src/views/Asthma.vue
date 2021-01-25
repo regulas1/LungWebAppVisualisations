@@ -1,55 +1,71 @@
 <template>
-    <v-container>
-        <v-layout column>
-            
-            <base-subheading>Asthma</base-subheading> <!--Main heading-->
+    <v-container class="grey lighten-5">
+        <v-row>
+            <v-col
+                cols="12"
+                md="3"
+            > 
+                <v-card
+                class="pa-2"
+                outlined
+                tile
+                >
+                    <base-subheading>Asthma</base-subheading> <!--Main heading-->
 
-            <h1 class="title my-3">Why is breathing difficult?</h1> <!--Subheading-->
+                    <h1 class="title my-3">Why is breathing difficult?</h1> <!--Subheading-->
+                    
+                    <p>
+                    Asthma causes airways to become narrower which makes it harder to get air into the lungs. This 
+                    happens because the muscle cells that wrap around the airways becomes tighter. Sometimes extra 
+                    mucus is made and this can block airways. The narrowing and/or blockage of airways reduces the 
+                    amount of air flow that can reach the gas exchange surface and can make us feel breathless.
+                    </p>
+                    
+                    <p>
+                    Extra paragraph
+                    </p>
+                </v-card>
+            </v-col>
 
-            <p>
-                Asthma causes airways to become narrower which makes it harder to get air into the lungs. This 
-                happens because the muscle cells that wrap around the airways becomes tighter. Sometimes extra 
-                mucus is made and this can block airways. The narrowing and/or blockage of airways reduces the 
-                amount of air flow that can reach the gas exchange surface and can make us feel breathless. 
-            </p>
-                
-            <p>
-                Select an option from MILD, MODERATE, and SEVERE asthma to see how flow of air is altered.
-            </p>
+            <v-col
+                cols="6"
+            > 
+                <v-card
+                class="pa-2"
+                outlined
+                tile
+                >
+                Second column: lung model goes here
+                </v-card>
+            </v-col>
 
-            <v-flex mt-4>
-                <!--Change capitalised text-->
-                <p>
-                    <v-btn color="primary" to="/menu"> Click here </v-btn> to learn more about MEASURING LUNG FUNCTION.
-                </p>
-            </v-flex>
-
-            <p>
-                When the airways constrict during an asthma attack, this causes the air delivery to be ‘patchy’. 
-                Some patches of lung get a small amount of air, and others get more air than usual.
-            </p>
-
-            <ul>
-                <li>Gas exchange is worse</li>
-                <li>The breathing muscles have to work harder to breathe</li>
-                <li>Much more energy is required just to breathe, which is distressing for the patient</li>
-            </ul>
-            
-            <p></p>
-            
-            <p>
-                In this model <font color="green">Green</font> is good, <font color="red">Red</font> is too high, and <font color="blue">Blue</font> is too low.
-            </p>
-		    
-
-        </v-layout>
+            <v-col
+                cols="6"
+                md="3"
+            > 
+                <v-card
+                class="pa-2"
+                outlined
+                tile
+                >
+                    <h1 class="title my-3">Key Vocabulary</h1> <!--Subheading-->
+                    <p>
+                        <ul>
+                            <li>Airways: "tubes" that allow oxygen to flow to the lungs.</li>
+                            <li>Gas Exchange: inhaled oxygen is transferred to the blood from the lungs. 
+                                Carbon dioxide is transferred out of the blood (and then exhaled).</li>
+                        </ul>
+                    </p>
+                </v-card>
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 
-<script>
-export default {
-    name: 'Asthma', /* Change name of component */ 
-};
-</script>
 
-<style scoped></style>
+<script>
+    export default {
+        name: 'Breathing',
+        //components: 'BaseLayout', // Undefined component (since BaseLayout is a global plugin)
+    }
+</script>

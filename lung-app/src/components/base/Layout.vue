@@ -10,7 +10,7 @@
                 outlined
                 tile
                 >
-                First column
+                {{ col1-text }}
                 </v-card>
             </v-col>
 
@@ -44,6 +44,6 @@
 
 <script>
     export default {
-        name: 'BaseLayout', //Camel Case
+        name: 'BaseLayout', //Camel Case. Use kebab case (base-layout) in HTML
     }
 </script>
