@@ -1,10 +1,10 @@
 <!--Corresponds to large image on Homepage & "Page 1 of "-->
 
 <template>
-  <section id="feed">
-    <feed>
+  <section id="layout">
+    <layout>
       <slot />
-    </feed>
+    </layout>
   </section>
 </template>
 
@@ -13,7 +13,7 @@
     name: 'HomeAbout',
 
     components: {
-      Feed: () => import('@/components/Feed'),
+      Layout: () => import('@/components/Layout'),
     },
   }
 </script>

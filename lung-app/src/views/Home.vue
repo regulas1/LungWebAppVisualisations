@@ -1,10 +1,10 @@
 <template>
   <div id="home">
     <!--Main images on Homepage-->
-    <articles>
+    <!--<articles>
       <banner />
-    </articles>
-
+    </articles>-->
+    <banner />
     <subscribe />
 
    
@@ -16,7 +16,7 @@
     name: 'Home',
 
     components: {
-      Articles: () => import('@/components/home/Articles'), // Corresponds to dimensions of main image on Homepage
+      //Articles: () => import('@/components/home/Articles'), // Corresponds to dimensions of main image on Homepage
       Banner: () => import('@/components/home/Banner'),
       Subscribe: () => import('@/components/home/Subscribe'),
     },
