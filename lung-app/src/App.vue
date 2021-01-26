@@ -17,7 +17,7 @@
     name: 'App',
 
     components: {
-      AppNavigation,
+      AppNavigation,      
       //app,
     },
   }

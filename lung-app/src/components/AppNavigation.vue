@@ -89,7 +89,7 @@
 
 <script>
 export default {
-    name: 'AppNavigation', /* Change component name */
+    name: 'AppNavigation',
     data() {
         return {
             appTitle: 'My Lungs', /* Text in left-most button */

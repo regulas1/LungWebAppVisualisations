@@ -33,20 +33,20 @@
     OR
              git checkout -b vue-3
 
+6. Installations required to run in local browser:
+    (a) Install Vue through its command line interface (CLI)
+        Example: npm install -g @vue/cli
+
+    (b) Install Vuetify
+        Example: vue add vuetify
+
 ```
 
 ### Compile
 ```
-To run the web app in your local browser:
-
- (a) Install Vue through their command line interface (CLI)
-     Example: npm install -g @vue/cli
-
- (b) Install Vuetify
-     Example: vue add vuetify
-
- (c) Run yarn
-     Example: yarn serve
+yarn serve
+OR
+npm run serve
 ```
 
 ### Compiles and minifies for production

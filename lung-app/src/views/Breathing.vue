@@ -68,6 +68,7 @@
                     outlined
                     tile
                 >Hello</v-card>
+                <nav-btn />
             </v-col>
         </v-row>
         <subscribe />
@@ -76,10 +77,13 @@
 
 
 <script>
+    //import NavBtn from '@/components/base/NavBtn'
+
     export default {
         name: 'Breathing',
         components: {
             Subscribe: () => import('@/components/home/Subscribe'),
+            NavBtn: () => import('@/components/base/NavBtn'),
             //BaseLayout // Undefined component (since BaseLayout is a global plugin)
         }
     }
