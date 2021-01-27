@@ -62,10 +62,16 @@
     </v-container>
 </template>
 
+ <script src="jquery-3.5.1.min.js"></script>
 
 <script>
+
+   
     export default {
         name: 'Breathing',
         //components: 'BaseLayout', // Undefined component (since BaseLayout is a global plugin)
     }
+
+    $(selector).getJSON("./smoker_and_asthmatic_flow_1.json",data,success(data,status,xhr))
+
 </script>

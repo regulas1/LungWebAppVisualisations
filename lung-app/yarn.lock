@@ -8337,6 +8337,13 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-radial-menu@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vue-radial-menu/-/vue-radial-menu-1.1.1.tgz#a955c856284d726077e83d490e4446acba3fd765"
+  integrity sha512-SySXDESYZPxOe4mxOWp77qUOJUW9o2n7co1Po9NSiEkfoZsPVtVK7iH/I4fBnGAN+ltGDcUYqiQ0Q7A8qggYQA==
+  dependencies:
+    vue "^2.5.17"
+
 vue-router@^3.2.0:
   version "3.4.9"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.4.9.tgz#c016f42030ae2932f14e4748b39a1d9a0e250e66"
@@ -8363,7 +8370,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.11:
+vue@^2.5.17, vue@^2.6.11:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
