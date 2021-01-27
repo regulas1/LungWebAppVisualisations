@@ -23,6 +23,7 @@
                 tile
                 >
                 Second column: lung model goes here
+                <load-scene />
                 </v-card>
             </v-col>
 
@@ -43,7 +44,12 @@
 </template>
 
 <script>
+import LoadScene from 'C:/Users/alat076/Documents/SummerResearchProject/Projects/VueProj/LungWebAppVisualisations/lung-app/src/components/LungWebAppVisualisations/js/test.js'
+
     export default {
         name: 'BaseLayout', //Camel Case. Use kebab case (base-layout) in HTML
+        components: {
+            LoadScene,
+        }
     }
 </script>
