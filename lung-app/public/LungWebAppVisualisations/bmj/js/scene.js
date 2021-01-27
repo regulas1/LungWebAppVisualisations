@@ -257,3 +257,7 @@ function toBufferGeometry(geometry) {
 	}
 	return bufferGeometry;
 }
+
+export {
+	loadScene,
+}

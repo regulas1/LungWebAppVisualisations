@@ -34,6 +34,7 @@
                 outlined
                 tile
                 >
+                <test />
                 Second column: lung model goes here
                 </v-card>
             </v-col>
@@ -77,14 +78,14 @@
 
 
 <script>
-    //import NavBtn from '@/components/base/NavBtn'
+    //import test from '@/components/test.js' 
 
     export default {
         name: 'Breathing',
         components: {
             Subscribe: () => import('@/components/home/Subscribe'),
             NavBtn: () => import('@/components/base/NavBtn'),
-            //BaseLayout // Undefined component (since BaseLayout is a global plugin)
+            test // Undefined component (since BaseLayout is a global plugin)
         }
     }
 </script>

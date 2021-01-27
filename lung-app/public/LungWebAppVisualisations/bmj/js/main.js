@@ -122,3 +122,8 @@ document.getElementById('renderer').addEventListener('mouseup', function(e){
         links[i].style.pointerEvents = 'auto';
     }
 });
+
+export { 
+	addPageInit,
+	initPage,
+ } //Exported the functions that "dulled" when adding export

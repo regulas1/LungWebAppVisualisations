@@ -55,3 +55,13 @@ document.getElementById('information').addEventListener('click', function(e) {
 	}
 });
 
+export { 
+  PLAY_SPEED,
+  GRAPH_WIDTH,
+  GRAPH_HEIGHT,
+  GRAPH_PADDING,
+  GRAPH_TEXT_HEIGHT,
+  GRAPH_SMOOTHING,
+  MARKER_RADIUS,
+  resetUniforms,
+} //Added anything that "dulled" when adding export
