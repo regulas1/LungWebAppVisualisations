@@ -11,13 +11,15 @@
 
 <script>
   import AppNavigation from '@/components/AppNavigation';
+  import LoadScene from '@/systems/LoadScene';
   //import app from '../examples/App'
   
   export default {
     name: 'App',
 
     components: {
-      AppNavigation,      
+      AppNavigation,   
+      LoadScene,   
       //app,
     },
   }
