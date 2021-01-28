@@ -1,8 +1,8 @@
 <!-- *************************************************************************
      *************************************************************************
-	TEMPLATE
+	   TEMPLATE
     ************************************************************************
-	************************************************************************ -->  
+	  ************************************************************************ -->  
 <template>
     <v-container>
         <v-col
@@ -21,7 +21,8 @@
   
                   <v-card-subtitle v-text="description"></v-card-subtitle>
   
-                  <v-card-actions>
+                  <v-card-actions
+                    v-if="button != 'none'"> <!--If the text for the button is "none", no button will be displayed-->
                     <v-btn
                       v-if="description === 'Click to play the video'"
                       class="ml-2 mt-3"
@@ -40,8 +41,8 @@
                       outlined
                       rounded
                       small
-                    >
-                      LEARN MORE
+                      v-text="button"
+                    > <!--The text for the button is determined by the text within button = " " in the component using this custom directive-->
                     </v-btn>
                   </v-card-actions>
                 </div>
@@ -51,6 +52,12 @@
     </v-container>
 </template>
 
+<!-- *************************************************************************
+     *************************************************************************
+	   SCRIPT
+    ************************************************************************
+	  ************************************************************************ --> 
+
 <script>
 export default {
     name: "BaseOptions",
@@ -58,22 +65,7 @@ export default {
         'color',
         'title',
         'description',
+        'button',
     ]
-    /*data: () => ({
-            items: [
-                {
-                color: '#385F73',
-                //src: './path/to/url',
-                title: 'The Lungs',
-                description: 'How breathing works',
-                },
-                {
-                color: '#1F7087',
-                //src: './path/to/url',
-                title: 'Gas Exchange',
-                description: 'Why do we need it?',
-                },
-            ],
-        }),*/
 }
 </script>

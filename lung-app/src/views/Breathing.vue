@@ -8,67 +8,42 @@
 
 <div>
     <v-container class="grey lighten-5">
-        <v-row class="yellow lighten-3 fill-height">
+        <v-row class="grey lighten-3 fill-height">
             <v-col
                 cols="12"
                 md="3"
             > 
-
-            <base-options 
-                color = "#385F73"
-                title = "My Title"
-                description = "My description"
-            >
-            </base-options>
-
-                        
             <!-- *************************************************************************
                                         TOP LEFT CONTAINER
                  ************************************************************************ -->
-                 <!--<v-row> 
-                    <v-card
-                    class="pa-2"
-                    outlined
-                    tile
-                    >
-                        <base-subheading>The Lungs</base-subheading>--> <!--Main heading-->
-
-                        <!--<h1 class="title my-3">Normal Breathing</h1>--> <!--Subheading-->
-                        
-                        <!--<p>
+                <v-row> 
+                    <base-options 
+                    color = "#385F73"
+                    title = "The Lungs"
+                    description = "NORMAL BREATHING:
+                    
                         When the healthy lung breathes in the upright position, the lung tissue that is closest to the 
                         diaphragm expands the most. The tissue at the top of 
-                        the lung expands the least. 
-                        </p>
-                        <p>
+                        the lung expands the least.
+                        
                         We usually breathe in just as much air as we need to supply oxygen for 
-                        energy for the activities that we are doing.
-                        </p>
-                    </v-card>
-                </v-row>-->
+                        energy for the activities that we are doing."
+                    button = "Learn more"
+                    >
+                    </base-options>
+                </v-row>
+
                 <!-- *************************************************************************
                                             BOTTOM LEFT CONTAINER
                  ************************************************************************ -->
                  <v-row> 
-                    <v-card
-                    class="pa-2"
-                    outlined
-                    tile
+                    <base-options 
+                    color = "#1F7087"
+                    title = "Gas Exchange"
+                    description = "Why do we need it?"
+                    button = "Learn more"
                     >
-                        <base-subheading>The Lungs</base-subheading> <!--Main heading-->
-
-                        <h1 class="title my-3">Normal Breathing</h1> <!--Subheading-->
-                        
-                        <p>
-                        When the healthy lung breathes in the upright position, the lung tissue that is closest to the 
-                        diaphragm expands the most. The tissue at the top of 
-                        the lung expands the least. 
-                        </p>
-                        <p>
-                        We usually breathe in just as much air as we need to supply oxygen for 
-                        energy for the activities that we are doing.
-                        </p>
-                    </v-card>
+                    </base-options>
                 </v-row>
             </v-col>
 
@@ -87,25 +62,17 @@
                 cols="6"
                 md="3"
             > 
-                <v-card
-                class="pa-2"
-                outlined
-                tile
-                >
-                    <h1 class="title my-3">Key Vocabulary</h1> <!--Subheading-->
-                    <p>
-                        <ul>
-                            <li>Diaphragm: the muscle that sits beneath the lungs.</li>
-                            <li>Expands: gets bigger by filling with air (similar to a balloon).</li>
-                        </ul>
-                    </p>
-                </v-card>
+                <base-options 
+                    color = "grey"
+                    title = "Key Vocabulary"
+                    description = "Diaphragm: the muscle that sits beneath the lungs.
+                                   Expands: gets bigger by filling with air (similar to a balloon)."
+                    button = "none" 
+                    > <!--Since button option text is "none", no button will be displayed-->
+                </base-options>
             </v-col>
         </v-row>
-
-        <!--<v-row>-->
-                <nav-btn />
-        <!--</v-row>-->
+        <nav-btn />
         <subscribe />
     </v-container>
 </div>
