@@ -30,6 +30,9 @@
                         energy for the activities that we are doing."
                     button = "Learn more"
                     >
+                    <template v-slot:header>
+                        My title
+                    </template>
                     </base-options>
                 </v-row>
 
