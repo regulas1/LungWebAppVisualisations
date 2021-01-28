@@ -17,6 +17,8 @@
                 filling entirely with air. They cannot expand to their optimal volume.
             </p>
 
+            <base-test-card />
+
             <v-flex mt-4>
                 <!--Change capitalised text-->
                 <p>
@@ -28,8 +30,13 @@
 </template>
 
 <script>
+import BaseTestCard from '@/components/base/TestCard'
+
 export default {
     name: 'Disease', /* Change name of component */ 
+    components: {
+        BaseTestCard,
+    }
 };
 </script>
 
