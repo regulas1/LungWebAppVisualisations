@@ -1,4 +1,4 @@
-export { 
+/*export { 
   PLAY_SPEED,
   GRAPH_WIDTH,
   GRAPH_HEIGHT,
@@ -7,7 +7,7 @@ export {
   GRAPH_SMOOTHING,
   MARKER_RADIUS,
   resetUniforms,
-} from './globals.js'
+} from './globals.js'*/
 export { 
     addPageInit,
     initPage,
