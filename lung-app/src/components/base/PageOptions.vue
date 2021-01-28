@@ -6,28 +6,27 @@
 <template>
     <v-container>
         <v-col
-            v-for="(item, i) in items"
-            :key="i"
             cols="12"
             md="3"
         >
             <v-card
-              :color="item.color"
+              :color="color"
               dark
             >
               <div class="d-flex flex-no-wrap justify-space-between">
                 <div>
                   <v-card-title
                     class="headline"
+                    v-text="title"
                   >
                     <slot name="header"></slot>
                   </v-card-title>
   
-                  <v-card-subtitle v-text="item.description"></v-card-subtitle>
+                  <v-card-subtitle v-text="description"></v-card-subtitle>
   
                   <v-card-actions>
                     <v-btn
-                      v-if="item.description === 'Click to play the video'"
+                      v-if="description === 'Click to play the video'"
                       class="ml-2 mt-3"
                       fab
                       icon
@@ -58,12 +57,12 @@
 <script>
 export default {
     name: "BaseOptions",
-    /*props: [
+    props: [
         'color',
         'title',
         'description',
-    ]*/
-    data: () => ({
+    ]
+    /*data: () => ({
             items: [
                 {
                 color: '#385F73',
@@ -78,6 +77,6 @@ export default {
                 description: 'Why do we need it?',
                 },
             ],
-        }),
+        }),*/
 }
 </script>
