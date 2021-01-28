@@ -6,8 +6,6 @@
 <template>
     <v-container>
         <v-col
-            cols="12"
-            md="3"
         >
             <v-card
               :color="color"

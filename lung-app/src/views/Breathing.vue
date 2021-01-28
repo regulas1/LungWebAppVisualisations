@@ -7,19 +7,19 @@
 <template>
 
 <div>
-
-                        <base-options 
-                            color = "#385F73"
-                            title = "My Title"
-                            description = "My description"
-                            >
-                        </base-options>
     <v-container class="grey lighten-5">
         <v-row class="yellow lighten-3 fill-height">
             <v-col
                 cols="12"
                 md="3"
             > 
+
+            <base-options 
+                color = "#385F73"
+                title = "My Title"
+                description = "My description"
+            >
+            </base-options>
 
                         
             <!-- *************************************************************************
@@ -122,22 +122,6 @@
 
     export default {
         name: 'Breathing',
-        data: () => ({
-            items: [
-                {
-                color: '#385F73',
-                //src: './path/to/url',
-                title: 'The Lungs',
-                description: 'How breathing works',
-                },
-                {
-                color: '#1F7087',
-                //src: './path/to/url',
-                title: 'Gas Exchange',
-                description: 'Why do we need it?',
-                },
-            ],
-        }),
         components: {
             Subscribe: () => import('@/components/home/Subscribe'),
             NavBtn: () => import('@/components/base/NavBtn'),
