@@ -11,6 +11,34 @@
                 cols="12"
                 md="3"
             > 
+            <v-row>
+            <base-test-card>
+                <template v-slot:header>
+                    The Lungs
+                </template>
+
+                <template v-slot:description>
+                    <p>Have you ever wondered why you seem to feel breathless?</p>
+                    <p>Click "Learn More" to display information about how the lungs actually work.</p>
+                </template>
+
+                <template v-slot:hiddenHeader>
+                    Normal Breathing
+                </template>
+
+                <template v-slot:hiddenDescription>
+                    <p>
+                        When the healthy lung breathes in the upright position, the lung tissue that is closest to the 
+                        diaphragm expands the most. The tissue at the top of 
+                        the lung expands the least.
+                    </p>
+                    <p>
+                        We usually breathe in just as much air as we need to supply oxygen for 
+                        energy for the activities that we are doing.
+                    </p>
+                </template>
+            </base-test-card>
+            </v-row>
             <!-- ------------------------------------------------------------------------
                                         TOP LEFT CONTAINER
                 ------------------------------------------------------------------------- -->
@@ -121,13 +149,15 @@
 	************************************************************************ -->  
 <script>
     //import NavBtn from '@/components/base/NavBtn'
-    import BaseOptions from '@/components/base/PageOptions'
+import BaseOptions from '@/components/base/PageOptions'
+import BaseTestCard from '@/components/base/TestCard'
 
     export default {
         name: 'Breathing',
         components: {
             NavBtn: () => import('@/components/base/NavBtn'),
-            BaseOptions
+            BaseOptions,
+            BaseTestCard,
             //BaseLayout // Undefined component (since BaseLayout is a global plugin)
         }
     }

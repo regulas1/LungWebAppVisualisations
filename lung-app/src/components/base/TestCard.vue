@@ -5,16 +5,14 @@
     <v-container>
         <v-col
         >
-            <v-card class="mx-auto" max-width="344">
+            <v-card class="mx-auto" max-width="500">
             <v-card-text>
-                <div>Word of the Day</div>
                 <p class="display-1 text--primary">
-                el·ee·mos·y·nar·y
+                    <slot name="header"></slot>
                 </p>
-                <p>adjective</p>
+                <p><!--subtitle--></p>
                 <div class="text--primary">
-                relating to or dependent on charity; charitable.<br>
-                "an eleemosynary educational institution."
+                    <slot name="description"></slot>
                 </div>
             </v-card-text>
             <v-card-actions>
@@ -27,9 +25,10 @@
                 <v-card v-if="reveal" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%;">
                 <v-card-text class="pb-0">
                     <p class="display-1 text--primary">
-                    Origin
+                        <slot name="hiddenHeader">Origin</slot>
                     </p>
-                    <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
+                    <p>
+                        <slot name="hiddenDescription"></slot> </p>
                 </v-card-text>
                 <v-card-actions class="pt-0">
                     <v-btn text color="teal accent-4" @click="reveal = false">
