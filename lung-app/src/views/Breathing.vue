@@ -1,3 +1,9 @@
+<!-- *************************************************************************
+     *************************************************************************
+	TEMPLATE
+    ************************************************************************
+	************************************************************************ -->  
+
 <template>
     <v-container class="grey lighten-5">
         <v-row>
@@ -5,39 +11,67 @@
                 cols="12"
                 md="3"
             > 
-                <v-card
-                class="pa-2"
-                outlined
-                tile
-                >
-                    <base-subheading>The Lungs</base-subheading> <!--Main heading-->
+            <!-- *************************************************************************
+                                        TOP LEFT CONTAINER
+                 ************************************************************************ -->
+                 <v-row> 
+                    <v-card
+                    class="pa-2"
+                    outlined
+                    tile
+                    >
+                        <base-subheading>The Lungs</base-subheading> <!--Main heading-->
 
-                    <h1 class="title my-3">Normal Breathing</h1> <!--Subheading-->
-                    
-                    <p>
-                    When the healthy lung breathes in the upright position, the lung tissue that is closest to the 
-                    diaphragm expands the most. The tissue at the top of 
-                    the lung expands the least. 
-                    </p>
-                    <p>
-                    We usually breathe in just as much air as we need to supply oxygen for 
-                    energy for the activities that we are doing.
-                    </p>
-                </v-card>
+                        <h1 class="title my-3">Normal Breathing</h1> <!--Subheading-->
+                        
+                        <p>
+                        When the healthy lung breathes in the upright position, the lung tissue that is closest to the 
+                        diaphragm expands the most. The tissue at the top of 
+                        the lung expands the least. 
+                        </p>
+                        <p>
+                        We usually breathe in just as much air as we need to supply oxygen for 
+                        energy for the activities that we are doing.
+                        </p>
+                    </v-card>
+                </v-row>
+                <!-- *************************************************************************
+                                            BOTTOM LEFT CONTAINER
+                 ************************************************************************ -->
+                 <v-row> 
+                    <v-card
+                    class="pa-2"
+                    outlined
+                    tile
+                    >
+                        <base-subheading>The Lungs</base-subheading> <!--Main heading-->
+
+                        <h1 class="title my-3">Normal Breathing</h1> <!--Subheading-->
+                        
+                        <p>
+                        When the healthy lung breathes in the upright position, the lung tissue that is closest to the 
+                        diaphragm expands the most. The tissue at the top of 
+                        the lung expands the least. 
+                        </p>
+                        <p>
+                        We usually breathe in just as much air as we need to supply oxygen for 
+                        energy for the activities that we are doing.
+                        </p>
+                    </v-card>
+                </v-row>
             </v-col>
 
+        <!-- *************************************************************************
+                                     CENTRE CONTAINER
+             ************************************************************************ -->
             <v-col
                 cols="6"
-            > 
-                <v-card
-                class="pa-2"
-                outlined
-                tile
-                >
-                Second column: lung model goes here
-                </v-card>
+            >Second column: lung model goes here
             </v-col>
 
+        <!-- *************************************************************************
+                                    TOP LEFT CONTAINER
+             ************************************************************************ -->
             <v-col
                 cols="6"
                 md="3"
@@ -58,24 +92,18 @@
             </v-col>
         </v-row>
 
-        <v-row>
-            <v-col
-                v-for="n in 3"
-                :key="n"
-            >
-                <v-card
-                    class="pa-2"
-                    outlined
-                    tile
-                >Hello</v-card>
+        <!--<v-row>-->
                 <nav-btn />
-            </v-col>
-        </v-row>
+        <!--</v-row>-->
         <subscribe />
     </v-container>
 </template>
 
-
+<!-- *************************************************************************
+     *************************************************************************
+	SCRIPT
+    ************************************************************************
+	************************************************************************ -->  
 <script>
     //import NavBtn from '@/components/base/NavBtn'
 
@@ -88,3 +116,9 @@
         }
     }
 </script>
+
+<!-- *************************************************************************
+     *************************************************************************
+	STYLE
+    ************************************************************************
+	************************************************************************ -->  
