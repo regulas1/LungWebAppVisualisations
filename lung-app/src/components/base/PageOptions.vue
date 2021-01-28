@@ -19,8 +19,9 @@
                 <div>
                   <v-card-title
                     class="headline"
-                    v-text="item.title"
-                  ></v-card-title>
+                  >
+                    <slot name="header"></slot>
+                  </v-card-title>
   
                   <v-card-subtitle v-text="item.description"></v-card-subtitle>
   
@@ -57,10 +58,26 @@
 <script>
 export default {
     name: "BaseOptions",
-    props: [
+    /*props: [
         'color',
         'title',
         'description',
-    ]
+    ]*/
+    data: () => ({
+            items: [
+                {
+                color: '#385F73',
+                //src: './path/to/url',
+                title: 'The Lungs',
+                description: 'How breathing works',
+                },
+                {
+                color: '#1F7087',
+                //src: './path/to/url',
+                title: 'Gas Exchange',
+                description: 'Why do we need it?',
+                },
+            ],
+        }),
 }
 </script>
