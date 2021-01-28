@@ -112,7 +112,6 @@
             </v-col>
         </v-row>
         <nav-btn />
-        <subscribe />
     </v-container>
 </div>
 </template>
@@ -127,7 +126,6 @@
     export default {
         name: 'Breathing',
         components: {
-            Subscribe: () => import('@/components/home/Subscribe'),
             NavBtn: () => import('@/components/base/NavBtn'),
             BaseOptions
             //BaseLayout // Undefined component (since BaseLayout is a global plugin)

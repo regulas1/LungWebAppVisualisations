@@ -51,9 +51,26 @@
                       rounded
                       small
                       v-text="button"
+                      @click="reveal = true"
                     > <!--The text for the button is determined by the text within button = " " in the component using this custom directive-->
                     </v-btn>
                   </v-card-actions>
+
+                  <v-expand-transition>
+                    <v-card v-if="reveal" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%;">
+                      <v-card-text class="pb-0">
+                        <p class="display-1 text--primary">
+                          Origin
+                        </p>
+                        <p>late 16th century</p>
+                      </v-card-text>
+                      <v-card-actions class="pt-0">
+                        <v-btn text color="teal accent-4" @click="reveal = false">
+                          Close
+                        </v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </v-expand-transition>
                 </div>
               </div>
             </v-card>
@@ -71,6 +88,23 @@ export default {
     props: [
         'color',
         'button',
-    ]
+    ],
+    data: function() {
+      return {
+        reveal: false,
+      }
+    },
 }
 </script>
+
+<!-- *************************************************************************
+	   STYLE
+	  ************************************************************************ --> 
+<style>
+.v-card--reveal {
+bottom: 0;
+opacity: 1 !important;
+position: absolute;
+width: 100%;
+}
+</style>
