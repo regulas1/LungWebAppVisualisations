@@ -13,9 +13,6 @@
                             title = "My Title"
                             description = "My description"
                             >
-                            <template v-slot:header>
-                                Header goes here
-                            </template>
                         </base-options>
     <v-container class="grey lighten-5">
         <v-row class="yellow lighten-3 fill-height">

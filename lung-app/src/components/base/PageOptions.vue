@@ -19,7 +19,6 @@
                     class="headline"
                     v-text="title"
                   >
-                    <slot name="header"></slot>
                   </v-card-title>
   
                   <v-card-subtitle v-text="description"></v-card-subtitle>
