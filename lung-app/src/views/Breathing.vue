@@ -168,13 +168,13 @@
                 //src: './path/to/url',
                 title: 'The Lungs',
                 description: 'How breathing works',
-            },
-            {
+                },
+                {
                 color: '#1F7087',
                 //src: './path/to/url',
                 title: 'Gas Exchange',
                 description: 'Why do we need it?',
-            },
+                },
             ],
         }),
         components: {
