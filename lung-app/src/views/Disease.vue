@@ -62,9 +62,9 @@
                                 <p>
                                     Some common causes of restrictive lung diseases include:
                                     <ul>
-                                        <li>Interstitial lung disease</li> <!--Key Vocab: interstitial (stiff lung)-->
-                                        <li>Sarcoidosis</li> <!--Key vocab: autoimmune disease which attacks body-->
-                                        <li>Scoliosis</li> <!--Key vocab: deformation of spine-->
+                                        <li>Interstitial lung disease</li>  
+                                        <li>Sarcoidosis</li>    
+                                        <li>Scoliosis</li>  
                                     </ul>
                                 </p>
                             </template>
@@ -96,11 +96,30 @@
                         </template>
 
                         <template v-slot:description>
-                            <ul>
-                                <li>Interstitial: charactersied by a stiff lung</li>
-                                <li>Obstructive: characterised by a soft/squishy lung</li>
-                                <li>Sarcoidosis: an autoimmune disease where the immune system attacks its own body</li>
-                            </ul>
+                            <p>
+                                <br>
+                                <strong>Interstitial</strong>
+                                <br>
+                                Charactersied by a stiff lung.
+                            </p>
+                            <p>
+                                <br>
+                                <strong>Obstructive</strong>
+                                <br>
+                                Characterised by a soft/squishy lung.
+                            </p>
+                            <p>
+                                <br>
+                                <strong>Sarcoidosis</strong>
+                                <br>
+                                An autoimmune disease where the immune system attacks its own body.
+                            </p>
+                            <p>
+                                <br>
+                                <strong>Scoliosis</strong>
+                                <br>
+                                Deformation of the spine.
+                            </p>
                         </template>
                     </base-options>
                 </v-col>
