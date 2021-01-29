@@ -96,7 +96,7 @@
                                 <br>
                                 <strong>Alveoli</strong>
                                 <br>
-                                Site/unit of gas exchange at the end of airways deep within the lungs
+                                Site/unit of gas exchange at the end of airways deep within the lungs.
                             </p>
                             <p>
                                 <br>
