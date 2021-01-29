@@ -152,7 +152,7 @@
                                     <li>Inhaled oxygen is transferred to the blood from the lungs.</li>
                                     <li>Carbon dioxide is transferred out of the blood (and then exhaled).</li>
                                 </ul>
-                                <br> Check out the 'Breathing' page for more details.
+                                <br> Check out the 'Breathing' page to learn more about gas exchange.
                             </p>
                         </template>
                     </base-options>

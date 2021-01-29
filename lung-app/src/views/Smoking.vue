@@ -1,36 +1,134 @@
+<!-- *************************************************************************
+	TEMPLATE
+	************************************************************************ -->
 <template>
     <v-container>
-        <v-layout column>
-            <base-subheading>Smoking</base-subheading> <!--Main heading-->
+        <base-subheading>Smoking</base-subheading> <!--Main heading-->
+        <v-container class="grey lighten-5">
+            <v-row class="grey lighten-3 fill-height">
+                <v-col
+                    cols="12"
+                    md="3"
+                > 
+                <!-- ------------------------------------------------------------------------
+                                                COLUMN 1; CONTAINER 1
+                    ------------------------------------------------------------------------- -->
+                    <v-row>
+                        <base-reveal>
+                            <template v-slot:header>
+                                Effects of Smoking
+                            </template>
 
-            <h1 class="title my-3">How does smoking affect my lungs?</h1> <!--Subheading-->
+                            <template v-slot:subheader>
+                                How does smoking affect my lungs?
+                            </template>
 
-            <p>
-                Smoking affects the body in many ways. Smokers are at higher risk of lung cancer. Smoking damages the 
-                heart muscle and the blood vessels of the heart. Smoking even damages your eyes.
-            </p>
-		    
-            <p>
-                The worst effect of smoking is that it damages the airways and gas exchange tissue of the lungs, 
-                making it harder to get enough oxygen. Airways become irritated so they secrete too much mucus which 
-                leads to coughing. The lung tissue breaks down and gets ‘floppy’. Smokers become breathless, and are 
-                at high risk of heart failure.
-            </p>
+                            <template v-slot:description>
+                                <p>
+                                   The worst effect of smoking is that it damages the airways and gas exchange tissue of your lungs. This makes it harder to get enough oxygen.
+                                </p>
+                                <p>
+                                    Some consequences of lung damage:
+                                    <ul>
+                                        <li>Airways become irritated, so they secrete too much mucus. This then leads to coughing.</li>  
+                                        <li>The lung tissue breaks down and becomes ‘floppy’.</li>    
+                                        <li>Smokers become breathless, and are at high risk of heart failure.</li>  
+                                    </ul>
+                                </p>
+                            </template>
+                        </base-reveal>
+                    </v-row>
 
-            <v-flex mt-4>
-                <!--Change capitalised text-->
-                <p>
-                    <v-btn color="primary" to="/menu"> Click here </v-btn> to learn more about YOUR SMOKING LUNG.
-                </p>
-            </v-flex>
-        </v-layout>
+                <!-- ------------------------------------------------------------------------
+                                            COLUMN 1; CONTAINER 2
+                    ------------------------------------------------------------------------- -->
+                    <v-row>
+                        <base-reveal>
+                            <template v-slot:header>
+                                Effects of Quitting
+                            </template>
+
+                            <template v-slot:subheader>
+                                How will quitting affect my condition?
+                            </template>
+
+                            <template v-slot:description>
+                                <p>
+                                    Smoking affects your body in many ways. Smokers are at higher risk of lung cancer. Smoking damages your 
+                                    heart muscle and the blood vessels of your heart. Smoking even damages your eyes.
+                                </p>
+                                <p>
+                                   For patients of <strong>Chronic Obstructive Pulmonary Disease</strong>, smoking is especially harmful.
+                                   Smoking cessation is the single most effective treatment
+                                   available.
+                                </p>
+                            </template>
+                        </base-reveal>
+                    </v-row>
+                </v-col>
+
+            <!-- ------------------------------------------------------------------------
+                                            COLUMN 2; CONTAINER 1
+                ------------------------------------------------------------------------- -->
+                 <v-col
+                    cols="6"
+                >Second column: lung model goes here
+                </v-col>
+
+            <!-- ------------------------------------------------------------------------
+                                            COLUMN 3; CONTAINER 1
+                ------------------------------------------------------------------------- -->
+                <v-col
+                    cols="6"
+                    md="3"
+                > 
+                    <base-options 
+                        color = "grey"
+                        button = "none" 
+                    > <!--Since button option text is "none", no button will be displayed-->
+                        <template v-slot:header>
+                            Key Vocabulary
+                        </template>
+
+                        <template v-slot:description>
+                            <p>
+                                <br>
+                                <strong>Cessation</strong>
+                                <br>
+                                To cease or stop.
+                            </p>
+                            <p>
+                                <br>
+                                <strong>Chronic Obstructive Pulmonary Disease</strong>
+                                <br>
+                                An obstructive lung disease characterised by breathlessness.
+                                <br> Check out the 'Disease' page to learn more about obstructive lung diseases.
+                            </p>
+                        </template>
+                    </base-options>
+                </v-col>
+            </v-row>
+        </v-container>
     </v-container>
 </template>
 
+<!-- *************************************************************************
+	SCRIPT
+	************************************************************************ -->
 <script>
+import BaseOptions from '@/components/base/PageOptions'
+import BaseReveal from '@/components/base/RevealCard'
+
 export default {
-    name: 'Smoking', /* Change name of component */ 
+    name: 'Disease', /* Change name of component */ 
+    components: {
+        BaseOptions,
+        BaseReveal,
+    }
 };
 </script>
 
+<!-- *************************************************************************
+	STYLE
+	************************************************************************ -->
 <style scoped></style>
