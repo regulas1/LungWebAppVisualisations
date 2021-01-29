@@ -11,7 +11,7 @@
                     md="3"
                 > 
                 <!-- ------------------------------------------------------------------------
-                                                TOP LEFT CONTAINER
+                                                COLUMN 1; CONTAINER 1
                     ------------------------------------------------------------------------- -->
                     <v-row>
                         <base-reveal>
@@ -37,7 +37,7 @@
                     </v-row>
 
                 <!-- ------------------------------------------------------------------------
-                                            BOTTOM LEFT CONTAINER
+                                            COLUMN 1; CONTAINER 2
                     ------------------------------------------------------------------------- -->
                     <v-row>
                         <base-reveal>
@@ -69,10 +69,47 @@
                             </template>
                         </base-reveal>
                     </v-row>
+
+                <!-- ------------------------------------------------------------------------
+                                            COLUMN 1; CONTAINER 3
+                    ------------------------------------------------------------------------- -->
+                    <v-row>
+                        <base-reveal>
+                            <template v-slot:header>
+                                FEV1
+                            </template>
+
+                            <template v-slot:subheader>
+                                Measuring lung function
+                            </template>
+
+                            <template v-slot:description>
+                                <p>
+                                    The classic test of lung function is <strong>FEV1</strong>. 
+                                    This measures the volume of air that is forcefully exhaled from the lung in one second.
+                                </p>
+                                <p>
+                                    The size of FEV1 depends on the size of a person’s lungs. 
+                                    But it also depends on how stretchy or floppy the lung tissue and airways are.
+                                </p>
+                                <p>
+                                    The size of FEV1 depends on:
+                                    <ul>
+                                        <li>The size of a person's lungs.</li>  
+                                        <li>How stretchy or floppy the lung tissue &amp; airways are.</li>    
+                                    </ul>
+                                </p>
+                                <p>
+                                    When a person with healthy lungs breathes out some volume of air, at least 80% of this air will be expired in the first 1 second.
+                                </p>
+                            </template>
+                        </base-reveal>
+                    </v-row>
+
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
-                                            CENTRE CONTAINER
+                                            COLUMN 2; CONTAINER 1
                 ------------------------------------------------------------------------- -->
                  <v-col
                     cols="6"
@@ -80,7 +117,7 @@
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
-                                            TOP RIGHT CONTAINER
+                                            COLUMN 3; CONTAINER 1
                 ------------------------------------------------------------------------- -->
                 <v-col
                     cols="6"
@@ -100,6 +137,12 @@
                                 <strong>Airways</strong>
                                 <br>
                                 "Tubes" that allow oxygen to flow to the lungs.
+                            </p>
+                            <p>
+                                <br>
+                                <strong>FEV1 test</strong>
+                                <br>
+                                Tells us how healthy a lung is.
                             </p>
                             <p>
                                 <br>
