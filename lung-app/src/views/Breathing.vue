@@ -6,6 +6,10 @@
         <base-subheading>Breathing</base-subheading> <!--Main heading-->
         <v-container class="grey lighten-5">
             <v-row class="grey lighten-3 fill-height">
+
+                <!-- ------------------------------------------------------------------------
+                                                    COLUMN 1
+                    ------------------------------------------------------------------------- -->
                 <v-col
                     cols="12"
                     md="3"
@@ -69,7 +73,7 @@
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
-                                           COLUMN 2; CONTAINER 1
+                                                COLUMN 2
                 ------------------------------------------------------------------------- -->
                  <v-col
                     cols="6"
@@ -77,41 +81,64 @@
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
-                                            COLUMN 3; CONTAINER 1
+                                                COLUMN 3
                 ------------------------------------------------------------------------- -->
                 <v-col
                     cols="6"
                     md="3"
                 > 
-                    <base-options 
-                        color = "grey"
-                        button = "none" 
-                    > <!--Since button option text is "none", no button will be displayed-->
-                        <template v-slot:header>
-                            Key Vocabulary
-                        </template>
+                <!-- ------------------------------------------------------------------------
+                                            COLUMN 3; CONTAINER 1
+                    ------------------------------------------------------------------------- -->
+                    <v-row>
+                        <base-options 
+                            color = "grey"
+                            button = "none" 
+                        > <!--Since button option text is "none", no button will be displayed-->
+                            <template v-slot:header>
+                                Key Vocabulary
+                            </template>
 
-                        <template v-slot:description>
-                            <p>
-                                <br>
-                                <strong>Alveoli</strong>
-                                <br>
-                                Site/unit of gas exchange at the end of airways deep within the lungs.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>Diaphragm</strong>
-                                <br>
-                                The muscle that sits beneath the lungs.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>Expands</strong>
-                                <br>
-                                Gets bigger by filling with air (similar to a balloon).
-                            </p>
-                        </template>
-                    </base-options>
+                            <template v-slot:description>
+                                <p>
+                                    <br>
+                                    <strong>Alveoli</strong>
+                                    <br>
+                                    Site/unit of gas exchange at the end of airways deep within the lungs.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>Diaphragm</strong>
+                                    <br>
+                                    The muscle that sits beneath the lungs.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>Expands</strong>
+                                    <br>
+                                    Gets bigger by filling with air (similar to a balloon).
+                                </p>
+                            </template>
+                        </base-options>
+                    </v-row>
+
+                <!-- ------------------------------------------------------------------------
+                                            COLUMN 3; CONTAINER 2
+                    ------------------------------------------------------------------------- -->
+                    <v-row>
+                        <base-options 
+                            color = "#385F73"
+                            button = "none" 
+                        > <!--Since button option text is "none", no button will be displayed-->
+                            <template v-slot:description>
+                                <p>
+                                    <strong>Lung Volume vs. Time</strong>
+                                    <br>
+                                    How lung volume changes when inhaling &amp; exhaling.
+                                </p>
+                            </template>
+                        </base-options>
+                    </v-row>
                 </v-col>
             </v-row>
         </v-container>
