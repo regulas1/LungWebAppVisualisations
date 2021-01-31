@@ -34,13 +34,14 @@ export default {
             default: -Infinity
         },
         value: {
-            required: true
+            required: true,
+            default: 5,
         },
     },
 
     data: function() {
         return {
-            currentValue: this.currentValue,
+            currentValue: this.value,
             decrementDisabled: false,
             incrementDisabled: false,
             inputDisabled: false,
@@ -86,7 +87,7 @@ export default {
                 this.decrementDisabled = true
             }
             this.currentValue = newVal
-            //this.$emit('input', this.currentValue)
+            this.$emit('input', this.currentValue)
         }
     },
 
