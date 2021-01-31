@@ -11,10 +11,11 @@
             :min="min"
             v-model.number="currentValue"
             @blur="currentValue"
-            @keydown.enter="currentValue"
+            @keydown.enter="currentValue" 
             @keydown.up.prevent="increment"
             @keydown.down.prevent="decrement"
-        />
+        /> <!--Must use @keydown events with "currentValue." Using "currentValue = value" will return
+            the value stored from last use of increment/decrement buttons-->
     </div>
 </template>
 
@@ -33,7 +34,7 @@ export default {
         },
         value: {
             required: true,
-            default: 5,
+            default: 50,
         },
     },
 

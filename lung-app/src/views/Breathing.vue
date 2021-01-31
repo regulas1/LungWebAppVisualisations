@@ -80,6 +80,7 @@
                 >
                 Second column: lung model goes here
                 <base-age-select v-model='currentValue' :min='0'></base-age-select>
+                <base-gender-select />
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
@@ -154,6 +155,7 @@
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
 import BaseAgeSelect from '@/components/base/AgeSelect'
+import BaseGenderSelect from '@/components/base/GenderSelect'
 
 export default {
     name: 'Disease', /* Change name of component */ 
@@ -161,6 +163,7 @@ export default {
         BaseOptions,
         BaseReveal,
         BaseAgeSelect,
+        BaseGenderSelect
     }
 };
 </script>
