@@ -75,9 +75,11 @@
             <!-- ------------------------------------------------------------------------
                                                 COLUMN 2
                 ------------------------------------------------------------------------- -->
-                 <v-col
+                <v-col
                     cols="6"
-                >Second column: lung model goes here
+                >
+                Second column: lung model goes here
+                <base-age-select v-model='currentValue' :min='0'></base-age-select>
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
@@ -151,12 +153,14 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
+import BaseAgeSelect from '@/components/base/AgeSelect'
 
 export default {
     name: 'Disease', /* Change name of component */ 
     components: {
         BaseOptions,
         BaseReveal,
+        BaseAgeSelect,
     }
 };
 </script>

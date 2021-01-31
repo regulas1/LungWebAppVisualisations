@@ -6,6 +6,10 @@
         <base-subheading>Asthma</base-subheading> <!--Main heading-->
         <v-container class="grey lighten-5">
             <v-row class="grey lighten-3 fill-height">
+
+            <!-- ------------------------------------------------------------------------
+                                                COLUMN 1
+                ------------------------------------------------------------------------- -->
                 <v-col
                     cols="12"
                     md="3"
@@ -35,7 +39,6 @@
                             </template>
                         </base-reveal>
                     </v-row>
-
                 <!-- ------------------------------------------------------------------------
                                             COLUMN 1; CONTAINER 2
                     ------------------------------------------------------------------------- -->
@@ -69,7 +72,6 @@
                             </template>
                         </base-reveal>
                     </v-row>
-
                 <!-- ------------------------------------------------------------------------
                                             COLUMN 1; CONTAINER 3
                     ------------------------------------------------------------------------- -->
@@ -105,7 +107,6 @@
                             </template>
                         </base-reveal>
                     </v-row>
-
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
@@ -117,45 +118,74 @@
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
-                                            COLUMN 3; CONTAINER 1
+                                                COLUMN 3
                 ------------------------------------------------------------------------- -->
                 <v-col
                     cols="6"
                     md="3"
                 > 
-                    <base-options 
-                        color = "grey"
-                        button = "none" 
-                    > <!--Since button option text is "none", no button will be displayed-->
-                        <template v-slot:header>
-                            Key Vocabulary
-                        </template>
+                <!-- ------------------------------------------------------------------------
+                                            COLUMN 3; CONTAINER 1
+                    ------------------------------------------------------------------------- -->
+                    <v-row>
+                        <base-options 
+                            color = "grey"
+                            button = "none" 
+                        > <!--Since button option text is "none", no button will be displayed-->
+                            <template v-slot:header>
+                                Key Vocabulary
+                            </template>
 
-                        <template v-slot:description>
-                            <p>
-                                <br>
-                                <strong>Airways</strong>
-                                <br>
-                                "Tubes" that allow oxygen to flow to the lungs.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>FEV1 test</strong>
-                                <br>
-                                Tells us how healthy a lung is.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>Gas Exchange</strong>
-                                <br>
-                                <ul>
-                                    <li>Inhaled oxygen is transferred to the blood from the lungs.</li>
-                                    <li>Carbon dioxide is transferred out of the blood (and then exhaled).</li>
-                                </ul>
-                                <br> Check out the 'Breathing' page to learn more about gas exchange.
-                            </p>
-                        </template>
-                    </base-options>
+                            <template v-slot:description>
+                                <p>
+                                    <br>
+                                    <strong>Airways</strong>
+                                    <br>
+                                    "Tubes" that allow oxygen to flow to the lungs.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>FEV1 test</strong>
+                                    <br>
+                                    Tells us how healthy a lung is.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>Gas Exchange</strong>
+                                    <br>
+                                    <ul>
+                                        <li>Inhaled oxygen is transferred to the blood from the lungs.</li>
+                                        <li>Carbon dioxide is transferred out of the blood (and then exhaled).</li>
+                                    </ul>
+                                    <br> Check out the 'Breathing' page to learn more about gas exchange.
+                                </p>
+                            </template>
+                        </base-options>
+                    </v-row>
+                <!-- ------------------------------------------------------------------------
+                                            COLUMN 3; CONTAINER 2
+                    ------------------------------------------------------------------------- -->
+                    <v-row>
+                        <base-options 
+                            color = "#385F73"
+                            button = "none" 
+                        > <!--Since button option text is "none", no button will be displayed-->
+                            <template v-slot:description>
+                                <p>
+                                    <strong>3D Model Guide</strong>
+                                    <br>Select MILD, MODERATE, or SEVERE to see how different levels of asthma affect air flow.
+                                </p>
+                                <p>
+                                    <strong>Colour Guide</strong>
+                                    <ul>
+                                        <li>Green represents good air flow</li>
+                                        <li>Red is too high</li>
+                                        <li>Blue is too low</li>
+                                    </ul>
+                                </p>
+                            </template>
+                        </base-options>
+                    </v-row>
                 </v-col>
             </v-row>
         </v-container>
