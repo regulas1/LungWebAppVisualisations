@@ -4,11 +4,10 @@
 <template>
     <div class="control number">
         <button class="decrement-button" :disabled="decrementDisabled" @click="decrement">−</button>
-        <button class="increment-button" :disabled="incrementDisabled" @click="increment">+</button>
-        <p>Age is: {{currentValue}}</p>
+        <button class="increment-button" @click="increment">+</button>
         <input
             type="number"
-            :disabled="inputDisabled"
+            :disabled="decrementDisabled"
             :min="min"
             v-model.number="currentValue"
             @blur="currentValue"
@@ -16,7 +15,6 @@
             @keydown.up.prevent="increment"
             @keydown.down.prevent="decrement"
         />
-        
     </div>
 </template>
 
@@ -43,7 +41,6 @@ export default {
         return {
             currentValue: this.value,
             decrementDisabled: false,
-            incrementDisabled: false,
             inputDisabled: false,
 
         }
@@ -57,43 +54,41 @@ export default {
 
     methods: {
         increment() {
-            if (this.disabled || this.incrementDisabled) {
+            if (this.disabled) {
                 return
-            }
+            };
+            let newVal = this.currentValue + 1;
+            this.decrementDisabled = false;
 
-            let newVal = this.currentValue + 1
-            this.decrementDisabled = false
-
-            this._updateValue(newVal)
+            this._updateValue(newVal);
         },
         decrement() {
             if (this.disabled || this.decrementDisabled) {
                 return
             }
 
-            let newVal = this.currentValue + -1
-            this.incrementDisabled = false
+            let newVal = this.currentValue + -1;
 
-            this._updateValue(newVal)
+            this._updateValue(newVal);
         },
         _updateValue(newVal) {
-            const oldVal = this.currentValue
+            const oldVal = this.currentValue;
 
             if (oldVal === newVal || typeof this.value !== 'number') {
                 return
             }
             if (newVal <= this.min) {
-                newVal = this.min
-                this.decrementDisabled = true
+                newVal = this.min;
+                this.decrementDisabled = true;
             }
-            this.currentValue = newVal
-            this.$emit('input', this.currentValue)
+            this.currentValue = newVal;
+            this.$emit('input', this.currentValue);
         }
     },
 
     mounted() {
         if (this.value == this.min) {
-            this.decrementDisabled = true
+            this.decrementDisabled = true;
         }
     }
 }
@@ -106,7 +101,7 @@ export default {
 .control.number {
   display: inline-flex;
   position: relative;
-  width: 200px;
+  width: 150px; /* Need "width" not "max-width" to prevent surrounding elements from reducing its size */ 
 }
 .control.number input {
   background-color: #fff;
@@ -116,7 +111,7 @@ export default {
   height: 40px;
   padding-left: 8px;
   padding-right: 100px;
-  position: absolute;
+  position: absolute; /* Width cannot be altered by other elements */
   text-align: left;
   width: 100%;
   -moz-appearance: textfield;
