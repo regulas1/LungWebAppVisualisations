@@ -106,7 +106,7 @@ export default {
 .control.number {
   display: inline-flex;
   position: relative;
-  max-width: 200px;
+  width: 200px;
 }
 .control.number input {
   background-color: #fff;
@@ -116,6 +116,7 @@ export default {
   height: 40px;
   padding-left: 8px;
   padding-right: 100px;
+  position: absolute;
   text-align: left;
   width: 100%;
   -moz-appearance: textfield;
