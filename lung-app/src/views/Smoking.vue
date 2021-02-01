@@ -72,7 +72,9 @@
                 ------------------------------------------------------------------------- -->
                  <v-col
                     cols="6"
-                >Second column: lung model goes here
+                >
+                    <selectors />
+                    Second column: lung model goes here
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
@@ -118,12 +120,14 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
+import Selectors from '@/components/Selectors'
 
 export default {
     name: 'Disease', /* Change name of component */ 
     components: {
         BaseOptions,
         BaseReveal,
+        Selectors,
     }
 };
 </script>
