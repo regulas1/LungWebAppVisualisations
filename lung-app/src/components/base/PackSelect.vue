@@ -2,7 +2,7 @@
 	TEMPLATE
 	************************************************************************ -->
 <template>
-    <v-btn-toggle
+    <!--<v-btn-toggle
             v-model="toggle_exclusive"
             active-class="white--text"
           >
@@ -34,7 +34,21 @@
              >
               2 Packs
             </v-btn>
-          </v-btn-toggle>
+          </v-btn-toggle>-->
+          <div>
+          <v-btn 
+              v-for="(item, index) in items"
+              tile
+              :key="index"
+              :color="item.color"
+              :outlined="toggle_exclusive==index ? false : true"
+              @click="toggle_exclusive = index"
+            >
+              {{ item.title }} 
+              {{ index }}
+              {{ toggle_exclusive }}
+            </v-btn>
+            </div>
 </template>
 
 <!-- *************************************************************************
@@ -46,6 +60,13 @@ export default {
     data: function() {
         return{
                 toggle_exclusive: 2,
+                items: [
+                { title: 'Heal Me', clicked: true, color: 'blue' },
+                { title: 'Zero', clicked: false, color: 'green' }, /* Array corresponding to each page */
+                { title: '1', clicked: false, color: 'orange' },
+                { title: '2', clicked: false, color: 'red' },
+            ],
+
         }
     },
 };

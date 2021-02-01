@@ -28,6 +28,7 @@
                     tile
                     :key="index" 
                     :to="item.url"
+                    
                 >
                     {{ item.title }} 
                 </v-btn>
