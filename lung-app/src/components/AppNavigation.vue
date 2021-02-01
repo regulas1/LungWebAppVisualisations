@@ -21,6 +21,7 @@
 
         <!--All navigation buttons to go inside <v-toolbar> tag-->
         <v-toolbar app color="brown darken-4" dark>
+            <sequential-entrance>
             <v-toolbar-side-icon
                 class="hidden-md-and-up"
                 @click="drawer = !drawer"
@@ -83,6 +84,7 @@
                 >
             </div>
             -->
+            </sequential-entrance>
         </v-toolbar>
     </span>
 </template>
