@@ -20,8 +20,7 @@
         </v-navigation-drawer>
 
         <!--All navigation buttons to go inside <v-toolbar> tag-->
-        <v-toolbar app color="brown darken-4" dark>
-            <sequential-entrance>
+        <v-toolbar app color="#385F73" dark>
             <v-toolbar-side-icon
                 class="hidden-md-and-up"
                 @click="drawer = !drawer"
@@ -29,10 +28,11 @@
 
             <!--Corresponds to left-most button ("My Lungs")-->
             <v-spacer class="hidden-md-and-up"></v-spacer>
+            <sequential-entrance>
             <router-link to="/">
-                <v-toolbar-title data-cy="titleBtn">{{
-                    appTitle
-                }}</v-toolbar-title>
+                <v-toolbar-title data-cy="titleBtn">
+                    {{ appTitle }}
+                </v-toolbar-title>
             </router-link>
 
             <!--Corresponds to v-btn for each page-->
