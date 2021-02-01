@@ -38,15 +38,16 @@
           <div>
           <v-btn 
               v-for="(item, index) in items"
-              tile
+  
+              class="ma-2"
+              fab
+              large
               :key="index"
               :color="item.color"
               :outlined="toggle_exclusive==index ? false : true"
               @click="toggle_exclusive = index"
             >
               {{ item.title }} 
-              {{ index }}
-              {{ toggle_exclusive }}
             </v-btn>
             </div>
 </template>
@@ -61,10 +62,10 @@ export default {
         return{
                 toggle_exclusive: 2,
                 items: [
-                { title: 'Heal Me', clicked: true, color: 'blue white--text' },
-                { title: 'Zero', clicked: false, color: 'green white--text' }, /* Array corresponding to each page */
-                { title: '1', clicked: false, color: 'orange white--text' },
-                { title: '2', clicked: false, color: 'red white--text' },
+                { title: 'Heal', color: 'blue white--text' },
+                { title: 'Zero', color: 'green white--text' }, /* Array corresponding to each page */
+                { title: '1', color: 'orange white--text' },
+                { title: '2', color: 'red white--text' },
             ],
 
         }
