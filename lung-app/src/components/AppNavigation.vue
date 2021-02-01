@@ -1,5 +1,6 @@
 <template>
     <span>
+
         <!--All navigation buttons to go inside <v-toolbar> tag-->
         <v-toolbar 
             app 
@@ -21,37 +22,17 @@
                     }}</v-toolbar-title>
                 </router-link>
 
-                <v-spacer />
                 <!--Corresponds to v-btn for each page-->
                 <!--Change url name ("to=") and button text-->
-                <v-btn
-                    flat
-                    class="hidden-sm-and-down nav-menu"
-                    to="/breathing" 
-                    data-cy="menuBtn"
-                    >Breathing</v-btn
+                <v-btn 
+                    v-for="(item, index) in items"
+                    class="ma-2"
+                    tile
+                    :key="index" 
+                    :to="item.url"
                 >
-                <v-btn
-                    flat
-                    class="hidden-sm-and-down nav-menu"
-                    to="/asthma"
-                    data-cy="menuBtn"
-                    >Asthma</v-btn
-                >
-                <v-btn
-                    flat
-                    class="hidden-sm-and-down nav-menu"
-                    to="/smoking"
-                    data-cy="menuBtn"
-                    >Smoking</v-btn
-                >
-                <v-btn
-                    flat
-                    class="hidden-sm-and-down nav-menu"
-                    to="/disease"
-                    data-cy="menuBtn"
-                    >Disease</v-btn
-                >
+                    {{ item.title }} 
+                </v-btn>
                 <!--
                 <v-spacer class="hidden-sm-and-down"></v-spacer>
                 <div v-if="!isAuthenticated" class="hidden-sm-and-down">
