@@ -61,10 +61,10 @@ export default {
         return{
                 toggle_exclusive: 2,
                 items: [
-                { title: 'Heal Me', clicked: true, color: 'blue' },
-                { title: 'Zero', clicked: false, color: 'green' }, /* Array corresponding to each page */
-                { title: '1', clicked: false, color: 'orange' },
-                { title: '2', clicked: false, color: 'red' },
+                { title: 'Heal Me', clicked: true, color: 'blue white--text' },
+                { title: 'Zero', clicked: false, color: 'green white--text' }, /* Array corresponding to each page */
+                { title: '1', clicked: false, color: 'orange white--text' },
+                { title: '2', clicked: false, color: 'red white--text' },
             ],
 
         }
