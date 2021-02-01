@@ -9,18 +9,16 @@
             extended
         >
             <sequential-entrance>
-                <v-toolbar-side-icon
-                    class="hidden-md-and-up"
-                    @click="drawer = !drawer"
-                ></v-toolbar-side-icon>
-
                 <!--Corresponds to left-most button ("My Lungs")-->
-                <v-spacer class="hidden-md-and-up"></v-spacer>
+                <!--<v-spacer class="hidden-md-and-up"></v-spacer>
                 <router-link to="/">
-                    <v-toolbar-title data-cy="titleBtn">{{
-                        appTitle
-                    }}</v-toolbar-title>
-                </router-link>
+                    <v-toolbar-title 
+                        data-cy="titleBtn"
+                        class="title"
+                    >
+                        {{ appTitle }}
+                    </v-toolbar-title>
+                </router-link>-->
 
                 <!--Corresponds to v-btn for each page-->
                 <!--Change url name ("to=") and button text-->
@@ -63,8 +61,8 @@ export default {
     data() {
         return {
             appTitle: 'My Lungs', /* Text in left-most button */
-            drawer: false,
             items: [
+                { title: 'My Lungs', url: '/' },
                 { title: 'Breathing', url: '/breathing' }, /* Array corresponding to each page */
                 { title: 'Asthma', url: '/asthma' },
                 { title: 'Smoking', url: '/smoking' },
@@ -91,4 +89,5 @@ a {
     color: white;
     text-decoration: none;
 }
+
 </style>
