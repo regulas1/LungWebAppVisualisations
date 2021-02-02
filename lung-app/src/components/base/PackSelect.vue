@@ -64,8 +64,8 @@ export default {
                 items: [
                 { title: 'Heal', color: 'blue white--text' },
                 { title: 'Zero', color: 'green white--text' }, /* Array corresponding to each page */
-                { title: '1', color: 'orange white--text' },
-                { title: '2', color: 'red white--text' },
+                { title: '1 Pack', color: 'orange white--text' },
+                { title: '2 Packs', color: 'red white--text' },
             ],
 
         }

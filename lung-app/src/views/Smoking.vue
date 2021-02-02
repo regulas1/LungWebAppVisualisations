@@ -86,30 +86,32 @@
                     cols="6"
                     md="2"
                 > 
-                    <base-options 
-                        color = "grey"
-                        button = "none" 
-                    > <!--Since button option text is "none", no button will be displayed-->
-                        <template v-slot:header>
-                            Key Vocabulary
-                        </template>
+                    <v-row>
+                        <base-options 
+                            color = "grey"
+                            button = "none" 
+                        > <!--Since button option text is "none", no button will be displayed-->
+                            <template v-slot:header>
+                                Key Vocabulary
+                            </template>
 
-                        <template v-slot:description>
-                            <p>
-                                <br>
-                                <strong>Cessation</strong>
-                                <br>
-                                To cease or stop.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>Chronic Obstructive Pulmonary Disease</strong>
-                                <br>
-                                An obstructive lung disease characterised by breathlessness.
-                                <br> Check out the 'Disease' page to learn more about obstructive lung diseases.
-                            </p>
-                        </template>
-                    </base-options>
+                            <template v-slot:description>
+                                <p>
+                                    <br>
+                                    <strong>Cessation</strong>
+                                    <br>
+                                    To cease or stop.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>Chronic Obstructive Pulmonary Disease</strong>
+                                    <br>
+                                    An obstructive lung disease characterised by breathlessness.
+                                    <br> Check out the 'Disease' page to learn more about obstructive lung diseases.
+                                </p>
+                            </template>
+                        </base-options>
+                    </v-row>
                 </v-col>
             </v-row>
     </container>

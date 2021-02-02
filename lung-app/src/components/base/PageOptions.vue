@@ -3,14 +3,12 @@
 	  ************************************************************************ -->  
 <template>
     <v-container>
-        <v-col
-        >
+        <v-row style="padding-top: 6%">
+        <v-col style="padding-right: 12%">
             <v-card
               :color="color"
               dark
             >           
-              <div class="d-flex flex-no-wrap justify-space-between">
-                <div>
               <!-- ------------------------------------------------------------------------
                                             TITLE OF CARD
                   ------------------------------------------------------------------------- -->                   
@@ -71,11 +69,10 @@
                       </v-card-actions>
                     </v-card>
                   </v-expand-transition>
-                </div>
-              </div>
             </v-card>
         </v-col>
-    </v-container>
+        </v-row>
+        </v-container>
 </template>
 
 <!-- *************************************************************************

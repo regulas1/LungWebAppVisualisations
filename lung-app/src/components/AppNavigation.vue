@@ -28,7 +28,7 @@
                     tile
                     :key="index" 
                     :to="item.url"
-                    active-class="primary black--text"
+                    active-class="primary lighten-1 black--text"
                     
                 >
                     {{ item.title }} 

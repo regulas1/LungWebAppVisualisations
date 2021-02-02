@@ -2,13 +2,14 @@
 	TEMPLATE
 	************************************************************************ -->
 <template>
-    <v-container>
+    <container>
         <!--<base-subheading>Disease</base-subheading>--> <!--Main heading-->
-        <v-container class="grey lighten-5">
-            <v-row class="grey lighten-3 fill-height">
+        <v-row 
+                class="grey darken-4 fill-height"
+            >
                 <v-col
                     cols="12"
-                    md="3"
+                    md="4"
                 > 
                 <!-- ------------------------------------------------------------------------
                                                 COLUMN 1; CONTAINER 1
@@ -76,7 +77,8 @@
                                             COLUMN 2; CONTAINER 1
                 ------------------------------------------------------------------------- -->
                  <v-col
-                    cols="6"
+                    cols="12"
+                    md="6"
                 >Second column: lung model goes here
                 </v-col>
 
@@ -85,47 +87,48 @@
                 ------------------------------------------------------------------------- -->
                 <v-col
                     cols="6"
-                    md="3"
+                    md="2"
                 > 
-                    <base-options 
-                        color = "grey"
-                        button = "none" 
-                    > <!--Since button option text is "none", no button will be displayed-->
-                        <template v-slot:header>
-                            Key Vocabulary
-                        </template>
+                    <v-row>
+                        <base-options 
+                            color = "grey"
+                            button = "none" 
+                        > <!--Since button option text is "none", no button will be displayed-->
+                            <template v-slot:header>
+                                Key Vocabulary
+                            </template>
 
-                        <template v-slot:description>
-                            <p>
-                                <br>
-                                <strong>Interstitial</strong>
-                                <br>
-                                Charactersied by a stiff lung.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>Obstructive</strong>
-                                <br>
-                                Characterised by a soft/squishy lung.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>Sarcoidosis</strong>
-                                <br>
-                                An autoimmune disease where the immune system attacks its own body.
-                            </p>
-                            <p>
-                                <br>
-                                <strong>Scoliosis</strong>
-                                <br>
-                                Deformation of the spine.
-                            </p>
-                        </template>
-                    </base-options>
+                            <template v-slot:description>
+                                <p>
+                                    <br>
+                                    <strong>Interstitial</strong>
+                                    <br>
+                                    Charactersied by a stiff lung.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>Obstructive</strong>
+                                    <br>
+                                    Characterised by a soft/squishy lung.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>Sarcoidosis</strong>
+                                    <br>
+                                    An autoimmune disease where the immune system attacks its own body.
+                                </p>
+                                <p>
+                                    <br>
+                                    <strong>Scoliosis</strong>
+                                    <br>
+                                    Deformation of the spine.
+                                </p>
+                            </template>
+                        </base-options>
+                    </v-row>
                 </v-col>
             </v-row>
-        </v-container>
-    </v-container>
+    </container>
 </template>
 
 <!-- *************************************************************************
