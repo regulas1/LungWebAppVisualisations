@@ -6,7 +6,7 @@
         <v-row style="padding-top: 3%">
         <v-col style="padding-left: 6%">
             <v-card
-            class="mx-auto"
+            class="gradient mx-auto"
             >
         
             <v-card-title>
@@ -66,3 +66,15 @@ export default {
     },
 }
 </script>
+
+<!-- *************************************************************************
+	   STYLE
+	  ************************************************************************ --> 
+<style scoped>
+
+/* Color of v-card. Last parameter indicates opacity (i.e. begins with 0% opacity, ends with 50% opacity) */
+.gradient {
+    background-image: linear-gradient(rgba(177,153,77,1), rgba(177,153,77,0));
+}
+
+</style>
