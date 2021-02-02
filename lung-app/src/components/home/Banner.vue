@@ -1,9 +1,8 @@
 <template>
-  <base-card dark>
-    <v-img
-      :src="require('@/assets/articles/blurcamera.jpg')"
-      class="grey lighten-2"
-      height="400"
+  <base-card 
+      dark 
+      class="grey darken-4"
+      height="600px"
       width="100%"
     >
       <v-row
@@ -16,12 +15,22 @@
           offset-md="5"
         >
           <h1 class="display-3 font-weight-light">
-            Visualise My Lungs
+            Visualising My Lungs
           </h1>
 
           <div class="subheading text-uppercase pl-2 mb-4">
             Use your mouse to rotate the interactive lung model
           </div>
+          <typical 
+        :steps="['Hello', 1000, 'Hello world!', 500]" 
+        :wrapper="'h2'"
+      ></typical>
+      <typical 
+        class="typicalWrapper"
+        :steps="['So', 1000, 'So Awesome!', 500, 'So Awesome! Aha :-) 👋', 1000]" 
+        :loop=3 
+        :wrapper="'h3'"
+      ></typical>
 
           <v-btn
             color="primary"
@@ -31,12 +40,14 @@
           </v-btn>
         </v-col>
       </v-row>
-    </v-img>
   </base-card>
 </template>
 
 <script>
+import typical from '@/components/home/Typical.vue'
+
   export default {
     name: 'HomeBanner',
+    components: typical
   }
 </script>

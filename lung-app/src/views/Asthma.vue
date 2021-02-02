@@ -3,7 +3,7 @@
 	************************************************************************ -->
 <template>
     <v-container>
-        <base-subheading>Asthma</base-subheading> <!--Main heading-->
+        <!--<base-subheading>Asthma</base-subheading>--> <!--Main heading-->
         <v-container class="grey lighten-5">
             <v-row class="grey lighten-3 fill-height">
 
