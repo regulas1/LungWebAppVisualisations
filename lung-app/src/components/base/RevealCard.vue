@@ -19,7 +19,7 @@
         
             <v-card-actions>
                 <v-btn
-                color="orange lighten-2"
+                color="primary"
                 text
                 @click="show = !show"
                 >
@@ -30,7 +30,7 @@
         
                 <v-btn
                 icon
-                color="orange lighten-2"
+                color="primary"
                 @click="show = !show"
                 >
                 <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>

@@ -2,13 +2,14 @@
 	TEMPLATE
 	************************************************************************ -->
 <template>
-    <v-container>
+    <container>
         <!--<base-subheading>Smoking</base-subheading>--> <!--Main heading-->
-        <v-container class="grey lighten-5">
-            <v-row class="grey lighten-3 fill-height">
+        <v-row 
+            class="grey darken-4 fill-height"
+            >
                 <v-col
                     cols="12"
-                    md="3"
+                    md="4"
                 > 
                 <!-- ------------------------------------------------------------------------
                                                 COLUMN 1; CONTAINER 1
@@ -71,7 +72,8 @@
                                             COLUMN 2; CONTAINER 1
                 ------------------------------------------------------------------------- -->
                  <v-col
-                    cols="6"
+                    cols="12"
+                    md="6"
                 >
                     <selectors />
                     Second column: lung model goes here
@@ -82,7 +84,7 @@
                 ------------------------------------------------------------------------- -->
                 <v-col
                     cols="6"
-                    md="3"
+                    md="2"
                 > 
                     <base-options 
                         color = "grey"
@@ -110,8 +112,7 @@
                     </base-options>
                 </v-col>
             </v-row>
-        </v-container>
-    </v-container>
+    </container>
 </template>
 
 <!-- *************************************************************************

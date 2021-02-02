@@ -77,7 +77,8 @@
                                                 COLUMN 2
                 ------------------------------------------------------------------------- -->
                 <v-col
-                    cols="6"
+                    cols="12"
+                    md="6"
                 >
                 Second column: lung model goes here
                 </v-col>
