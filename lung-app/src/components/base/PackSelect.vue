@@ -38,7 +38,6 @@
           <div>
           <v-btn 
               v-for="(item, index) in items"
-  
               class="ma-2"
               fab
               large
@@ -61,6 +60,7 @@ export default {
     data: function() {
         return{
                 toggle_exclusive: 2,
+                temp_toggle: 2,
                 items: [
                 { title: 'Heal', color: 'blue white--text' },
                 { title: 'Zero', color: 'green white--text' }, /* Array corresponding to each page */

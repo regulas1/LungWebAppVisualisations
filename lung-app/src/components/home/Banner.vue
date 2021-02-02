@@ -1,9 +1,8 @@
 <template>
-  <base-card dark>
-    <v-img
-      :src="require('@/assets/articles/blurcamera.jpg')"
-      class="grey lighten-2"
-      height="400"
+  <base-card 
+      dark 
+      class="grey darken-4"
+      height="700px"
       width="100%"
     >
       <v-row
@@ -16,7 +15,7 @@
           offset-md="5"
         >
           <h1 class="display-3 font-weight-light">
-            Visualise My Lungs
+            Visualising My Lungs
           </h1>
 
           <div class="subheading text-uppercase pl-2 mb-4">
@@ -31,7 +30,6 @@
           </v-btn>
         </v-col>
       </v-row>
-    </v-img>
   </base-card>
 </template>
 
