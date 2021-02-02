@@ -2,13 +2,11 @@
 	TEMPLATE
 	************************************************************************ -->  
 <template>
-    <div>
         <v-container>
+        <v-row style="padding-top: 3%">
         <v-col style="padding-left: 6%">
             <v-card
             class="mx-auto"
-            width="400px"
-            max-width="400px"
             >
         
             <v-card-title>
@@ -50,8 +48,8 @@
             </v-expand-transition>
             </v-card>
         </v-col>
+        </v-row>
         </v-container>
-    </div>
 </template>
 
 <!-- *************************************************************************
