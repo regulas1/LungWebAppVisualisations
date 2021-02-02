@@ -2,19 +2,21 @@
 	TEMPLATE
 	************************************************************************ -->  
 <template>
-    <v-container>
-        <v-col>
+    <div>
+        <v-container>
+        <v-col style="padding-left: 6%">
             <v-card
             class="mx-auto"
-            max-width="344"
+            width="400px"
+            max-width="400px"
             >
         
             <v-card-title>
-                <slot name="header">Top western road trips</slot>
+                <slot name="header"></slot>
             </v-card-title>
         
             <v-card-subtitle>
-                <slot name="subheader">1,000 miles of wonder</slot>
+                <slot name="subheader"></slot>
             </v-card-subtitle>
         
             <v-card-actions>
@@ -42,13 +44,14 @@
                 <v-divider></v-divider>
         
                 <v-card-text>
-                    <slot name="description">I'm a thing.</slot>
+                    <slot name="description"></slot>
                 </v-card-text>
                 </div>
             </v-expand-transition>
             </v-card>
         </v-col>
-    </v-container>
+        </v-container>
+    </div>
 </template>
 
 <!-- *************************************************************************

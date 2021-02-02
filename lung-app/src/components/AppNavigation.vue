@@ -6,7 +6,7 @@
             color="#385F73" 
             dark
             prominent
-            style="padding-top: 20px;"
+            style="padding-top: 1%"
         >
             <sequential-entrance>
                 <!--Corresponds to left-most button ("My Lungs")-->
