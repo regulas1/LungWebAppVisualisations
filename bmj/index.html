@@ -32,6 +32,18 @@
 		<div class="spinner"></div>
 		<p>Loading</p>
 	</div>
+
+	<article class="left">
+		<h1>The Lungs</h1>
+		<h2>Normal breathing</h2>
+		<p>When the healthy lung breathes in the upright position, the lung tissue that is closest to the diaphragm (the muscle that sits beneath the lungs) expands the most, and the tissue at the top of the lung expands the least.</p>
+		<p>We usually breathe in just as much air as we need to supply oxygen for energy for the activities that we are doing.</p>
+		<a class="nav-button" href="#/breathing-gas-exchange">Learn more about GAS<br>EXCHANGE</a>
+	</article>
+	<article class="right">
+		<div id="breathing-plot" class="plot"></div>
+	</article>
+
 	<script src="lib/pako_inflate.min.js"></script>
 	<script src="lib/zinc-0.29.5.min.js"></script>
 	<script src="lib/svg-2.7.1.min.js"></script>
@@ -42,6 +54,7 @@
 	<script src="js/main.js"></script>
 	<script src="js/controls.js"></script>
 	<script src="js/charts.js"></script>
+
 	<script>
 		loadScene({
 			vs: 'shaders/surface.vs',
@@ -57,7 +70,7 @@
 			],
 		}, surfaceUniforms);
 		document.getElementById('play').click();
-		</script>
+	</script>
 		
 </body>
 </html>

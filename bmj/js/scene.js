@@ -73,7 +73,7 @@ if (!WEBGL.isWebGLAvailable()) {
 } else {
 	zincRenderer = new Zinc.Renderer(document.getElementById('renderer'), window);
 	zincRenderer.initialiseVisualisation({antialias: false});
-	zincRenderer.getThreeJSRenderer().setClearColor(0x000000, 1);
+	//zincRenderer.getThreeJSRenderer().setClearColor(0xffffff, 0);
   //if (window.innerWidth > 2000 || window.innerHeight > 2000) {
   //  zincRenderer.getThreeJSRenderer().setPixelRatio(0.5);
   //} else {
@@ -105,6 +105,8 @@ const loadScene = function(data, uniforms) {
 	const scene = zincRenderer.createScene(name);
 	Zinc.loadExternalFiles([data.vs, data.fs], function (shaderText) {
 		scene.loadViewURL(data.view);
+
+		scene.background = new THREE.Color( 0xff0000 ); // Added NEW to try to set transparent background
 
 		const material = new THREE.ShaderMaterial({
 			vertexShader: shaderText[0],
