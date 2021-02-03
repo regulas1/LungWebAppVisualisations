@@ -37,23 +37,6 @@ const airwaysUniforms = THREE.UniformsUtils.merge([{
   'smokingSeverity': { type: 'f', value: 0.0 },
 }]);
 
-/* CHANGE BEGINS */
-loadScene({
-	vs: 'shaders/surface.vs',
-	fs: 'shaders/surface.fs',
-	view: 'models/surface_view.json',
-	models: [
-		'models/surface_1.json',
-		'models/surface_2.json',
-		'models/surface_3.json',
-		'models/surface_4.json',
-		'models/surface_5.json',
-		'models/surface_6.json',
-	],
-}, surfaceUniforms);
-document.getElementById('play').click();
-/* CHANGE ENDS */
-
 function resetUniforms() {
   surfaceUniforms['severity']['value'] = 0.0
   airwaysUniforms['asthmaSeverity']['value'] = 0.0
@@ -68,7 +51,7 @@ document.getElementById('information').addEventListener('click', function(e) {
   }
 	let articles = document.querySelectorAll('article');
 	for (let i = 0; i < articles.length; i++) {
-		articles[i].classList.toggle('hidden');
+    articles[i].classList.toggle('hidden');
 	}
 });
 
