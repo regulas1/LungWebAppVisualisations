@@ -49,8 +49,8 @@ html, body {
 	height: 100%;
 	overflow: hidden;
 
-	background: black;
-	color: white;
+	background: pink;
+	color: black;
 	font-family: Titillium, sans-serif;
 	font-size: min(1.7vw, 18pt);
 }

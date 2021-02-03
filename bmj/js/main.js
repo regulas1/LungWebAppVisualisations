@@ -1,6 +1,8 @@
 const MIN_RATIO = 2.1;//16/9; // minimum ratio of width/height
 
+
 /* Pages */
+/*
 let pageInits = {};
 function addPageInit(id, f) {
 	pageInits[id] = f;
@@ -68,8 +70,10 @@ function getURLSegment(i) {
 	}
 	return '';
 }
+*/
 
 /* Navigation */
+/*
 function updateRoute() {
 	const url = window.location.hash.substr(1);
 	if (url.length == 0) {
@@ -87,6 +91,7 @@ updateRoute();
 window.addEventListener('hashchange', function(e) {
 	updateRoute();
 });
+*/
 
 // Scale down when height too small
 function resize() {

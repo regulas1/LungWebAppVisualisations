@@ -14,7 +14,7 @@
 </head>
 <body data-page="" data-severity="">
 	<div id="renderer"></div>
-	<div id="pages"></div>
+	<!--<div id="pages"></div>-->
 	<div id="top-buttons">
 		<a id="play" class="nav-button"></a>
 		<a id="information" class="nav-button">Less information</a>
@@ -41,6 +41,23 @@
 	<script src="js/scene.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/controls.js"></script>
-    <script src="js/charts.js"></script>
+	<script src="js/charts.js"></script>
+	<script>
+		loadScene({
+			vs: 'shaders/surface.vs',
+			fs: 'shaders/surface.fs',
+			view: 'models/surface_view.json',
+			models: [
+				'models/surface_1.json',
+				'models/surface_2.json',
+				'models/surface_3.json',
+				'models/surface_4.json',
+				'models/surface_5.json',
+				'models/surface_6.json',
+			],
+		}, surfaceUniforms);
+		document.getElementById('play').click();
+		</script>
+		
 </body>
 </html>
