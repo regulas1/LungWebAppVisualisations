@@ -2,7 +2,6 @@
     <span>
         <!--All navigation buttons to go inside <v-toolbar> tag-->
         <v-toolbar 
-            app
             color="#385F73" 
             dark
             prominent
