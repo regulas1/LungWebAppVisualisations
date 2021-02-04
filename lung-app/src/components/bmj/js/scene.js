@@ -106,7 +106,7 @@ const loadScene = function(data, uniforms) {
 	Zinc.loadExternalFiles([data.vs, data.fs], function (shaderText) {
 		scene.loadViewURL(data.view);
 
-		scene.background = new THREE.Color( 0xff0000 ); // Added NEW to try to set transparent background
+		scene.background = new THREE.Color( 0xff0000 ); // ADDED to try to set transparent background
 
 		const material = new THREE.ShaderMaterial({
 			vertexShader: shaderText[0],
@@ -261,4 +261,4 @@ function toBufferGeometry(geometry) {
 }
 
 // export const loader ADDED
-export { loadScene }
+export { updateFrame, startLoading, stopLoading, setLoadingText, hashCode, setScene, loadScene, loadModels, toBufferGeometry }

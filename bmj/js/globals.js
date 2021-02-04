@@ -55,3 +55,4 @@ document.getElementById('information').addEventListener('click', function(e) {
 	}
 });
 
+export { resetUniforms } // Needed?
