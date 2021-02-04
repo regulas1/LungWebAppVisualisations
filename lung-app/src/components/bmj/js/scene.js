@@ -259,3 +259,5 @@ function toBufferGeometry(geometry) {
 	}
 	return bufferGeometry;
 }
+
+// export const loader ADDED

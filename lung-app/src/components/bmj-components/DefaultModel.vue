@@ -1,18 +1,18 @@
 <!-- *************************************************************************
 	TEMPLATE
 	************************************************************************ -->
-<template>
-    
-</template>
 
 <!-- *************************************************************************
 	SCRIPT
 	************************************************************************ -->
 <script>
-import DefaultModel from '@/components/bmj/js'
+import TestFiles from '@/components/bmj/js/test.js'
 
 export default {
-    name: 'DefaultModel', /* Change name of component */ 
+	name: 'Tester',
+	components: {
+		TestFiles,
+	} 
 };
 </script>
 
