@@ -122,3 +122,5 @@ function updateMarkers(t) {
 		marker.move(pos.x, pos.y);
 	}
 }
+
+export { loadGraph, updateMarkers }

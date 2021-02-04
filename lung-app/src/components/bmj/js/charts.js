@@ -171,3 +171,5 @@ function initFEV1Plot(id) {
 
   return svg.group();
 }
+
+export { computedFEV1, calculateFEVData, updateFEV1Plot, addSeriesFEV1Plot, initFEV1Plot}

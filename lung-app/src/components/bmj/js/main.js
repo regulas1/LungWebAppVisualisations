@@ -127,3 +127,5 @@ document.getElementById('renderer').addEventListener('mouseup', function(e){
         links[i].style.pointerEvents = 'auto';
     }
 });
+
+export { resize }

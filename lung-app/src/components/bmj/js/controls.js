@@ -49,3 +49,5 @@ document.body.addEventListener('load-page', function(e) {
     };
 	}
 });
+
+export { clickButton }

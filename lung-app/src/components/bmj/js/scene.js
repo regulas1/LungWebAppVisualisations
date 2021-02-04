@@ -261,4 +261,4 @@ function toBufferGeometry(geometry) {
 }
 
 // export const loader ADDED
-export { updateFrame, startLoading, stopLoading, setLoadingText, hashCode, setScene, loadScene, loadModels, toBufferGeometry }
+export { updateFrame, startLoading, stopLoading, setLoadingText, setScene, loadScene, loadModels, toBufferGeometry }

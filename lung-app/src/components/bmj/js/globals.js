@@ -54,3 +54,5 @@ document.getElementById('information').addEventListener('click', function(e) {
     articles[i].classList.toggle('hidden');
 	}
 });
+
+export { resetUniforms }
