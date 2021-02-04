@@ -261,3 +261,4 @@ function toBufferGeometry(geometry) {
 }
 
 // export const loader ADDED
+export { loadScene }
