@@ -35,22 +35,24 @@
               2 Packs
             </v-btn>
           </v-btn-toggle>-->
-          <div>
-            <sequential-entrance>
-              <v-btn 
-                  v-for="(item, index) in items"
-                  class="ma-2"
-                  fab
-                  large
-                  :key="index"
-                  :color="item.color"
-                  :outlined="toggle_exclusive==index ? false : true"
-                  @click="toggle_exclusive = index"
-                >
-                  {{ item.title }} 
-                </v-btn>
-              </sequential-entrance>
-            </div>
+  <v-container>
+    <v-row style="padding-top: 3%">
+      <sequential-entrance>
+        <v-btn 
+          v-for="(item, index) in items"
+          class="ma-2"
+          fab
+          large
+          :key="index"
+          :color="item.color"
+          :outlined="toggle_exclusive==index ? false : true"
+          @click="toggle_exclusive = index"
+        >
+          {{ item.title }} 
+        </v-btn>
+      </sequential-entrance>
+    </v-row>
+  </v-container>
 </template>
 
 <!-- *************************************************************************

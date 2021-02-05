@@ -76,8 +76,8 @@
                     md="6"
                 >
                         <selectors />
-                    <img src="../../public/img/Rotate_Zoom.png" width="180px">
-                    Second column: lung model goes here
+                        <img src="../../public/img/Rotate_Zoom.png" width="180px">
+                        Second column: lung model goes here
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
