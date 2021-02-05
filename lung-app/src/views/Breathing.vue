@@ -80,7 +80,8 @@
                     cols="12"
                     md="6"
                 >
-                Second column: lung model goes here
+                    Second column: lung model goes here
+                    <img src="../../public/img/Rotate_Zoom.png" width="180px">
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
