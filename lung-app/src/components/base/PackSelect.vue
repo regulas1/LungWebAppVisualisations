@@ -36,18 +36,20 @@
             </v-btn>
           </v-btn-toggle>-->
           <div>
-          <v-btn 
-              v-for="(item, index) in items"
-              class="ma-2"
-              fab
-              large
-              :key="index"
-              :color="item.color"
-              :outlined="toggle_exclusive==index ? false : true"
-              @click="toggle_exclusive = index"
-            >
-              {{ item.title }} 
-            </v-btn>
+            <sequential-entrance>
+              <v-btn 
+                  v-for="(item, index) in items"
+                  class="ma-2"
+                  fab
+                  large
+                  :key="index"
+                  :color="item.color"
+                  :outlined="toggle_exclusive==index ? false : true"
+                  @click="toggle_exclusive = index"
+                >
+                  {{ item.title }} 
+                </v-btn>
+              </sequential-entrance>
             </div>
 </template>
 
