@@ -26,7 +26,7 @@
             color="primary"
             depressed
           >
-            Subscribe
+            Learn How
           </v-btn>
         </v-col>
       </v-row>

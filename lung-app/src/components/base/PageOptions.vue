@@ -13,7 +13,7 @@
                                             TITLE OF CARD
                   ------------------------------------------------------------------------- -->                   
                   <v-card-title
-                    class="headline"
+                    :class="headline"
                   >
                     <slot name="header"> </slot>
                   </v-card-title>
@@ -103,5 +103,9 @@ bottom: 0;
 opacity: 1 !important;
 position: absolute;
 width: 100%;
+}
+
+.headline {
+  font-size: 5px;
 }
 </style>
