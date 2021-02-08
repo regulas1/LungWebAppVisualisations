@@ -4,7 +4,7 @@
 <template>
     <v-container>
         <v-row style="padding-top: 6%">
-        <v-col style="padding-right: 12%">
+        <v-col style="padding-right: 10%">
             <v-card
               :color="color"
               dark
