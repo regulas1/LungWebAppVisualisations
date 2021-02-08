@@ -3,8 +3,8 @@
 	************************************************************************ -->
 <template>
   <v-container>
-    <v-row style="padding-top: 3%">
-      <v-col align="center">
+    <v-row>
+      <v-col align="center">  <!--Centers buttons in column-->
       <sequential-entrance>
         <v-btn 
           v-for="(item, index) in items"

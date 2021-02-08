@@ -6,6 +6,7 @@
         <!--<base-subheading>Smoking</base-subheading>--> <!--Main heading-->
         <v-row 
             class="grey darken-4 fill-height"
+            style="padding-bottom: 50px"
             >
                 <v-col
                     cols="12"
@@ -77,6 +78,13 @@
                     align="center"
                 >
                         <selectors />
+                        <v-card 
+                            height="450px" 
+                            color="rgb(0, 0, 0, 0)"
+                            flat
+                        > 
+                        <!--Creates a space for lung model (implement lung model here)-->
+                        </v-card>
                         <img src="../../public/img/Rotate_Zoom.png" width="180px">
                 </v-col>
 
@@ -139,4 +147,5 @@ export default {
 <!-- *************************************************************************
 	STYLE
 	************************************************************************ -->
-<style scoped></style>
+<style scoped>
+</style>
