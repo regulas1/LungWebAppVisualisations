@@ -116,8 +116,8 @@
                  <v-col
                     cols="12"
                     md="6"
+                    align="center"
                 >
-                    Second column: lung model goes here
                     <img src="../../public/img/Rotate_Zoom.png" width="180px">
                 </v-col>
 

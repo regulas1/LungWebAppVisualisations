@@ -74,10 +74,10 @@
                  <v-col
                     cols="12"
                     md="6"
+                    align="center"
                 >
                         <selectors />
                         <img src="../../public/img/Rotate_Zoom.png" width="180px">
-                        Second column: lung model goes here
                 </v-col>
 
             <!-- ------------------------------------------------------------------------

@@ -2,41 +2,9 @@
 	TEMPLATE
 	************************************************************************ -->
 <template>
-    <!--<v-btn-toggle
-            v-model="toggle_exclusive"
-            active-class="white--text"
-          >
-            <v-btn 
-              color="blue"
-              class="ma-1"
-              outlined
-             >
-              Heal Me
-            </v-btn>
-            <v-btn 
-              active-class="green white--text"
-              class="ma-1"
-              outlined
-             >
-              Zero
-            </v-btn>
-            <v-btn 
-              active-class="orange white--text"
-              class="ma-1"
-              outlined
-             >
-              1 Pack
-            </v-btn>
-            <v-btn 
-              active-class="red white--text"
-              class="ma-1"
-              outlined
-             >
-              2 Packs
-            </v-btn>
-          </v-btn-toggle>-->
   <v-container>
     <v-row style="padding-top: 3%">
+      <v-col align="center">
       <sequential-entrance>
         <v-btn 
           v-for="(item, index) in items"
@@ -51,6 +19,7 @@
           {{ item.title }} 
         </v-btn>
       </sequential-entrance>
+      </v-col>
     </v-row>
   </v-container>
 </template>
