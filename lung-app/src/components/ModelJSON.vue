@@ -46,9 +46,31 @@
 
         this.importGLTF(scene, camera, renderer, stats, control)
         // this.importJSON(scene, camera, renderer, stats, control)
+
+        // Import my own lung model
+        const loader = new GLTFLoader();
+        loader.load(
+            'public/static/glTF/Duck.gltf',
+            function ( gltf ) {
+
+                scene.add( gltf.scene );
+
+                gltf.animations; // Array<THREE.AnimationClip>
+                gltf.scene; // THREE.Group
+                gltf.scenes; // Array<THREE.Group>
+                gltf.cameras; // Array<THREE.Camera>
+                gltf.asset; // Object
+
+            },
+            function ( xhr ) {
+
+                console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+            },
+        );
       },
       // Import GLTF format model
-      importGLTF(scene, camera, renderer, stats, control) {
+      /*importGLTF(scene, camera, renderer, stats, control) {
         // set the camera position
         camera.position.z = 130
         camera.position.y = 80
@@ -92,8 +114,9 @@
           renderer.render(scene, camera)
         }
         animate()
-      },
+      },*/
       // Import JSON format model
+      /*
       importJSON(scene, camera, renderer, stats, control) {
         // set the camera position
         camera.position.z = 130
@@ -133,7 +156,7 @@
           renderer.render(scene, camera)
         }
         animate()
-      }
+      }*/
     }
   }
 </script>
