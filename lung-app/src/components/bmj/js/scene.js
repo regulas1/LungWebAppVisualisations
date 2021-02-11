@@ -89,7 +89,7 @@ const setScene = function (name, scene, material) {
 	zincRenderer.setCurrentScene(scene);
 	currentUniforms = material.uniforms;
 };
-const loadScene = function(data, uniforms) {
+export function loadScene(data, uniforms) {
 	if (!zincRenderer) {
 		console.error('zinc not loaded');
 		return;
@@ -259,6 +259,3 @@ function toBufferGeometry(geometry) {
 	}
 	return bufferGeometry;
 }
-
-// export const loader ADDED
-export { updateFrame, startLoading, stopLoading, setLoadingText, hashCode, setScene, loadScene, loadModels, toBufferGeometry }

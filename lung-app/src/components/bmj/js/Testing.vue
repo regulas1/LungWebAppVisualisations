@@ -16,13 +16,23 @@
 	SCRIPT
 	************************************************************************ -->
 <script>
-import TestFiles from '@/components/bmj/js/test.js'
+//import charts from 'charts.js'
+//import controls from 'controls.js'
+//import globals from 'globals.js'
+//import graphs from 'graphs.js'
+//import main from 'main.js'
+import { loadScene } from './scene.js'
+//import webgl_check from 'webgl_check.js'
 
 export default {
-	name: 'Tester',
-	components: {
-		TestFiles,
-	} 
+	data: function() {
+		return {
+			
+		}
+	}
+	methods: {
+		loadScene,
+	}
 };
 </script>
 
