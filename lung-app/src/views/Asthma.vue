@@ -224,6 +224,6 @@ export default {
 	************************************************************************ -->
 <style scoped>
 .gradient {
-    background-image: linear-gradient(rgba(33,33,33,1), rgba(177,153,77,1));
+    background-image: linear-gradient(rgba(33,33,33,1), rgba(177,153,77,0.7));
 }
 </style>

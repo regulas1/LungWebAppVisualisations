@@ -74,7 +74,7 @@ export default {
 
 /* Color of v-card. Last parameter indicates opacity (i.e. begins with 0% opacity, ends with 50% opacity) */
 .gradient {
-    background-image: linear-gradient(rgba(177,153,77,1), rgba(177,153,77,0));
+    background-image: linear-gradient(rgba(33,33,33,0), rgba(33,33,33,0));
 }
 
 </style>

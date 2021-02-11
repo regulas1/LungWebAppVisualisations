@@ -5,7 +5,7 @@
     <container>
         <!--<base-subheading>Smoking</base-subheading>--> <!--Main heading-->
         <v-row 
-            class="grey darken-4 fill-height"
+            class="gradient fill-height"
             style="padding-bottom: 50px"
             >
                 <v-col
@@ -148,4 +148,7 @@ export default {
 	STYLE
 	************************************************************************ -->
 <style scoped>
+.gradient {
+    background-image: linear-gradient(rgba(33,33,33,1), rgba(177,153,77,0.7));
+}
 </style>

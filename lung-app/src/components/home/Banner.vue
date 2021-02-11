@@ -1,7 +1,7 @@
 <template>
   <base-card 
       dark 
-      class="grey darken-4"
+      class="gradient"
       height="600px"
       width="100%"
     >
@@ -41,3 +41,9 @@ import typical from '@/components/home/Typical.vue'
     components: typical
   }
 </script>
+
+<style scoped>
+.gradient {
+    background-image: linear-gradient(rgba(33,33,33,0.5), rgba(177,153,77,0.5));
+}
+</style>
