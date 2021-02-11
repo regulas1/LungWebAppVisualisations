@@ -4,7 +4,6 @@
   
     <div class="model-preview">
       <model-gltf />
-      hello
       <!--<model-json />-->
     </div>
     
@@ -32,8 +31,5 @@ import ModelGltf from '@/components/ModelGLTF.vue'
 </script>
 
 <style scoped>
-.model-preview {
-  width: "260px";
-  height: "260px";
-}
+
 </style>

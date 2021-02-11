@@ -1,6 +1,6 @@
 <template>
   <div id="scene-container" ref="sceneContainer">
-    My name is Alyssa
+    Hello
   </div>
 </template>
 
@@ -30,16 +30,16 @@ export default {
       this.stats = new Stats()
       this.container.appendChild(this.stats.dom)
       // add camera
-      const fov = 60 // Field of view
+      const fov = 45 // Field of view
       const aspect = this.container.clientWidth / this.container.clientHeight
       const near = 0.1 // the near clipping plane
-      const far = 30 // the far clipping plane
+      const far = 1000 // the far clipping plane
       const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
       camera.position.set(0, 5, 10)
       this.camera = camera
       // create scene
       this.scene = new THREE.Scene()
-      this.scene.background = new THREE.Color('skyblue')
+      this.scene.background = new THREE.Color('darkgrey')
       // add lights
       const ambientLight = new THREE.HemisphereLight(
         0xffffff, // bright sky color
@@ -89,5 +89,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.scene-container {
+  height: "50%"
+}
 </style>
