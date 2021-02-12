@@ -4,7 +4,7 @@
 <template>
         <v-container>
         <v-row style="padding-top: 3%">
-        <v-col style="padding-left: 6%">
+        <v-col style="padding-left: 10%">
             <v-card
             class="gradient mx-auto"
             >
