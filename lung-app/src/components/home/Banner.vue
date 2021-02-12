@@ -11,6 +11,12 @@
       >
         <v-col
           cols="12"
+          md="5"
+        >
+          <model-gltf />
+        </v-col>
+        <v-col
+          cols="12"
           md="7"
           offset-md="5"
         >
@@ -34,10 +40,14 @@
 </template>
 
 <script>
-import typical from '@/components/home/Typical.vue'
+//import typical from '@/components/home/Typical.vue'
+import ModelGltf from '../ModelGLTF.vue'
 
-  export default {
+export default {
     name: 'HomeBanner',
-    components: typical
+    components: {
+      //typical,
+      ModelGltf,
   }
+}
 </script>

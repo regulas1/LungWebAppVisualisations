@@ -1,6 +1,6 @@
 <template>
   <div id="scene-container" ref="sceneContainer">
-    Hello
+    Lung Model <!--Must include some text here for model to show-->
   </div>
 </template>
 
