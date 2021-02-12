@@ -103,7 +103,7 @@ export default {
         },
         undefined,
         undefined
-      ),
+      )
       loader.load( 
         '/three-assets/Lung/surface_5.glb',
         gltf => {
@@ -111,7 +111,7 @@ export default {
         },
         undefined,
         undefined
-      ),
+      )
       loader.load( 
         '/three-assets/Lung/surface_6.glb',
         gltf => {
@@ -124,7 +124,6 @@ export default {
         this.render()
       })
     },
-
     resize() {
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
       this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
