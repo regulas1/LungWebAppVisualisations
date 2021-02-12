@@ -1,6 +1,6 @@
 <template>
   <div id="scene-container" ref="sceneContainer">
-    <canvas />
+    Hello
   </div>
 </template>
 
@@ -52,20 +52,28 @@ export default {
       // add controls
       this.controls = new OrbitControls(this.camera, this.container)
       // create renderer
-      this.renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canvas") })
-      /*this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
+      this.renderer = new THREE.WebGLRenderer({ alpha: false })
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
       this.renderer.setPixelRatio(window.devicePixelRatio)
       this.renderer.gammaFactor = 2.2
       this.renderer.outputEncoding = THREE.sRGBEncoding
       this.renderer.physicallyCorrectLights = true
-      this.container.appendChild(this.renderer.domElement)*/
+      this.container.appendChild(this.renderer.domElement)
       // set aspect ratio to match the new browser window aspect ratio
-      //this.camera.aspect = this.container.clientWidth / this.container.clientHeight
-      //this.camera.updateProjectionMatrix()
-      //this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
+      this.camera.aspect = this.container.clientWidth / this.container.clientHeight
+      this.camera.updateProjectionMatrix()
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
       const loader = new GLTFLoader()
       loader.load(
         '/three-assets/RobotExpressive.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load(
+        '/three-assets/Lung/smoker_and_asthmatic_flow_1.glb',
         gltf => {
           this.scene.add(gltf.scene)
         },
@@ -76,20 +84,13 @@ export default {
         this.render()
       })
     },
-    resizeCanvasToDisplaySize () {
-      const canvas = this.renderer.domElement;
-      const width = this.canvas.clientWidth;
-      const height = this.canvas.clientHeight;
 
-      if (canvas.width !== width || canvas.height !== height) {
-        // Mustust pass false here or three.js will fight browser
-        this.renderer.setSize(width, height, false);
-        this.camera.aspect = width / height;
-        this.camera.updateProjectionMatrix();
-      }
+    resize() {
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+      this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
+      this.camera.updateProjectMatrix();
     },
     render () {
-      this.resizeCanvasToDisplaySize()
       this.renderer.render(this.scene, this.camera)
       this.stats.update()
 
@@ -97,13 +98,12 @@ export default {
   },
   mounted () {
     this.init()
+    window.addEventListener('resize', this.onResize)
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.scene-container {
-  height: "50%"
-}
+
 </style>
