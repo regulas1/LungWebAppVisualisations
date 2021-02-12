@@ -35,11 +35,11 @@ export default {
       const near = 0.01 // the near clipping plane
       const far = 1000 // the far clipping plane
       const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-      camera.position.set(0, 5, 10)
+      camera.position.set(0, -500, 50)
       this.camera = camera
       // create scene
       this.scene = new THREE.Scene()
-      this.scene.background = new THREE.Color('skyblue')
+      this.scene.background = new THREE.Color('red')
       // add lights
       const ambientLight = new THREE.HemisphereLight(
         0xffffff, // bright sky color
@@ -52,7 +52,7 @@ export default {
       // add controls
       this.controls = new OrbitControls(this.camera, this.container)
       // create renderer
-      this.renderer = new THREE.WebGLRenderer({ alpha: false })
+      this.renderer = new THREE.WebGLRenderer({ antialias: true })
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
       this.renderer.setPixelRatio(window.devicePixelRatio)
       this.renderer.gammaFactor = 2.2
@@ -144,5 +144,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+#scene-container {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+}
 </style>
