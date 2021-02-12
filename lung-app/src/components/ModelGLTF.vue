@@ -64,16 +64,56 @@ export default {
       this.camera.updateProjectionMatrix()
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
       const loader = new GLTFLoader()
-      loader.load(
-        '/three-assets/RobotExpressive.glb',
+      /*loader.load( 
+        '/three-assets/Lung/smoker_and_asthmatic_flow_1.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )*/
+      loader.load( 
+        '/three-assets/Lung/surface_1.glb',
         gltf => {
           this.scene.add(gltf.scene)
         },
         undefined,
         undefined
       )
-      loader.load(
-        '/three-assets/Lung/smoker_and_asthmatic_flow_1.glb',
+      loader.load( 
+        '/three-assets/Lung/surface_2.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load( 
+        '/three-assets/Lung/surface_3.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load( 
+        '/three-assets/Lung/surface_4.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      ),
+      loader.load( 
+        '/three-assets/Lung/surface_5.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      ),
+      loader.load( 
+        '/three-assets/Lung/surface_6.glb',
         gltf => {
           this.scene.add(gltf.scene)
         },
