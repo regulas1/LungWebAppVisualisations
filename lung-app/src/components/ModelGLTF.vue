@@ -1,6 +1,6 @@
 <template>
   <div id="scene-container" ref="sceneContainer">
-    Lung Model <!--Must include some text here for model to show-->
+     <!--If model is not displayed for some reason, try inserting some text here-->
   </div>
 </template>
 
@@ -144,9 +144,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div {
+  margin: 0;
+  overflow: hidden;
+}
+
 #scene-container {
   position: absolute;
-  width: 40%;
+  width: 40%; /* Approx 5/12 (5 cols / 12 cols) */
   height: 100%;
 }
 </style>
