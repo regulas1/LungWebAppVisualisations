@@ -89,7 +89,7 @@ const setScene = function (name, scene, material) {
 	zincRenderer.setCurrentScene(scene);
 	currentUniforms = material.uniforms;
 };
-export function loadScene(data, uniforms) {
+const loadScene = function(data, uniforms) {
 	if (!zincRenderer) {
 		console.error('zinc not loaded');
 		return;

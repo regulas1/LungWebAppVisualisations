@@ -19,7 +19,8 @@ export default {
       camera: null,
       controls: null,
       renderer: null,
-      stats: null
+      stats: null,
+      material: null,
     }
   },
   methods: {
@@ -49,6 +50,13 @@ export default {
       const mainLight = new THREE.DirectionalLight(0xffffff, 4.0)
       mainLight.position.set(10, 10, 10)
       this.scene.add(ambientLight, mainLight)
+      // add material
+      const material = new THREE.ShaderMaterial({
+        vertexShader: 'public/bmj/shaders/surface.vs',
+        fragmentShader: 'public/bmj/shaders/surface.fs',
+        /* Need to add uniforms */
+      });
+      this.scene.add(material)
       // add controls
       this.controls = new OrbitControls(this.camera, this.container)
       // create renderer
