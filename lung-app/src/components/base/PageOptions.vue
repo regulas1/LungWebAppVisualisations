@@ -13,7 +13,7 @@
                                             TITLE OF CARD
                   ------------------------------------------------------------------------- -->                   
                   <v-card-title
-                  >
+                  > <!--Removed :class="headline" from inside v-card-title-->
                     <slot name="header"> </slot>
                   </v-card-title>
 
