@@ -3,7 +3,7 @@
 	************************************************************************ -->  
 <template>
         <v-container>
-        <v-row style="padding-top: 3%">
+        <v-row style="padding-top: 5%">
         <v-col style="padding-left: 10%">
             <v-card
             class="gradient mx-auto"

@@ -3,7 +3,7 @@
 	  ************************************************************************ -->  
 <template>
     <v-container>
-        <v-row style="padding-top: 6%">
+        <v-row style="padding-top: 5%">
         <v-col style="padding-right: 10%">
             <v-card
               :color="color"
