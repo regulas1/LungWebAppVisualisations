@@ -11,6 +11,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Stats from 'stats.js'
 
+import surface from '../../public/three-assets/shaders/surface.js'
+
 export default {
   name: 'ModelGltf',
   data () {
@@ -22,6 +24,7 @@ export default {
       renderer: null,
       stats: null,
       material: null,
+      surface,
     }
   },
   methods: {
@@ -51,14 +54,6 @@ export default {
       const mainLight = new THREE.DirectionalLight(0xffffff, 4.0)
       mainLight.position.set(10, 10, 10)
       this.scene.add(ambientLight, mainLight)
-      // add material
-      const material = new THREE.ShaderMaterial({
-        vertexShader: 'public/bmj/shaders/surface.vs',
-        fragmentShader: 'public/bmj/shaders/surface.fs',
-        /* Need to add uniforms */
-      });
-      this.scene.add(material)
-      // add controls
       this.controls = new OrbitControls(this.camera, this.container)
       // create renderer
       this.renderer = new THREE.WebGLRenderer({ antialias: true })
@@ -133,6 +128,26 @@ export default {
         this.render()
       })
     },
+    setShader() {
+        let shader = this.surface;
+        let shaderObject = {
+          vertexShader: shader.vertexShader,
+          fragmentShader: shader.fragmentShader,
+          lights: true
+        };
+        if ('uniforms' in shader) {
+          // Using UniformUtils will clone the shader files uniforms,
+          shaderObject.uniforms = THREE.UniformsUtils.merge([
+            THREE.UniformsLib['lights'],
+            shader.uniforms
+          ]);
+        };
+        // add material
+        const material = new THREE.ShaderMaterial(shaderObject);
+        // add the original uniforms here so we can loop over them in the Controls, because other uniforms are added that we don't want controls for.
+        material.customUniforms = shader.uniforms;
+        //this.scene.add(material)
+    },
     resize() {
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
       this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
@@ -146,6 +161,7 @@ export default {
   },
   mounted () {
     this.init()
+    this.setShader();
     window.addEventListener('resize', this.onResize)
   }
 }
