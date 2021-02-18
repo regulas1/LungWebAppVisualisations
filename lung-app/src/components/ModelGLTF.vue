@@ -28,7 +28,7 @@ export default {
     }
   },
   methods: {
-    init () {
+    init (material) {
       // set container
       this.container = this.$refs.sceneContainer
       // add stats
@@ -44,7 +44,7 @@ export default {
       this.camera = camera
       // create scene
       this.scene = new THREE.Scene()
-      this.scene.background = new THREE.Color('red')
+      this.scene.background = new THREE.Color('#212121')
       // add lights
       const ambientLight = new THREE.HemisphereLight(
         0xffffff, // bright sky color
@@ -79,6 +79,9 @@ export default {
       loader.load( 
         '/three-assets/Lung/surface_1.glb',
         gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
           this.scene.add(gltf.scene)
         },
         undefined,
@@ -87,6 +90,9 @@ export default {
       loader.load( 
         '/three-assets/Lung/surface_2.glb',
         gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
           this.scene.add(gltf.scene)
         },
         undefined,
@@ -95,6 +101,9 @@ export default {
       loader.load( 
         '/three-assets/Lung/surface_3.glb',
         gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
           this.scene.add(gltf.scene)
         },
         undefined,
@@ -103,6 +112,9 @@ export default {
       loader.load( 
         '/three-assets/Lung/surface_4.glb',
         gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
           this.scene.add(gltf.scene)
         },
         undefined,
@@ -111,6 +123,9 @@ export default {
       loader.load( 
         '/three-assets/Lung/surface_5.glb',
         gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
           this.scene.add(gltf.scene)
         },
         undefined,
@@ -119,6 +134,9 @@ export default {
       loader.load( 
         '/three-assets/Lung/surface_6.glb',
         gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
           this.scene.add(gltf.scene)
         },
         undefined,
@@ -133,20 +151,25 @@ export default {
         let shaderObject = {
           vertexShader: shader.vertexShader,
           fragmentShader: shader.fragmentShader,
-          lights: true
+          //lights: true
+          uniforms: shader.uniforms,
+          onBeforeCompile: function(){}, // fix bug in ThreeJS
+            side: THREE.DoubleSide,
+            transparent: true,
         };
-        if ('uniforms' in shader) {
+        /*if ('uniforms' in shader) {
           // Using UniformUtils will clone the shader files uniforms,
           shaderObject.uniforms = THREE.UniformsUtils.merge([
             THREE.UniformsLib['lights'],
             shader.uniforms
           ]);
-        };
+        };*/
         // add material
         const material = new THREE.ShaderMaterial(shaderObject);
         // add the original uniforms here so we can loop over them in the Controls, because other uniforms are added that we don't want controls for.
-        material.customUniforms = shader.uniforms;
+        //material.customUniforms = shader.uniforms;
         //this.scene.add(material)
+        this.init(material)
     },
     resize() {
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
@@ -160,7 +183,6 @@ export default {
     }
   },
   mounted () {
-    this.init()
     this.setShader();
     window.addEventListener('resize', this.onResize)
   }
