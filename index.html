@@ -13,11 +13,25 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://unpkg.com/vuex"></script>
+	<script src="https://unpkg.com/http-vue-loader"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.js"></script> <!--Not properly initialised, need stylesheet?-->
 </head>
 <body data-page="" data-severity="">
 	<div id="renderer"></div>
 	<div id="pages"></div>
-	<div id="app-one"> {{ title }} </div>
+	<div id="app"> 
+		<v-app>
+			<h1> {{ title }} </h1>
+			<router-view></router-view>
+		</v-app>
+
+		<p>
+			<router-link to="/breathing">Go to Breathing</router-link>
+			<router-link to="/asthma">Go to Asthma</router-link>
+		</p>
+
+	</div>
 	<div id="top-buttons">
 		<a id="play" class="nav-button"></a>
 		<a id="information" class="nav-button">Less information</a>
