@@ -1,6 +1,8 @@
-const Breathing = { template: '<div>Breathing</div>' }
-const Asthma = { template: '<div>Asthma</div>' }
-
+const Page = {
+    template: `<div>Page: {{ $route.params.id }}</div>`
+  }
+  
+/*
   const routes = [{
     path: '/',
     component: Breathing
@@ -13,7 +15,12 @@ const Asthma = { template: '<div>Asthma</div>' }
     path: '/asthma',
     component: Asthma
 },
-]
+]*/
+
+const routes = [{   
+    path: '/:id', 
+    component: Page,
+  }]
 
 let router = new VueRouter({
     routes // short for `routes: routes`
