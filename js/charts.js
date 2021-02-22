@@ -1,3 +1,4 @@
+/* Corresponds to smoking chart */
 FEV1 = {
   constructor: function(params){
 			dojo.mixin(this, params);

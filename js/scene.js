@@ -1,3 +1,4 @@
+/* Need for model to be displayed */
 let playing = false;
 let sceneStartDate = new Date().getTime();
 let scenePauseDate = new Date().getTime();
@@ -74,11 +75,7 @@ if (!WEBGL.isWebGLAvailable()) {
 	zincRenderer = new Zinc.Renderer(document.getElementById('renderer'), window);
 	zincRenderer.initialiseVisualisation({antialias: false});
 	zincRenderer.getThreeJSRenderer().setClearColor(0x000000, 1);
-  //if (window.innerWidth > 2000 || window.innerHeight > 2000) {
-  //  zincRenderer.getThreeJSRenderer().setPixelRatio(0.5);
-  //} else {
-	  zincRenderer.getThreeJSRenderer().setPixelRatio(1.0);
-  //}
+	zincRenderer.getThreeJSRenderer().setPixelRatio(1.0);
 	zincRenderer.addPreRenderCallbackFunction(updateFrame(zincRenderer));
 	zincRenderer.animate();
 }
@@ -113,7 +110,6 @@ const loadScene = function(data, uniforms) {
             onBeforeCompile: function(){}, // fix bug in ThreeJS
             side: THREE.DoubleSide,
             transparent: true,
-            //depthWrite: false,
 		});
 
     loadModels(name, scene, data, material);

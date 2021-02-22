@@ -1,5 +1,7 @@
+/* Need for model to be displayed */
 let PLAY_SPEED = 1.0;
 
+/* Not needed? */
 const GRAPH_WIDTH = 250;
 const GRAPH_HEIGHT = 250;
 const GRAPH_PADDING = 5;
@@ -7,6 +9,7 @@ const GRAPH_TEXT_HEIGHT = 20;
 const GRAPH_SMOOTHING = 0.2;
 const MARKER_RADIUS = 16;
 
+/* Must be defined for model to be displayed */
 const THREE = Zinc.THREE;
 const surfaceUniforms = THREE.UniformsUtils.merge([{
 	'ambient'  : { type: 'c', value: new THREE.Color( 0xffffff ) },

@@ -61,6 +61,7 @@ function loadPage(page) {
 	}
 }
 
+/* Needed to display all page elements except page buttons & pause & info */
 function getURLSegment(i) {
 	const segments = window.location.hash.substr(2).split('/');
 	if (i < segments.length) {
@@ -84,6 +85,7 @@ function updateRoute() {
 }
 updateRoute();
 
+/* Need to change page (default is breathing) */
 window.addEventListener('hashchange', function(e) {
 	updateRoute();
 });
@@ -108,7 +110,7 @@ window.onresize = function(e) {
 };
 resize();
 
-// Dragging of model
+/* Dragging of model; does nothing on laptop? */
 document.getElementById('renderer').addEventListener('mousedown', function(e){
     const links = document.querySelectorAll('a, .clickable');
     for (let i = 0; i < links.length; i++) {

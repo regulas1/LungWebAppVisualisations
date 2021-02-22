@@ -1,3 +1,4 @@
+/* Corresponds to button inputs that change smoking lung */
 const eventChanged = new CustomEvent('changed', {});
 function clickButton(button) {
 	const controlButton = button.parentNode;

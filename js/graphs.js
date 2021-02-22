@@ -1,3 +1,4 @@
+/* Need for breathing graph to be displayed */
 const graphs = [];
 function loadGraph(id, url) {
 	if (!SVG.supported) {
@@ -95,6 +96,7 @@ function loadGraph(id, url) {
 	req.send();
 }
 
+/* Need for lung model AND movement of breathing graph */
 function updateMarkers(t) {
 	for (let j = 0; j < graphs.length; j++) {
 		let marker = graphs[j].marker;
