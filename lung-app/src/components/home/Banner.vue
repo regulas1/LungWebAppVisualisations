@@ -5,7 +5,7 @@
       height="600px"
       width="100%"
     >
-      <model-gltf />
+      <model-json />
 
       <v-row
         class="fill-height pa-3"
@@ -37,13 +37,13 @@
 
 <script>
 //import typical from '@/components/home/Typical.vue'
-import ModelGltf from '../ModelGLTF.vue'
+import ModelJson from '../ModelGLTF.vue'
 
 export default {
     name: 'HomeBanner',
     components: {
       //typical,
-      ModelGltf,
+      ModelJson,
   }
 }
 </script>

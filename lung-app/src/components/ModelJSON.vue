@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  //import * as Zinc from 'zincjs'
+  import * as Zinc from 'zincjs'
   import * as THREE from 'zincjs/node_modules/three/src/Three.js'
   // import * as dat from 'dat.gui'
   import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -21,8 +21,10 @@ export default {
       scene: null,
       camera: null,
       controls: null,
-      renderer: null,
+      //renderer: null,
+      zincRenderer: null,
       material: null,
+      currentUniforms: null,
       surface,
     }
   },
@@ -52,12 +54,16 @@ export default {
       this.scene.add(ambientLight, mainLight)
       this.controls = new OrbitControls(this.camera, this.container)
       // create renderer
-      this.renderer = new THREE.WebGLRenderer({ antialias: true })
+      /*this.renderer = new THREE.WebGLRenderer({ antialias: true })
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
       this.renderer.setPixelRatio(window.devicePixelRatio)
       this.renderer.gammaFactor = 2.2
       this.renderer.outputEncoding = THREE.sRGBEncoding
-      this.renderer.physicallyCorrectLights = true
+      this.renderer.physicallyCorrectLights = true*/
+      
+      /* ZINC */
+      
+      
       this.container.appendChild(this.renderer.domElement)
       // set aspect ratio to match the new browser window aspect ratio
       this.camera.aspect = this.container.clientWidth / this.container.clientHeight

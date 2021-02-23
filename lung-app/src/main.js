@@ -8,6 +8,24 @@ import './plugins/base'
 import SequentialEntrance from 'vue-sequential-entrance'
 import 'vue-sequential-entrance/vue-sequential-entrance.css'
 
+import { Model } from './Model/Model.js';
+
+// create the main function
+function main() {
+  // Get a reference to the container element
+  const container = document.querySelector('#scene-container');
+
+  // 1. Create an instance of the World app
+  const model = new Model(container);
+
+  // 2. Render the scene
+  model.render();
+}
+
+// call main to start the app
+main();
+
+
 Vue.use(SequentialEntrance);
 
 Vue.config.productionTip = false;
