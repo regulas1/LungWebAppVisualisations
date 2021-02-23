@@ -1,165 +1,200 @@
 <template>
-  <div id="import-model">
+  <div id="scene-container" ref="sceneContainer">
+     <!--If model is not displayed for some reason, try inserting some text here-->
   </div>
 </template>
 
 <script>
-  import * as THREE from 'three'
-  import * as Stats from 'stats.js'
+  //import * as Zinc from 'zincjs'
+  import * as THREE from 'zincjs/node_modules/three/src/Three.js'
   // import * as dat from 'dat.gui'
   import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
   import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-  export default {
-    name: 'ImportModel',
-    data() {
-      return {}
-    },
-    created() {
-      this.init()
-    },
-    methods: {
-      //initialization
-      init() {
-        // Create Scene
-        let scene = new THREE.Scene()
+  import surface from '../../public/three-assets/shaders/surface.js'
 
-        // Create a camera - vision, aspect ratio, near and far clipping plane
-        let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 200)
-        camera.position.set(0, 0, 15)
-
-        // Create Renderer - to set the display window size
-        let renderer = new THREE.WebGLRenderer()
-        renderer.setSize(window.innerWidth, window.innerHeight)
-        document.body.appendChild(renderer.domElement)
-
-        // Create a performance test
-        let stats = new Stats()
-        stats.showPanel(0) // 0: fps, 1: ms, 2: mb, 3+: custom
-        document.body.appendChild(stats.dom)
-
-        // Create a camera control
-        let control = new OrbitControls(camera, renderer.domElement)
-        control.enableDamping = true
-        control.dampingFactor = 0.25
-        control.enableZoom = false
-
-        this.importGLTF(scene, camera, renderer, stats, control)
-        // this.importJSON(scene, camera, renderer, stats, control)
-
-        // Import my own lung model
-        const loader = new GLTFLoader();
-        loader.load(
-            'public/static/glTF/Duck.gltf',
-            function ( gltf ) {
-
-                scene.add( gltf.scene );
-
-                gltf.animations; // Array<THREE.AnimationClip>
-                gltf.scene; // THREE.Group
-                gltf.scenes; // Array<THREE.Group>
-                gltf.cameras; // Array<THREE.Camera>
-                gltf.asset; // Object
-
-            },
-            function ( xhr ) {
-
-                console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-            },
-        );
-      },
-      // Import GLTF format model
-      /*importGLTF(scene, camera, renderer, stats, control) {
-        // set the camera position
-        camera.position.z = 130
-        camera.position.y = 80
-
-        // Create GLTF loader
-        let loader = new GLTFLoader()
-
-        // debugger
-        loader.load('models/gltf/scene.gltf', gltf => {
-          // Zoom
-          gltf.scene.scale.set(.1, .1, .1)
-
-          // processing load model is black problem
-          gltf.scene.traverse(child => {
-            if (child.isMesh) {
-              child.material.emissive = child.material.color
-              child.material.emissiveMap = child.material.map
-            }
-          })
-
-          scene.add(gltf.scene)
-        }, xhr => {
-          // called while loading is progressing
-          console.log(`${( xhr.loaded / xhr.total * 100 )}% loaded`);
-        }, error => {
-          // called when loading has errors
-          console.error('An error happened', error);
-        })
-
-        let animate = () => {
-          // call the function cycle
-          requestAnimationFrame(animate)
-
-          // update performance plug-in
-          stats.update()
-
-          // Update the camera controls
-          control.update()
-
-          // Render interface
-          renderer.render(scene, camera)
-        }
-        animate()
-      },*/
-      // Import JSON format model
-      /*
-      importJSON(scene, camera, renderer, stats, control) {
-        // set the camera position
-        camera.position.z = 130
-        camera.position.y = 80
-
-        let loader = new THREE.ObjectLoader()
-
-        loader.load('models/json/file.json', group => {
-          // processing load model is black problem
-          group.traverse(child => {
-            if (child.isMesh) {
-              child.material.emissive = child.material.color
-              child.material.emissiveMap = child.material.map
-            }
-          })
-
-          scene.add(group)
-        }, xhr => {
-          // called while loading is progressing
-          console.log(`${( xhr.loaded / xhr.total * 100 )}% loaded`);
-        }, error => {
-          // called when loading has errors
-          console.error('An error happened', error);
-        })
-
-        let animate = () => {
-          // call the function cycle
-          requestAnimationFrame(animate)
-
-          // update performance plug-in
-          stats.update()
-
-          // Update the camera controls
-          control.update()
-
-          // Render interface
-          renderer.render(scene, camera)
-        }
-        animate()
-      }*/
+export default {
+  name: 'ModelGltf',
+  data () {
+    return {
+      container: null,
+      scene: null,
+      camera: null,
+      controls: null,
+      renderer: null,
+      material: null,
+      surface,
     }
+  },
+  methods: {
+    init (material) {
+      // set container
+      this.container = this.$refs.sceneContainer
+      // add camera
+      const fov = 45 // Field of view
+      const aspect = 2 // this.container.clientWidth / this.container.clientHeight
+      const near = 0.01 // the near clipping plane
+      const far = 1000 // the far clipping plane
+      const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
+      camera.position.set(0, -500, 50)
+      this.camera = camera
+      // create scene
+      this.scene = new THREE.Scene()
+      this.scene.background = new THREE.Color('#212121')
+      // add lights
+      const ambientLight = new THREE.HemisphereLight(
+        0xffffff, // bright sky color
+        0x222222, // dim ground color
+        1 // intensity
+      )
+      const mainLight = new THREE.DirectionalLight(0xffffff, 4.0)
+      mainLight.position.set(10, 10, 10)
+      this.scene.add(ambientLight, mainLight)
+      this.controls = new OrbitControls(this.camera, this.container)
+      // create renderer
+      this.renderer = new THREE.WebGLRenderer({ antialias: true })
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
+      this.renderer.setPixelRatio(window.devicePixelRatio)
+      this.renderer.gammaFactor = 2.2
+      this.renderer.outputEncoding = THREE.sRGBEncoding
+      this.renderer.physicallyCorrectLights = true
+      this.container.appendChild(this.renderer.domElement)
+      // set aspect ratio to match the new browser window aspect ratio
+      this.camera.aspect = this.container.clientWidth / this.container.clientHeight
+      this.camera.updateProjectionMatrix()
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
+      const loader = new GLTFLoader()
+      /*loader.load( 
+        '/three-assets/Lung/smoker_and_asthmatic_flow_1.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )*/
+      loader.load( 
+        '/three-assets/Lung/surface_1.glb',
+        gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load( 
+        '/three-assets/Lung/surface_2.glb',
+        gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load( 
+        '/three-assets/Lung/surface_3.glb',
+        gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load( 
+        '/three-assets/Lung/surface_4.glb',
+        gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load( 
+        '/three-assets/Lung/surface_5.glb',
+        gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      loader.load( 
+        '/three-assets/Lung/surface_6.glb',
+        gltf => {
+          gltf.scene.traverse( function ( node ) {
+            if ( node.isMesh ) node.material = material;
+          } );
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      this.renderer.setAnimationLoop(() => {
+        this.render()
+      })
+    },
+    setShader() {
+        let shader = this.surface;
+        let shaderObject = {
+          vertexShader: shader.vertexShader,
+          fragmentShader: shader.fragmentShader,
+          //lights: true
+          uniforms: shader.uniforms,
+          onBeforeCompile: function(){}, // fix bug in ThreeJS
+            side: THREE.DoubleSide,
+            transparent: true,
+        };
+        /*if ('uniforms' in shader) {
+          // Using UniformUtils will clone the shader files uniforms,
+          shaderObject.uniforms = THREE.UniformsUtils.merge([
+            THREE.UniformsLib['lights'],
+            shader.uniforms
+          ]);
+        };*/
+        // add material
+        const material = new THREE.ShaderMaterial(shaderObject);
+        // add the original uniforms here so we can loop over them in the Controls, because other uniforms are added that we don't want controls for.
+        //material.customUniforms = shader.uniforms;
+        //this.scene.add(material)
+        this.init(material)
+    },
+    resize() {
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+      this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
+      this.camera.updateProjectMatrix();
+    },
+    render () {
+      this.renderer.render(this.scene, this.camera)
+      this.stats.update()
+
+    }
+  },
+  mounted () {
+    this.setShader();
+    window.addEventListener('resize', this.onResize)
   }
+}
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div {
+  margin: 0;
+  overflow: hidden;
+}
+
+#scene-container {
+  position: absolute;
+  width: 40%; /* Approx 5/12 (5 cols / 12 cols) */
+  height: 100%;
+}
 </style>

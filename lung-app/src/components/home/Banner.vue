@@ -6,6 +6,7 @@
       width="100%"
     >
       <model-gltf />
+
       <v-row
         class="fill-height pa-3"
         align="center"
