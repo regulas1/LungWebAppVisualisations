@@ -18,8 +18,8 @@ function main() {
   // 1. Create an instance of the World app
   const model = new Model(container);
 
-  // 2. Render the scene
-  model.render();
+  // 2. Render the scene (use .start for animation)
+  model.start();
 }
 
 // call main to start the app
