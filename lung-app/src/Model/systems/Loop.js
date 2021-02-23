@@ -1,6 +1,9 @@
 /*** A class constructor (hence a capital 'L') ***/
 import { Clock } from 'zincjs/node_modules/three/src/Three.js';
 
+// create module scoped clock istance
+const clock = new Clock();
+
 class Loop {
   constructor(camera, scene, renderer, zincRenderer) {
     this.camera = camera;
@@ -28,9 +31,13 @@ class Loop {
   // Loop.tick method called from inside animation loop to "tick over" (i.e. update) to the next 
   // frame 60 times per second
   tick() {
+    // only call the getDelta function once per frame!
+    // saves the results from .getDelta in variable "delta"
+    const delta = clock.getDelta();
     // loop over the list and call .tick on any objects within
+    // pass variable "delta" into .tick method of each animated object
     for (const object of this.updatables) {
-        object.tick();
+        object.tick(delta);
       }
   }
 }
