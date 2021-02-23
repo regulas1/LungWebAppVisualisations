@@ -2,15 +2,56 @@ import {
   BoxBufferGeometry,
   MathUtils,
   Mesh,
-  MeshStandardMaterial,
-} from 'three';
+  //MeshStandardMaterial,
+  ShaderMaterial,
+  TextureLoader,
+  DoubleSide,
+} from 'zincjs/node_modules/three/src/Three.js';
+
+import checker from '/public/three-assets/shaders/Checker.js'
+
+function createMaterial() {
+  // create a texture loader.
+  /*const textureLoader = new TextureLoader();
+
+  const texture = textureLoader.load(
+    '@/public/three-assets/glTF/DuckCM.png',
+  );*/
+
+  let shader = checker;
+
+
+
+  // create a "standard" material using
+  /* the texture we just loaded as a color map
+  const material = new MeshStandardMaterial({
+    map: texture,
+  });
+
+  return material;
+}*/
+
+// create a "standard" material using
+// the texture we just loaded as a color map
+  const material = new ShaderMaterial({
+    //map: texture,
+    vertexShader: shader.vertexShader,
+    fragmentShader: shader.fragmentShader,
+    uniforms: shader.uniforms,
+
+    onBeforeCompile: function(){}, // fix bug in ThreeJS
+    side: DoubleSide,
+    transparent: true,
+  });
+
+  return material;
+}
 
 function createCube() {
   // create a geometry
   const geometry = new BoxBufferGeometry(2, 2, 2);
 
-  // create a default (white) Basic material
-  const material = new MeshStandardMaterial({ color: 'purple' });
+  const material = createMaterial();
 
   // create a Mesh containing the geometry and material
   const cube = new Mesh(geometry, material);
