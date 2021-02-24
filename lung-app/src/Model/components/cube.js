@@ -4,11 +4,10 @@ import {
   Mesh,
   //MeshStandardMaterial,
   ShaderMaterial,
-  TextureLoader,
   DoubleSide,
 } from 'zincjs/node_modules/three/src/Three.js';
 
-import checker from '/public/three-assets/shaders/Checker.js'
+import surface from '/public/three-assets/shaders/surface.js'
 
 function createMaterial() {
   // create a texture loader.
@@ -18,18 +17,7 @@ function createMaterial() {
     '@/public/three-assets/glTF/DuckCM.png',
   );*/
 
-  let shader = checker;
-
-
-
-  // create a "standard" material using
-  /* the texture we just loaded as a color map
-  const material = new MeshStandardMaterial({
-    map: texture,
-  });
-
-  return material;
-}*/
+  let shader = surface;
 
 // create a "standard" material using
 // the texture we just loaded as a color map

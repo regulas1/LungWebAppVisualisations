@@ -1,8 +1,8 @@
-import * as THREE from 'three';
+import * as THREE from 'zincjs/node_modules/three/src/Three.js';
 
 export default {
   name: 'Basic Color',
-  uniforms: {
+  uniforms: THREE.UniformsUtils.merge([{
     'ambient'  : { type: 'c', value: new THREE.Color( 0xffffff ) },
     'emissive' : { type: 'c', value: new THREE.Color( 0x000000 ) },
     'specular' : { type: 'c', value: new THREE.Color( 0x111111 ) },
@@ -15,7 +15,7 @@ export default {
     'tidalVolumeRatio': { type: 'f', value: 0.4 },
     'severity': { type: 'f', value: 0.0 },
     'opacity': { type: 'f', value: 1.0 },
-  },
+  }]),
   vertexShader: `
   varying vec3 v_viewPos;
   varying vec3 v_normal;
