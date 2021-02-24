@@ -10,17 +10,10 @@ import {
 import surface from '/public/three-assets/shaders/surface.js'
 
 function createMaterial() {
-  // create a texture loader.
-  /*const textureLoader = new TextureLoader();
-
-  const texture = textureLoader.load(
-    '@/public/three-assets/glTF/DuckCM.png',
-  );*/
-
   let shader = surface;
 
-// create a "standard" material using
-// the texture we just loaded as a color map
+  // create a "standard" material using
+  // the texture we just loaded as a color map
   const material = new ShaderMaterial({
     //map: texture,
     vertexShader: shader.vertexShader,

@@ -1,37 +1,32 @@
-class newScene {
-    constructor(zincRenderer) {
+import { createZincRenderer } from '../systems/zincRenderer.js'
 
-        const scenes = {};
-        const materials = {};
+function setScene(name, scene, material) {
+    const zincRenderer = createZincRenderer();
+    if (!zincRenderer) {
+        console.error('Zinc not loaded');
+        return;
+    }
 
-        let name = JSON.stringify(data).hashCode();
-        const scene = zincRenderer.createScene(name);
+    zincRenderer.setCurrentScene(scene);
+    let currentUniforms = material.uniforms;
+}
 
-        if (name in scenes) {
-            setScene(name, scenes[name], materials[name]);
-            return;
-        }
+async function loadScene(data, uniforms) {
+    //let currentUniforms = undefined; // shaded out when moved setScene function out of loadScene()
 
-        const setScene = function (name, scene, material) {
-            zincRenderer.setCurrentScene(scene);
-            //currentUniforms = material.uniforms;
-        };
+    const scenes = {};
+    const materials = {};
 
-        let json = JSON.parse(text);
-        let object = (new THREE.JSONLoader()).parse(json, 'path');
-        object.geometry.morphColors = json.morphColors;
-
-        let bufferGeometry = toBufferGeometry(object.geometry);
-        scene.addZincGeometry(bufferGeometry, 10001, undefined, undefined, false, false, true, undefined, material);
-        n--;
-        if (n == 0) {
-            scenes[name] = scene;
-            materials[name] = material;
-            setScene(name, scene, material);
-            stopLoading();
-        }
-      }
-  }
+    let name = JSON.stringify(data).hashCode();
+    if (name in scenes) {
+		setScene(name, scenes[name], materials[name]);
+		return;
+	}
   
-  export { newScene };
+    console.log('Render!');
+
+    //return { loadedModel }
+}
+  
+export { loadScene };
 
