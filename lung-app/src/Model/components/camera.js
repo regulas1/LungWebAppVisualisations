@@ -1,4 +1,4 @@
-import { PerspectiveCamera } from 'three';
+import { PerspectiveCamera } from 'zincjs/node_modules/three/src/Three.js';
 
 function createCamera() {
   const camera = new PerspectiveCamera(

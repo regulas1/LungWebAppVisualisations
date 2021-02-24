@@ -16,6 +16,7 @@ let camera;
 let renderer;
 let scene;
 let loop;
+let surfaceUniforms = createSurfaceUniforms();
 
 class Model {
     // 1. Create an instance of the World app
@@ -29,8 +30,22 @@ class Model {
         const cube = createCube();
         const light = createLights();
 
-        const surfaceUniforms = createSurfaceUniforms()
-        const surface = loadScene({
+        // add cube to list of updatable objects which .tick will loop over 
+        loop.updatables.push(cube);
+
+        scene.add(cube, light);
+
+        const resizer = new Resizer(container, camera, renderer);
+        /* Removed once animation loop was created
+        resizer.onResize = () => {
+            // call World.render
+            this.render();
+          };
+        */
+    }
+
+    async init() {
+        const { surface } = await loadScene({
             vs: 'shaders/surface.vs',
             fs: 'shaders/surface.fs',
             view: 'models/surface_view.json',
@@ -44,26 +59,8 @@ class Model {
             ],
         }, surfaceUniforms);
 
-        // add cube to list of updatable objects which .tick will loop over 
-        loop.updatables.push(cube);
-
-        scene.add(cube, light, surface);
-
-        const resizer = new Resizer(container, camera, renderer);
-        /* Removed once animation loop was created
-        resizer.onResize = () => {
-            // call World.render
-            this.render();
-          };
-        */
-    }
-
-    /*
-    async init() {
-        const { surface } = await loadSurface();
-
         scene.add(surface);
-    }*/
+    }
 
     // 2. Render the scene
     render() {

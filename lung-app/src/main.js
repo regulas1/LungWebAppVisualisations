@@ -26,9 +26,11 @@ function main() {
 }
 
 // call main to start the app
-main().catch((err) => {
+/* use catch when using async */
+/*main().catch((err) => {
   console.error(err);
-});
+});*/
+main()
 
 
 Vue.use(SequentialEntrance);
