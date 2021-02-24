@@ -5,6 +5,7 @@ import {
   //MeshStandardMaterial,
   ShaderMaterial,
   DoubleSide,
+  //TextureLoader,
 } from 'zincjs/node_modules/three/src/Three.js';
 
 import surface from '/public/three-assets/shaders/Checker.js'
@@ -31,9 +32,7 @@ function createMaterial() {
 function createCube() {
   // create a geometry
   const geometry = new BoxBufferGeometry(2, 2, 2);
-
   const material = createMaterial();
-
   // create a Mesh containing the geometry and material
   const cube = new Mesh(geometry, material);
 

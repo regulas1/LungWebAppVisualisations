@@ -1,4 +1,4 @@
-import { Color, Scene } from 'three';
+import { Color, Scene } from 'zincjs/node_modules/three/src/Three.js';
 
 function createScene() {
   const scene = new Scene();

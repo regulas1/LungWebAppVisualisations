@@ -1,14 +1,15 @@
 //import { loadSurface } from './components/surface/surface.js';
-import { createSurfaceUniforms } from './components/surface/surfaceUniforms.js';
+//import { createSurfaceUniforms } from './components/surface/surfaceUniforms.js';
 import { createCamera } from './components/camera.js';
 import { createCube } from './components/cube.js';
 import { createLights } from './components/lights.js';
 import { createScene } from './components/scene.js';
-import { loadScene } from './components/newScene.js'
+//import { loadScene } from './components/newScene.js'
 
 import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/Resizer.js';
 import { Loop } from './systems/Loop.js';
+import { createControls } from './systems/controls.js';
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
@@ -16,7 +17,7 @@ let camera;
 let renderer;
 let scene;
 let loop;
-let surfaceUniforms = createSurfaceUniforms();
+//let surfaceUniforms = createSurfaceUniforms();
 
 class Model {
     // 1. Create an instance of the World app
@@ -27,13 +28,15 @@ class Model {
         loop = new Loop(camera, scene, renderer);
         container.append(renderer.domElement);
 
+        const controls = createControls(camera, renderer.domElement);
+
         const cube = createCube();
-        const light = createLights();
+        const { ambientLight, mainLight } = createLights();
 
-        // add cube to list of updatable objects which .tick will loop over 
-        loop.updatables.push(cube);
+        // add controls to list of updatable objects which .tick will loop over 
+        loop.updatables.push(controls, cube);
 
-        scene.add(cube, light);
+        scene.add(ambientLight, mainLight, cube);
 
         const resizer = new Resizer(container, camera, renderer);
         /* Removed once animation loop was created
@@ -44,7 +47,7 @@ class Model {
         */
     }
 
-    async init() {
+    /*async init() {
         const { surface } = await loadScene({
             vs: 'shaders/surface.vs',
             fs: 'shaders/surface.fs',
@@ -60,7 +63,7 @@ class Model {
         }, surfaceUniforms);
 
         scene.add(surface);
-    }
+    }*/
 
     // 2. Render the scene
     render() {

@@ -9,7 +9,7 @@ class Loop {
     this.camera = camera;
     this.scene = scene;
     this.renderer = renderer;
-    this.zincRenderer = zincRenderer;
+    //this.zincRenderer = zincRenderer;
     this.updatables = [];
   }
 

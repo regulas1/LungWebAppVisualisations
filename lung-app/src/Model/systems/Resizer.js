@@ -9,7 +9,7 @@ const setSize = (container, camera, renderer) => {
     renderer.setSize(container.clientWidth, container.clientHeight);
 
     // set the pixel ratio (for mobile devices)
-    renderer.setPixelRatio(1.0);
+    renderer.setPixelRatio(window.devicePixelRatio);
 };
 
 /*** A class constructor (hence a capital 'R') ***/
@@ -31,3 +31,4 @@ class Resizer {
   }
   
   export { Resizer };
+  

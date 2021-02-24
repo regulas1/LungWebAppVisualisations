@@ -1,13 +1,18 @@
-import { DirectionalLight } from 'zincjs/node_modules/three/src/Three.js';
+import { DirectionalLight, HemisphereLight } from 'zincjs/node_modules/three/src/Three.js';
 
 function createLights() {
-  // Create a directional light
-  const light = new DirectionalLight('white', 8);
-
+  // create an ambient light
+  const ambientLight = new HemisphereLight(
+    'white',
+    'darkslategrey',
+    10,
+  );
+  // create a directional light
+  const mainLight = new DirectionalLight('white', 5);
   // move the light right, up, and towards us
-  light.position.set(10, 10, 10);
+  mainLight.position.set(10, 10, 10);
 
-  return light;
+  return {mainLight, ambientLight };
 }
 
 export { createLights };
