@@ -7,7 +7,7 @@ import {
   DoubleSide,
 } from 'zincjs/node_modules/three/src/Three.js';
 
-import surface from '/public/three-assets/shaders/surface.js'
+import surface from '/public/three-assets/shaders/Checker.js'
 
 function createMaterial() {
   let shader = surface;

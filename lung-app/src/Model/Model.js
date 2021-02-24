@@ -1,4 +1,5 @@
-import { loadSurface } from './components/surface/surface.js';
+//import { loadSurface } from './components/surface/surface.js';
+import { createSurfaceUniforms } from './components/surface/surfaceUniforms.js';
 import { createCamera } from './components/camera.js';
 import { createCube } from './components/cube.js';
 import { createLights } from './components/lights.js';
@@ -27,7 +28,9 @@ class Model {
 
         const cube = createCube();
         const light = createLights();
-        /*const surface = loadScene({
+
+        const surfaceUniforms = createSurfaceUniforms()
+        const surface = loadScene({
             vs: 'shaders/surface.vs',
             fs: 'shaders/surface.fs',
             view: 'models/surface_view.json',
@@ -39,12 +42,12 @@ class Model {
                 'models/surface_5.json',
                 'models/surface_6.json',
             ],
-        }, surfaceUniforms);*/
+        }, surfaceUniforms);
 
         // add cube to list of updatable objects which .tick will loop over 
         loop.updatables.push(cube);
 
-        scene.add(cube, light);
+        scene.add(cube, light, surface);
 
         const resizer = new Resizer(container, camera, renderer);
         /* Removed once animation loop was created
@@ -55,11 +58,12 @@ class Model {
         */
     }
 
+    /*
     async init() {
-        const { surfaceModel } = await loadSurface();
+        const { surface } = await loadSurface();
 
-        scene.add(surfaceModel);
-    }
+        scene.add(surface);
+    }*/
 
     // 2. Render the scene
     render() {
