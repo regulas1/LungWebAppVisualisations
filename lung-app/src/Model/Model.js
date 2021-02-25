@@ -1,4 +1,4 @@
-//import { loadSurface } from './components/surface/surface.js';
+import { loadSurface } from './components/surface/surface.js';
 //import { createSurfaceUniforms } from './components/surface/surfaceUniforms.js';
 import { createCamera } from './components/camera.js';
 import { createCube } from './components/cube.js';
@@ -14,6 +14,7 @@ import { createControls } from './systems/controls.js';
 // These variables are module-scoped: we cannot access them
 // from outside the module
 let camera;
+//let controls
 let renderer;
 let scene;
 let loop;
@@ -64,6 +65,15 @@ class Model {
 
         scene.add(surface);
     }*/
+
+    async init() {
+        const { surface } = await loadSurface();
+    
+        // move the target to the center of the front bird
+        //controls.target.copy(surface.position);
+    
+        scene.add(surface);
+    }
 
     // 2. Render the scene
     render() {

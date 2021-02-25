@@ -11,7 +11,7 @@ import 'vue-sequential-entrance/vue-sequential-entrance.css'
 import { Model } from './Model/Model.js';
 
 // create the main function
-function main() {
+/*unction main() {
   // Get a reference to the container element
   const container = document.querySelector('#scene-container');
 
@@ -23,10 +23,11 @@ function main() {
 }
 // call main to start the app
 main();
+*/
 
 /* ASYNC VERSION FOR LOADING MODELS */
 // mark as async in order to call the async Model.init method
-/*async function main() {
+async function main() {
   // Get a reference to the container element
   const container = document.querySelector('#scene-container');
 
@@ -41,9 +42,7 @@ main();
 
 main().catch((err) => {
   console.error(err);
-});*/
-
-
+});
 
 Vue.use(SequentialEntrance);
 
