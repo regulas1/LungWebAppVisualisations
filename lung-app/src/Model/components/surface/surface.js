@@ -1,4 +1,4 @@
-import { FileLoader, ObjectLoader } from 'zincjs/node_modules/three'; 
+import { FileLoader, ObjectLoader } from 'zincjs/node_modules/three/src/loaders/FileLoader.js'; 
 
 // Get setupModel module
 import { setupModel } from './setupModel.js';
@@ -7,7 +7,7 @@ async function loadSurface() {
   const loader = new FileLoader();
 
   const surfaceData = await loader.loadAsync(
-    '/three-assets/Lung/models/surface_1.json',
+    '/three-assets/Lung/surface_1.json',
     function (text) { 
       let json = JSON.parse(text);
       let object = (new ObjectLoader()).parse(json, 'path');
