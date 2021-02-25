@@ -1,15 +1,16 @@
 import { FileLoader, ObjectLoader } from 'zincjs/node_modules/three'; 
+import { GLTFLoader } from 'zincjs/node_modules/three/examples/jsm/loaders/GLTFLoader.js'
 
 // Get setupModel module
 import { setupModel } from './setupModel.js';
 
 async function loadSurface() {
-  const loader = new FileLoader();
+  const loader = new GLTFLoader();
 
   const surfaceData = await loader.loadAsync(
-    '/three-assets/Lung/surface_1.json',
+    '/three-assets/RobotExpressive.glb',
     function(text) {
-      console.log('This is the text: ', text)
+      console.log('This is the text: ', text);
       //let json = JSON.parse(data);
       //console.log(json)
       //let object = (new ObjectLoader().parse());

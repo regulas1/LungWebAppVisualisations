@@ -67,12 +67,12 @@ class Model {
     }*/
 
     async init() {
-        const { surface } = await loadSurface();
+        const { surfaceModel } = await loadSurface();
     
         // move the target to the center of the front bird
         //controls.target.copy(surface.position);
     
-        scene.add(surface);
+        scene.add(surfaceModel);
     }
 
     // 2. Render the scene
