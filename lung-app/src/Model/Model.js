@@ -48,24 +48,6 @@ class Model {
         */
     }
 
-    /*async init() {
-        const { surface } = await loadScene({
-            vs: 'shaders/surface.vs',
-            fs: 'shaders/surface.fs',
-            view: 'models/surface_view.json',
-            models: [
-                'models/surface_1.json',
-                'models/surface_2.json',
-                'models/surface_3.json',
-                'models/surface_4.json',
-                'models/surface_5.json',
-                'models/surface_6.json',
-            ],
-        }, surfaceUniforms);
-
-        scene.add(surface);
-    }*/
-
     async init() {
         const { 
             surfaceModel_1,
@@ -78,7 +60,6 @@ class Model {
     
         // move the target to the center of the front bird
         //controls.target.copy(surface.position);
-    
         scene.add(
             surfaceModel_1,
             surfaceModel_2,
