@@ -47,9 +47,9 @@
                       outlined
                       rounded
                       small
-                      v-text="button"
                       @click="reveal = true"
                     > <!--The text for the button is determined by the text within button = " " in the component using this custom directive-->
+                      <slot name="button"></slot>
                     </v-btn>
                   </v-card-actions>
 

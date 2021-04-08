@@ -35,11 +35,11 @@ export default {
                 toggle_exclusive: 2,
                 temp_toggle: 2,
                 items: [
-                { title: 'Heal', color: 'blue white--text' },
-                { title: 'Zero', color: 'green white--text' }, /* Array corresponding to each page */
-                { title: '1 Pack', color: 'orange white--text' },
-                { title: '2 Packs', color: 'red white--text' },
-            ],
+                  { title: 'Heal', color: 'blue white--text'},
+                  { title: 'Zero', color: 'green white--text'}, /* Array corresponding to each page */
+                  { title: '1 Pack', color: 'orange white--text'},
+                  { title: '2 Packs', color: 'red white--text'},
+                ],
 
         }
     },

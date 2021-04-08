@@ -2,8 +2,8 @@
 	TEMPLATE
 	************************************************************************ -->  
 <template>
-        <v-container>
         <v-row style="padding-top: 5%">
+            <v-container>
         <v-col style="padding-left: 10%">
             <v-card
             class="gradient mx-auto"
@@ -48,8 +48,8 @@
             </v-expand-transition>
             </v-card>
         </v-col>
-        </v-row>
         </v-container>
+        </v-row>
 </template>
 
 <!-- *************************************************************************

@@ -5,8 +5,8 @@
       height="600px"
       width="100%"
     >
-
-      <v-row
+      <v-row 
+        no-gutters
         class="fill-height"
         align="center"
       >
