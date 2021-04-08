@@ -5,16 +5,15 @@
       height="600px"
       width="100%"
     >
-      <model-json />
 
       <v-row
-        class="fill-height pa-3"
+        class="fill-height"
         align="center"
       >
         <v-col
-          cols="12"
-          md="7"
-          offset-md="5"
+          cols="11"
+          md="6"
+          offset="1"
         >
           <h1 class="display-3 font-weight-light">
             Visualising My Lungs
@@ -31,6 +30,15 @@
             Learn How
           </v-btn>
         </v-col>
+
+        <v-col
+          cols="12"
+          md="5"
+          align="center"
+        >
+          <model-json />
+        </v-col>
+        
       </v-row>
   </base-card>
 </template>
