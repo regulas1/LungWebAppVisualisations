@@ -29,8 +29,7 @@
                     :key="index" 
                     :to="item.url"
                     :color="item.colour"
-                    active-class="outlined"
-                    
+                    active-class="active"
                 >
                     {{ item.title }} 
                 </v-btn>   
@@ -72,6 +71,10 @@ export default {
 a {
     color: white;
     text-decoration: none;
+}
+
+.active {
+    outline: solid 0.2em 
 }
 
 </style>
