@@ -23,7 +23,7 @@
                 text
                 @click="show = !show"
                 >
-                <v-text>{{ show ? 'Hide' : 'Reveal' }}</v-text>
+                <!--<v-text>{{ show ? 'Hide' : 'Reveal' }}</v-text>--> <!-- Commented out as it v-text shows error -->
                 </v-btn>
         
                 <v-spacer></v-spacer>

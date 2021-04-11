@@ -2,7 +2,7 @@
 	TEMPLATE
 	************************************************************************ -->
 <template>
-    <container>
+    <!--<container>--> <!-- Remove container since creating an error -->
         <!--<base-subheading>Breathing</base-subheading>--> <!--Main heading-->
             <v-row 
                 class="grey darken-4 fill-height"
@@ -153,7 +153,7 @@
                     </v-row>
                 </v-col>
             </v-row>
-    </container>
+    <!--</container>-->
 </template>
 
 <!-- *************************************************************************
