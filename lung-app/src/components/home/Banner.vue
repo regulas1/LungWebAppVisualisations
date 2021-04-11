@@ -13,6 +13,7 @@
         align="center"
       >
         <v-col
+          no-gutters
           cols="11"
           md="6"
         >

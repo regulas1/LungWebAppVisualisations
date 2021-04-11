@@ -2,7 +2,7 @@
     <span>
         <!--All navigation buttons to go inside <v-toolbar> tag-->
         <v-toolbar 
-            color="#385F73" 
+            color="grey darken-4" 
             dark
             prominent
             style="padding-top: 1%"
@@ -25,9 +25,11 @@
                     v-for="(item, index) in items"
                     class="ma-2"
                     tile
+                    x-large
                     :key="index" 
                     :to="item.url"
-                    active-class="primary lighten-1 black--text"
+                    :color="item.colour"
+                    active-class="outlined"
                     
                 >
                     {{ item.title }} 
@@ -44,11 +46,11 @@ export default {
         return {
             appTitle: 'My Lungs', /* Text in left-most button */
             items: [
-                { title: 'My Lungs', url: '/' },
-                { title: 'Breathing', url: '/breathing' }, /* Array corresponding to each page */
-                { title: 'Asthma', url: '/asthma' },
-                { title: 'Smoking', url: '/smoking' },
-                { title: 'Disease', url: '/disease' }
+                { title: 'My Lungs', colour: '#caa962', url: '/' },
+                { title: 'Breathing', colour: '#9dafb5', url: '/breathing' }, /* Array corresponding to each page */
+                { title: 'Asthma', colour: '#c5673e', url: '/asthma' },
+                { title: 'Smoking', colour: '#9ca286', url: '/smoking' },
+                { title: 'Disease', colour: '#87795f', url: '/disease' }
             ]
         };
     },
