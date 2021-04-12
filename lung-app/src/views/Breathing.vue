@@ -20,9 +20,9 @@
                                                 COLUMN 1; CONTAINER 1
                     ------------------------------------------------------------------------- -->
                     <v-row>
-                        <base-info :labels="items.title">
+                        <base-info :labels="items.label" :descriptions="items.description">
                             <template v-slot:header>
-                                Normal Breathing
+                                Breathing
                             </template>
                         </base-info>
 
@@ -175,7 +175,11 @@ export default {
     data() {
         return {
             items: {
-                title: ['first', 'second', 'third', 'forth'],
+                label: ['Normal Breathing', 'Healthy Gas Exchange', 'Graphs'],
+                description: [
+                    'When the healthy lung breathes in the upright position, the lung tissue that is closest to the diaphragm expands the most. The tissue at the top of the lung expands the least.'
+
+                ],
             }
         }
     },

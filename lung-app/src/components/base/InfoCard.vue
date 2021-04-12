@@ -19,9 +19,23 @@
           v-for="(item, index) in labels"
           :key="index"
         >
-          {{item}}
+          {{ item }}
         </v-tab>
       </v-tabs>
+
+      <v-tabs-items v-model="tab">
+        <v-tab-item
+          v-for="(item, index) in descriptions"
+          :key="index"
+        >
+          <v-card
+            color="basil"
+            flat
+          >
+            <v-card-text>{{ text }}</v-card-text>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
     </v-card>
 </template>
 
@@ -35,9 +49,10 @@ export default {
     data() {
       return {
         tab: null,
+        text: this.descriptions[0],
       }
     },
-    props: ['labels']
+    props: ['labels', 'descriptions']
 }
 </script>
 
