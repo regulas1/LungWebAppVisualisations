@@ -20,6 +20,12 @@
                                                 COLUMN 1; CONTAINER 1
                     ------------------------------------------------------------------------- -->
                     <v-row>
+                        <base-info :labels="items.title">
+                            <template v-slot:header>
+                                Normal Breathing
+                            </template>
+                        </base-info>
+
                         <base-reveal>
                             <template v-slot:header>
                                 Normal Breathing
@@ -162,13 +168,23 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
+import BaseInfo from '@/components/base/InfoCard'
 
 export default {
     name: 'Disease', /* Change name of component */ 
+    data() {
+        return {
+            items: {
+                title: ['first', 'second', 'third', 'forth'],
+            }
+        }
+    },
     components: {
         BaseOptions,
         BaseReveal,
+        BaseInfo
     }
+
 };
 </script>
 
