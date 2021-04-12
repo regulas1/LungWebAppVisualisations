@@ -32,7 +32,7 @@
             color="basil"
             flat
           >
-            <v-card-text>{{ text }}</v-card-text>
+            <v-card-text>{{ descriptions[index] }}</v-card-text>
           </v-card>
         </v-tab-item>
       </v-tabs-items>
@@ -49,10 +49,10 @@ export default {
     data() {
       return {
         tab: null,
-        text: this.descriptions[0],
+        
       }
     },
-    props: ['labels', 'descriptions']
+    props: ['labels', 'descriptions'],
 }
 </script>
 
