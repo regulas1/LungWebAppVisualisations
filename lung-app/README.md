@@ -19,8 +19,8 @@
     Example: git clone -b vue-13-copy https://github.com/johndoe/LungWebAppVisualisations.git
         
 
-4. Navigate to the folder called "LungWebAppVisualisations" and check what branches are available 
-    Example: cd LungWebAppVisualisations
+4. Navigate to the folder called "LungWebAppVisualisations" and then "lung-app" and check what branches are available 
+    Example: cd LungWebAppVisualisations/lung-app
              git branch -a 
              nb. including "-a" retrieves the remote branches too
 
@@ -28,10 +28,10 @@
     Example: git status
 
 5. Create a new branch (and move over to it) before starting any edits
-    Example: git branch vue-10
-       then: git checkout vue-10
+    Example: git branch vue-14
+       then: git checkout vue-14
     OR
-             git checkout -b vue-10
+             git checkout -b vue-14
 
 6. Installations required to run in local browser:
     (a) Install Vue through its command line interface (CLI)
