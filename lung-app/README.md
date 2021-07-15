@@ -24,14 +24,14 @@
              git branch -a 
              nb. including "-a" retrieves the remote branches too
 
-    Running a status check should confirm that you are on branch "vue-2" and everything is up to date
+    Running a status check should confirm that you are on branch "vue-13-copy" and everything is up to date
     Example: git status
 
 5. Create a new branch (and move over to it) before starting any edits
-    Example: git branch vue-3
-       then: git checkout vue-3
+    Example: git branch vue-10
+       then: git checkout vue-10
     OR
-             git checkout -b vue-3
+             git checkout -b vue-10
 
 6. Installations required to run in local browser:
     (a) Install Vue through its command line interface (CLI)
