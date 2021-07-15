@@ -78,7 +78,7 @@ index.html
     It contians the Vue attribute (directive) connected to the overall App.vue component.
 ```
 
-### @/assets
+### @/src
 ```
 @/components
     Contains only .vue files. Each component has a specific function within the app and can be re-used multiple times on the page.
@@ -95,6 +95,17 @@ index.html
     ./AppNavigation.vue
         A navigation configuration created using Vuetify
 
+@/Model
+    Contains three.js aspects of the app.
+    Further split into two sub-folders
+
+    ./components
+        The fixed components in a scene (including the scene itself)
+        Examples: camera, object, surfaces (in a separate folder)
+
+    ./systems
+        Dynamic components of a scene that must react to user input
+        Examples: controls, renderer, resizer
 
 @/views
     Contains separate Vue components corresponding to each different page in the lung app.
