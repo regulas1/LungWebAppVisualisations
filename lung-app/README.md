@@ -16,7 +16,7 @@
     This will display message "Cloning into LungWebAppVisualisations..."
     A new folder will be created in the VueProjects folder called "LungWebAppVisualisations"
     nb. if wanting to only want to clone the LASTEST branch, use the format "git clone -b <branchName> <repo url>"
-    Example: git clone -b step-3 https://github.com/johndoe/LungWebAppVisualisations.git
+    Example: git clone -b vue-13-copy https://github.com/johndoe/LungWebAppVisualisations.git
         
 
 4. Navigate to the folder called "LungWebAppVisualisations" and check what branches are available 
