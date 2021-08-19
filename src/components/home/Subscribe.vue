@@ -68,7 +68,7 @@
                 <v-list-item-title>EMAIL</v-list-item-title>
 
                 <v-list-item-subtitle>
-                  THEARTOFTRAVEL@GMAIL.COM
+                  ABI UoA
                 </v-list-item-subtitle>
               </v-list-item>
 
@@ -85,7 +85,7 @@
                 <v-list-item-title>ADDRESS</v-list-item-title>
 
                 <v-list-item-subtitle>
-                  1234 WORLD DR. HERE, TX 76123
+                  UniServices House, Level, 6/70 Symonds Street, Grafton, Auckland 1010.
                 </v-list-item-subtitle>
               </v-list-item>
 
@@ -102,7 +102,7 @@
                 <v-list-item-title>PHONE</v-list-item-title>
 
                 <v-list-item-subtitle>
-                  555-789-1234
+                  
                 </v-list-item-subtitle>
               </v-list-item>
             </v-list>

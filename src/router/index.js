@@ -30,6 +30,11 @@ const routes = [
     path: '/disease',            
     name: 'disease',            
     component: () => import('../views/Disease.vue')   
+  },
+  {            
+    path: '/vaping',            
+    name: 'vaping',            
+    component: () => import('../views/Vaping.vue')   
   }
 ];
 

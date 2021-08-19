@@ -49,7 +49,8 @@ export default {
                 { title: 'Breathing', colour: '#9dafb5', url: '/breathing' }, /* Array corresponding to each page */
                 { title: 'Asthma', colour: '#c5673e', url: '/asthma' },
                 { title: 'Smoking', colour: '#9ca286', url: '/smoking' },
-                { title: 'Disease', colour: '#87795f', url: '/disease' }
+                { title: 'Disease', colour: '#87795f', url: '/disease' },
+                { title: 'Vaping', colour: '#0000ff', url: '/vaping' }
             ]
         };
     },
