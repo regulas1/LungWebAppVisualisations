@@ -11,30 +11,33 @@ const routes = [
     component: Home
   },
   /* Add paths for each page in "views" folder of "Components" */
-  {            
-    path: '/breathing',            
-    name: 'breathing',            
-    component: () => import('../views/Breathing.vue')   /* Need ../ to exit out of current directory and locate views folder in src */     
+  {
+    path: "/breathing",
+    name: "breathing",
+    component: () =>
+      import(
+        "../views/Breathing.vue"
+      ) /* Need ../ to exit out of current directory and locate views folder in src */
   },
-  {            
-    path: '/asthma',            
-    name: 'asthma',            
-    component: () => import('../views/Asthma.vue')   
+  {
+    path: "/asthma",
+    name: "asthma",
+    component: () => import("../views/Asthma.vue")
   },
-  {            
-    path: '/smoking',            
-    name: 'smoking',            
-    component: () => import('../views/Smoking.vue')   
+  {
+    path: "/smoking",
+    name: "smoking",
+    component: () => import("../views/Smoking.vue")
   },
-  {            
-    path: '/disease',            
-    name: 'disease',            
-    component: () => import('../views/Disease.vue')   
+  {
+    path: "/disease",
+    name: "disease",
+    component: () => import("../views/Disease.vue")
   },
-  {            
-    path: '/vaping',            
-    name: 'vaping',            
-    component: () => import('../views/Vaping.vue')   
+  {
+    path: "/vaping",
+    name: "vaping",
+    component: () => import("../views/Vaping.vue")
   }
 ];
 
