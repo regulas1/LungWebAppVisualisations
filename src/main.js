@@ -4,11 +4,11 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
-import './plugins/base'
-import SequentialEntrance from 'vue-sequential-entrance'
-import 'vue-sequential-entrance/vue-sequential-entrance.css'
+import "./plugins/base";
+import SequentialEntrance from "vue-sequential-entrance";
+import "vue-sequential-entrance/vue-sequential-entrance.css";
 
-import { Model } from './Model/Model.js';
+import { Model } from "./Model/Model.js";
 
 // create the main function
 /*unction main() {
@@ -29,7 +29,7 @@ main();
 // mark as async in order to call the async Model.init method
 async function main() {
   // Get a reference to the container element
-  const container = document.querySelector('#scene-container');
+  const container = document.querySelector("#scene-container");
 
   // 1. Create an instance of the Model app
   const model = new Model(container);
@@ -40,7 +40,7 @@ async function main() {
   model.start();
 }
 
-main().catch((err) => {
+main().catch(err => {
   console.error(err);
 });
 
