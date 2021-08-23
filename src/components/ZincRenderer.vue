@@ -13,4 +13,4 @@ export default {
         zincRenderer = new Zinc.Renderer()
     }
 }
-</script>
+</script> 
