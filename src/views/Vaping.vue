@@ -142,14 +142,16 @@
                     md="6"
                     align="center"
                 >
-                    <v-card 
+                    <!-- <v-card 
                         height="450px" 
                         color="rgb(0, 0, 0, 0)"
                         flat
-                    > 
+                    >  -->
                     <!--Creates a space for lung model (implement lung model here)-->
-                    </v-card>
+                    <!-- </v-card> -->
                     <img src="../../public/img/Rotate_Zoom.png" width="180px">
+                    <GltfModel>
+                        </GltfModel>
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
@@ -232,12 +234,14 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
+import GltfModel from '@/components/ModelGLTF'
 
 export default {
-    name: 'Disease', /* Change name of component */ 
+    name: 'Vaping', /* Change name of component */ 
     components: {
         BaseOptions,
         BaseReveal,
+        GltfModel,
     }
 };
 </script>
