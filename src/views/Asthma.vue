@@ -119,14 +119,18 @@
                     md="6"
                     align="center"
                 >
+                 
                     <v-card 
                         height="450px" 
                         color="rgb(0, 0, 0, 0)"
                         flat
-                    > 
+                    >   <GltfModel>
+                        </GltfModel>
+                    
                     <!--Creates a space for lung model (implement lung model here)-->
                     </v-card>
-                    <img src="../../public/img/Rotate_Zoom.png" width="180px">
+                    <!-- <img src="../../public/img/Rotate_Zoom.png" width="180px"> -->
+                      
                 </v-col>
 
             <!-- ------------------------------------------------------------------------
@@ -136,6 +140,7 @@
                     cols="6"
                     md="3"
                 > 
+           
                 <!-- ------------------------------------------------------------------------
                                             COLUMN 3; CONTAINER 1
                     ------------------------------------------------------------------------- -->
@@ -209,12 +214,16 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
+import GltfModel from '@/components/ModelGLTFtwo'
+
+
 
 export default {
     name: 'Disease', /* Change name of component */ 
     components: {
         BaseOptions,
         BaseReveal,
+        GltfModel,
     }
 };
 </script>

@@ -86,7 +86,7 @@ export default {
         undefined
       )*/
       loader.load(
-        "/three-assets/Lung/airwaysblue.glb",
+        "/three-assets/Lung/miniairways.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) node.material = material;
