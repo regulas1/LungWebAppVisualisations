@@ -85,19 +85,8 @@ export default {
         undefined,
         undefined
       )*/
-      // loader.load(
-      //   "/three-assets/Lung/miniairways.glb",
-      //   gltf => {
-      //     gltf.scene.traverse(function(node) {
-      //       if (node.isMesh) node.material = material;
-      //     });
-      //     this.scene.add(gltf.scene);
-      //   },
-      //   undefined,
-      //   undefined
-      // );
       loader.load(
-        "/three-assets/Lung/surface_2.glb",
+        "/three-assets/Lung/miniairways.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) node.material = material;
@@ -107,6 +96,17 @@ export default {
         undefined,
         undefined
       );
+      // loader.load(
+      //   "/three-assets/Lung/surface_2.glb",
+      //   gltf => {
+      //     gltf.scene.traverse(function(node) {
+      //       if (node.isMesh) node.material = material;
+      //     });
+      //     this.scene.add(gltf.scene);
+      //   },
+      //   undefined,
+      //   undefined
+      // );
       // loader.load(
       //   "/three-assets/Lung/surface_3.glb",
       //   gltf => {
@@ -158,13 +158,13 @@ export default {
     setShader() {
       let shader = this.surface;
       let shaderObject = {
-        vertexShader: shader.vertexShader,
-        fragmentShader: shader.fragmentShader,
+        // vertexShader: shader.vertexShader,
+        // fragmentShader: shader.fragmentShader,
         //lights: true
         uniforms: shader.uniforms,
         onBeforeCompile: function() {}, // fix bug in ThreeJS
         side: THREE.DoubleSide,
-        transparent: true
+        transparent: false
       };
       /*if ('uniforms' in shader) {
           // Using UniformUtils will clone the shader files uniforms,

@@ -66,6 +66,7 @@
                                         <li>The breathing muscles must work harder.</li>    
                                         <li>Much more energy is required to breathe.</li>  
                                     </ul>
+                                // eslint-disable-next-line prettier/prettier
                                 </p>
                                 <p>
                                     Asthma attacks can be very distressing.
