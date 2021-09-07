@@ -15,11 +15,11 @@
                                                 COLUMN 1; CONTAINER 1
                     ------------------------------------------------------------------------- -->
       <v-row>
-        <base-info :labels="items.label" :descriptions="items.description">
+        <!-- <base-info :labels="items.label" :descriptions="items.description">
           <template v-slot:header>
             Breathing
           </template>
-        </base-info>
+        </base-info> -->
 
         <base-reveal>
           <template v-slot:header>
@@ -86,10 +86,15 @@
                                                 COLUMN 2
                 ------------------------------------------------------------------------- -->
     <v-col cols="12" md="6" align="center">
-      <v-card height="450px" color="rgb(0, 0, 0, 0)" flat>
-        <!--Creates a space for lung model (implement lung model here)-->
-      </v-card>
+      <!-- <v-card 
+                        height="450px" 
+                        color="rgb(0, 0, 0, 0)"
+                        flat
+                    >  -->
+      <!--Creates a space for lung model (implement lung model here)-->
+      <!-- </v-card> -->
       <img src="../../public/img/Rotate_Zoom.png" width="180px" />
+      <GltfModel> </GltfModel>
     </v-col>
 
     <!-- ------------------------------------------------------------------------
@@ -156,7 +161,8 @@
 <script>
 import BaseOptions from "@/components/base/PageOptions";
 import BaseReveal from "@/components/base/RevealCard";
-import BaseInfo from "@/components/base/InfoCard";
+// import BaseInfo from "@/components/base/InfoCard";
+import GltfModel from "@/components/ModelGLTFtwo";
 
 export default {
   name: "Disease" /* Change name of component */,
@@ -173,7 +179,8 @@ export default {
   components: {
     BaseOptions,
     BaseReveal,
-    BaseInfo
+    GltfModel
+    // BaseInfo
   }
 };
 </script>
