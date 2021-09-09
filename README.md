@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+
 1(a) Fork project to a repository in your personal GitHub
 
  (b) Install node.js & NPM through Command Prompt (or Terminal on Mac)
@@ -41,6 +42,8 @@
         Example: vue add vuetify
 
 ```
+
+Folder updated
 
 ### Compile
 ```
