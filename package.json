@@ -23,6 +23,7 @@
     "vue-typical": "^1.4.0",
     "vuetify": "^2.2.11",
     "vuex": "^3.4.0",
+    "yarn": "^1.22.11",
     "zincjs": "^0.36.4"
   },
   "devDependencies": {

@@ -96,6 +96,12 @@ export default {
         undefined,
         undefined
       );
+      const textureloader = new THREE.TextureLoader();
+      material = new THREE.MeshBasicMaterial({
+        map: textureloader.load(
+          "https://threejsfundamentals.org/threejs/resources/images/wall.jpg"
+        )
+  });
       // loader.load(
       //   "/three-assets/Lung/surface_2.glb",
       //   gltf => {
