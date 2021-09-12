@@ -51,7 +51,7 @@ export default {
       // mainLight.position.set(10, 10, 10);
       // this.scene.add(ambientLight, mainLight);
       //LIGHTS
-      var light = new THREE.AmbientLight(0x0000ff, 8);
+      var light = new THREE.AmbientLight(0xdd8a8a, 2);
       this.scene.add(light);
 
       var light2 = new THREE.PointLight(0x0000ff, 5);
@@ -86,7 +86,7 @@ export default {
         undefined
       )*/
       loader.load(
-        "/three-assets/Lung/lungtissue.glb",
+        "/three-assets/Lung/miniairways.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) node.material = material;
@@ -97,11 +97,15 @@ export default {
         undefined
       );
       const textureloader = new THREE.TextureLoader();
-      material = new THREE.MeshBasicMaterial({
-        map: textureloader.load(
-          "https://threejsfundamentals.org/threejs/resources/images/wall.jpg"
-        )
-  });
+
+      material = new THREE.MeshStandardMaterial({
+        color: 0xdd8a8a, // red (can also use a CSS color string here)
+        flatShading: true,
+        shininess: 30,
+        // map: textureloader.load(
+        //   "https://threejsfundamentals.org/threejs/resources/images/checker.png"
+        // )
+      });
       // loader.load(
       //   "/three-assets/Lung/surface_2.glb",
       //   gltf => {
