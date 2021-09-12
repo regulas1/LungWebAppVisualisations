@@ -157,7 +157,7 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
-import GltfModel from '@/components/ModelGLTFtwo'
+import GltfModel from '@/components/ModelGLTFthree'
 
 export default {
     name: 'Disease', /* Change name of component */ 

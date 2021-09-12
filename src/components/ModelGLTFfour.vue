@@ -86,7 +86,7 @@ export default {
         undefined
       )*/
       loader.load(
-        "/three-assets/Lung/miniairways.glb",
+        "/three-assets/Lung/smoker_and_asthmatic_flow_1.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) node.material = material;
@@ -99,7 +99,7 @@ export default {
       const textureloader = new THREE.TextureLoader();
 
       material = new THREE.MeshStandardMaterial({
-        color: 0xdd8a8a, // red (can also use a CSS color string here)
+        color: 0x87ceeb, // red (can also use a CSS color string here)
         flatShading: true,
         shininess: 50,
         map: textureloader.load(

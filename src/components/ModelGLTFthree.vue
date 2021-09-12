@@ -86,7 +86,7 @@ export default {
         undefined
       )*/
       loader.load(
-        "/three-assets/Lung/miniairways.glb",
+        "/three-assets/Lung/surface_1.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) node.material = material;
@@ -106,17 +106,17 @@ export default {
           "https://threejsfundamentals.org/threejs/resources/images/checker.png"
         )
       });
-      // loader.load(
-      //   "/three-assets/Lung/surface_2.glb",
-      //   gltf => {
-      //     gltf.scene.traverse(function(node) {
-      //       if (node.isMesh) node.material = material;
-      //     });
-      //     this.scene.add(gltf.scene);
-      //   },
-      //   undefined,
-      //   undefined
-      // );
+      loader.load(
+        "/three-assets/Lung/airwaysblue.glb",
+        gltf => {
+          gltf.scene.traverse(function(node) {
+            if (node.isMesh) node.material = material;
+          });
+          this.scene.add(gltf.scene);
+        },
+        undefined,
+        undefined
+      );
       // loader.load(
       //   "/three-assets/Lung/surface_3.glb",
       //   gltf => {
