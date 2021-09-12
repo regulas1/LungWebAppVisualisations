@@ -86,7 +86,7 @@ export default {
         undefined
       )*/
       loader.load(
-        "/three-assets/Lung/surface_1.glb",
+        "/three-assets/Lung/tissue.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) node.material = material;
@@ -94,18 +94,8 @@ export default {
           this.scene.add(gltf.scene);
         },
         undefined,
-        undefined
+        undefined,
       );
-      const textureloader = new THREE.TextureLoader();
-
-      material = new THREE.MeshStandardMaterial({
-        color: 0xdd8a8a, // red (can also use a CSS color string here)
-        flatShading: true,
-        shininess: 50,
-        map: textureloader.load(
-          "https://threejsfundamentals.org/threejs/resources/images/checker.png"
-        )
-      });
       loader.load(
         "/three-assets/Lung/airwaysblue.glb",
         gltf => {
@@ -117,6 +107,17 @@ export default {
         undefined,
         undefined
       );
+      const textureloader = new THREE.TextureLoader();
+
+      material = new THREE.MeshPhongMaterial({
+        color: 0xdd8a8a, // red (can also use a CSS color string here)
+        flatShading: true,
+        shininess: 500,
+        map: textureloader.load(
+          "https://threejsfundamentals.org/threejs/resources/images/checker.png"
+        )
+      });
+
       // loader.load(
       //   "/three-assets/Lung/surface_3.glb",
       //   gltf => {
