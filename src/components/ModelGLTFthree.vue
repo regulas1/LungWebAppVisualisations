@@ -86,7 +86,7 @@ export default {
         undefined
       )*/
       loader.load(
-        "/three-assets/Lung/tissue.glb",
+        "/three-assets/Lung/tissueLungsF.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) {
@@ -99,7 +99,7 @@ export default {
         undefined
       );
       loader.load(
-        "/three-assets/Lung/airwaysblue.glb",
+        "/three-assets/Lung/airwaysLungF.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) {
