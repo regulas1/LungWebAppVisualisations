@@ -56,7 +56,13 @@ export default {
 
       var light2 = new THREE.PointLight(0x0000ff, 5);
       this.scene.add(light2);
+
+      var light3 = new THREE.DirectionalLight(0xffa500, 10);
+      this.scene.add(light3);
       this.controls = new OrbitControls(this.camera, this.container);
+
+      this.controls = new OrbitControls(this.camera, this.container);
+
       // create renderer
       this.renderer = new THREE.WebGLRenderer({ antialias: true });
       this.renderer.setSize(

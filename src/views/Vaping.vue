@@ -234,7 +234,7 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
-import GltfModel from '@/components/ModelGLTF'
+import GltfModel from '@/components/ModelGLTFthree'
 
 export default {
     name: 'Vaping', /* Change name of component */ 
