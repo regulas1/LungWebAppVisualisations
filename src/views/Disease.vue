@@ -93,7 +93,7 @@
                     >  -->
                     <!--Creates a space for lung model (implement lung model here)-->
                     <!-- </v-card> -->
-                    <img src="../../public/img/Rotate_Zoom.png" width="180px">
+                    <!-- <img src="../../public/img/Rotate_Zoom.png" width="180px"> -->
                     <GltfModel>
                         </GltfModel>
                 </v-col>

@@ -67,7 +67,8 @@ export default {
       this.renderer = new THREE.WebGLRenderer({ antialias: true });
       this.renderer.setSize(
         this.container.clientWidth,
-        this.container.clientHeight
+        this.container.clientHeight,
+        false
       );
       this.renderer.setPixelRatio(window.devicePixelRatio);
       this.renderer.gammaFactor = 2.2;
@@ -129,6 +130,7 @@ export default {
         transparent: true,
         alphaTest: 0,
         opacity: 0.65
+
         // map: textureloader.load(
         //   "https://threejsfundamentals.org/threejs/resources/images/checker.png"
         // )
@@ -236,8 +238,8 @@ div {
 }
 
 #scene-container {
-  position: absolute;
-  width: 42%; /* Approx 5/12 (5 cols / 12 cols) */
+  position: relative;
+  width: 100%; /* Approx 5/12 (5 cols / 12 cols) */
   height: 100%;
 }
 </style>

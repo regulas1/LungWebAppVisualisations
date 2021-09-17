@@ -10,6 +10,7 @@
           <v-btn
             v-for="(item, index) in items"
             class="ma-2"
+            fab
             large
             :key="index"
             :color="item.color"
@@ -29,7 +30,7 @@
 	************************************************************************ -->
 <script>
 export default {
-  name: "BasePackSelect" /* Change name of component */,
+  name: "ButtonChange" /* Change name of component */,
   data: function() {
     return {
       toggle_exclusive: 2,
