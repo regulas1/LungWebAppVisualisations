@@ -86,7 +86,7 @@ export default {
         undefined
       )*/
       loader.load(
-        "/three-assets/Lung/airwaysFLO.glb",
+        "/three-assets/Lung/tissueHD.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) {
@@ -99,7 +99,7 @@ export default {
         undefined
       );
       loader.load(
-        "/three-assets/Lung/airwaysNew.glb",
+        "/three-assets/Lung/airwaysHD.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) {
@@ -122,7 +122,7 @@ export default {
         shininess: 100,
         transparent: true,
         alphaTest: 0,
-        opacity: 0.65
+        opacity: 0.87
         // map: textureloader.load(
         //   "https://threejsfundamentals.org/threejs/resources/images/checker.png"
         // )
