@@ -88,7 +88,7 @@
                     >  -->
                     <!--Creates a space for lung model (implement lung model here)-->
                     <!-- </v-card> -->
-                    <img src="../../public/img/Rotate_Zoom.png" width="180px">
+                    <!-- <img src="../../public/img/Rotate_Zoom.png" width="180px"> -->
                     <GltfModel>
                         </GltfModel>
                 </v-col>
@@ -140,7 +140,7 @@
 <script>
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
-import GltfModel from '@/components/ModelGLTFfour'
+import GltfModel from '@/components/ModelGLTFthree'
 // import Selectors from '@/components/Selectors'
 
 export default {

@@ -232,6 +232,6 @@ div {
 #scene-container {
   position: absolute;
   width: 42%; /* Approx 5/12 (5 cols / 12 cols) */
-  height: 100%;
+  height: 80%;
 }
 </style>
