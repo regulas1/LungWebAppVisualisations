@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "puppeteer": "^10.4.0",
     "register-service-worker": "^1.7.1",
+    "selenium-webdriver": "^4.0.0-rc-2",
     "serve-static": "^1.14.1",
     "stats.js": "^0.17.0",
     "three": "^0.125.2",
