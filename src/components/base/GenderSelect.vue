@@ -2,18 +2,9 @@
 	TEMPLATE
 	************************************************************************ -->
 <template>
-    <v-col
-        class="d-flex"
-        cols="12"
-        sm="6"
-    >
-        <v-select
-        :items="items"
-        filled
-        label="Your gender"
-        dense
-        ></v-select>
-    </v-col>
+  <v-col class="d-flex" cols="12" sm="6">
+    <v-select :items="items" filled label="Your gender" dense></v-select>
+  </v-col>
 </template>
 
 <!-- *************************************************************************
@@ -21,17 +12,16 @@
 	************************************************************************ -->
 <script>
 export default {
-    name: 'BaseGenderSelect', /* Change name of component */ 
-    data: function() {
-        return{
-            items: ['Male', 'Female'],
-        }
-    },
+  name: "BaseGenderSelect" /* Change name of component */,
+  data: function() {
+    return {
+      items: ["Male", "Female"]
+    };
+  }
 };
 </script>
 
 <!-- *************************************************************************
 	STYLE
 	************************************************************************ -->
-<style scoped>
-</style>
+<style scoped></style>
