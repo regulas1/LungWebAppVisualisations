@@ -142,11 +142,15 @@
                     md="6"
                     align="center"
                 >
-                
+                 <button   style="background-color:white;" v-on:click="isHidden = !isHidden">
+    Hide show Lungs</button>
+
                   
-                   <GenderSelect/>
-                    <GltfModel>
+                   <!-- <GenderSelect/> -->
+                    <GltfModel v-if="!isHidden">
                         </GltfModel>
+                    <GltfModelairways v-if="isHidden">
+                        </GltfModelairways>
                         
                 </v-col>
 
@@ -231,7 +235,8 @@
 import BaseOptions from '@/components/base/PageOptions'
 import BaseReveal from '@/components/base/RevealCard'
 import GltfModel from '@/components/ModelGLTFthree'
-import GenderSelect from '@/components/base/BtnAgeSelect'
+// import GenderSelect from '@/components/base/BtnAgeSelect'
+import GltfModelairways from '@/components/ModelGLTFthreeairways'
 
 export default {
     name: 'Vaping', /* Change name of component */ 
@@ -239,8 +244,14 @@ export default {
         BaseOptions,
         BaseReveal,
         GltfModel,
-        GenderSelect,
-    }
+        GltfModelairways,
+        // GenderSelect,
+    },
+      data() {
+    return {
+      isHidden: false
+    };
+  },
 };
 </script>
 
