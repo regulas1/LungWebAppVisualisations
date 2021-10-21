@@ -31,7 +31,9 @@
 
                             <template v-slot:description>
                                 <p>
-                                    Vape .. 
+                                 E-liquids are made up of propylene glycol, glycerol, flavourings and other chemicals. They can come with or without nicotine included. There are more than 15,000 flavours available around the world and each of these products will have a different list of chemicals included. Likely at least 50 different chemicals within each. While the chemicals in an e-liquid are thought to be safe to eat, no one knows if they are safe to breath in.
+When the aerosol or vape is created through an e-cigarette, different chemicals can be found. This includes dangerous chemicals like formaldehyde, acrolein and acetaldehyde. Heavy metals, which come from the heating coil and other metal parts of the vape, can also be found in the aerosol that is breathed in.
+Users are exposed to less chemicals from vaping as compared to smoking, but there are different chemicals associated with vaping. We don’t yet know the effects these different chemicals might have on our bodies.
                                 </p>
                                 <p>
                                    ...
@@ -45,28 +47,28 @@
                     <v-row>
                         <base-reveal>
                             <template v-slot:header>
-                                What does vaping do to your lungs ?
+                                What does vaping do to your
+                                <p> lungs ?</p>
                             </template>
 
                             <template v-slot:subheader>
-                                Why breathing gets harder
+                    
                             </template>
 
                             <template v-slot:description>
                                 <p>
-                                   ..info here ..
+                            
                                 </p>
                                 <p>
-                                    As a result:
+                             
                                     <ul>
-                                        <li>   ..info here ...</li>  
-                                        <li>   ..info here ...</li>    
-                                        <li>   ..info here ..</li>  
+                                        <li>  The long-term health effects of vaping are not yet known because they have not been around long enough for us to study them. But many studies are showing that vaping does have some harmful effects. The question is, how harmful are they?</li>  
+                                    <li>  Animal studies and short-term studies on humans have shown some similar changes to the lungs as cause by smoking. This includes inflammation (this is the bodies normal response to something foreign entering the body), changes to the airways and even early studies suggesting emphysema and a link to increased chance of cancer. Only time will expose the long-term effects.</li>    
+                                    
                                     </ul>
-                                </p>
+                           
                                 <p>
-                                       ..info here ..
-                                    <br>   ..info here ..
+                                    <br>  
                                 </p>
                             </template>
                         </base-reveal>
@@ -77,26 +79,20 @@
                     <v-row>
                         <base-reveal>
                             <template v-slot:header>
-                                What does vaping do to your heart?
+                                What does vaping do to your <p>heart?</p>
                             </template>
 
                             <template v-slot:subheader>
-                               .. info here .. 
+                    
                             </template>
 
                             <template v-slot:description>
+                         
                                 <p>
-                                      .. info here .. <strong>   .. info here .. </strong>. 
-                                      .. info here .. 
+                           Vaping has been shown to increase heart rate (how fast your heart beats), blood pressure, and the stiffness of blood vessels around the heart, like traditional cigarettes.
                                 </p>
                                 <p>
-                                       .. info here .. 
-                                </p>
-                                <p>
-         .. info here .. 
-                                </p>
-                                <p>
-   .. info here .. 
+                            
                                 </p>
                             </template>
                         </base-reveal>
@@ -112,19 +108,18 @@
                             </template>
 
                             <template v-slot:subheader>
-                               .. info here .. 
+                   
                             </template>
 
                             <template v-slot:description>
                                 <p>
-                                      .. info here .. <strong>   .. info here .. </strong>. 
-                                      .. info here .. 
+                                E-cigarettes were developed as a tool to help reduce smoking and the harmful effects that come with this. Unfortunately, many younger people/non-smokers are starting to vape. While vaping is still thought to be safer than smoking, it is very likely that they will cause harm. Vaping is not for non-smokers, but it has the potential to help smokers to quit.
                                 </p>
                                 <p>
-                                       .. info here .. 
+                               
                                 </p>
                                 <p>
-         .. info here .. 
+  
                                 </p>
                                 <p>
    .. info here .. 
@@ -176,26 +171,28 @@
                             <template v-slot:description>
                                 <p>
                                     <br>
-                                    <strong>Airways</strong>
+                                    <strong> ENDS</strong>
                                     <br>
-                                    "Tubes" that allow oxygen to flow to the lungs.
+                      : Electronic Nicotine Deliver System.
+                                   
+
                                 </p>
                                 <p>
                                     <br>
-                                    <strong>FEV1 test</strong>
+                                    <strong>E-cigarette / E-cig / Vape
+</strong>
                                     <br>
-                                    Tells us how healthy a lung is.
+                                   : Electronic cigarette. A type of ENDS that heats up an e-liquid that the user inhales.
                                 </p>
                                 <p>
                                     <br>
-                                    <strong>Gas Exchange</strong>
+                                    <strong>E-liquid</strong>
                                     <br>
-                                    <ul>
-                                        <li>Inhaled oxygen is transferred to the blood from the lungs.</li>
-                                        <li>Carbon dioxide is transferred out of the blood (and then exhaled).</li>
-                                    </ul>
+                                    <p>
+                                         This is the liquid that is used within an e-cigarette.
+                                    </p>
                                     <br> Check out the 'Breathing' page to learn more about gas exchange.
-                                </p>
+                               
                             </template>
                         </base-options>
                     </v-row>
@@ -210,7 +207,7 @@
                             <template v-slot:description>
                                 <p>
                                     <strong>3D Model Guide</strong>
-                                    <br>Select MILD, MODERATE, or SEVERE to see how different levels of asthma affect air flow.
+                                    <br>Select MILD, MODERATE, or SEVERE to see how different levels of affect air flow because of vaping
                                 </p>
                                 <p>
                                     <strong>Colour Guide</strong>
