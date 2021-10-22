@@ -14,6 +14,11 @@ import AppNavigation from "@/components/AppNavigation";
 
 export default {
   name: "App",
+  data() {
+    return {
+      isNinja: false
+    };
+  },
 
   components: {
     AppNavigation

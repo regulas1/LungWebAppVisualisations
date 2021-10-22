@@ -12,6 +12,9 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Stats from "stats.js";
 
 import surface from "../../public/three-assets/shaders/surface.js";
+import vShader from "../../public/three-assets/shadersv/airways.vs.js";
+
+import fShader from "../../public/three-assets/shadersv/airways.fs.js";
 
 export default {
   name: "ModelGltf",
@@ -92,8 +95,13 @@ export default {
         undefined,
         undefined
       )*/
+
+      const customShaderMaterial = new THREE.ShaderMaterial({
+        // vertexShader: vShader,
+        // fragmentShader: fShader,
+      });
       loader.load(
-        "/three-assets/Lung/tissueLungsF.glb",
+        "/three-assets/Lung/LungsF2.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) {
@@ -106,7 +114,7 @@ export default {
         undefined
       );
       loader.load(
-        "/three-assets/Lung/airwaysLungF.glb",
+        "/three-assets/Lung/LungsAirwaysF2.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) {
@@ -115,6 +123,7 @@ export default {
               mat.color = color;
               mat.wireframe = false;
               node.material = mat;
+              // node.material = customShaderMaterial;
             }
           });
           this.scene.add(gltf.scene);
