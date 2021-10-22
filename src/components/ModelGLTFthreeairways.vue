@@ -114,7 +114,7 @@ export default {
       //   undefined
       // );
       loader.load(
-        "/three-assets/Lung/LungsAirwaysF2.glb",
+        "/three-assets/Lung/airwaysLungF.glb",
         gltf => {
           gltf.scene.traverse(function(node) {
             if (node.isMesh) {
